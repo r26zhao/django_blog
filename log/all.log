@@ -1,0 +1,429 @@
+2017-05-05 21:08:10,559 [MainThread:9512] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:10,571 [MainThread:9512] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-05-05 21:08:31,850 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:31,857 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-05-05 21:08:31,859 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:31,860 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-05-05 21:08:31,883 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.019) PRAGMA foreign_keys; args=None
+2017-05-05 21:08:31,883 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:31,884 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:31,887 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params None)
+2017-05-05 21:08:31,895 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.007) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); args=None
+2017-05-05 21:08:31,900 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; (params [])
+2017-05-05 21:08:31,901 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; args=[]
+2017-05-05 21:08:31,913 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params None)
+2017-05-05 21:08:31,914 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); args=None
+2017-05-05 21:08:31,914 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- INSERT INTO "django_content_type" ("model", "id", "name", "app_label") SELECT "model", "id", "name", "app_label" FROM "django_content_type__old"; (params [])
+2017-05-05 21:08:31,915 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) INSERT INTO "django_content_type" ("model", "id", "name", "app_label") SELECT "model", "id", "name", "app_label" FROM "django_content_type__old"; args=[]
+2017-05-05 21:08:31,916 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- DROP TABLE "django_content_type__old"; (params [])
+2017-05-05 21:08:31,948 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.031) DROP TABLE "django_content_type__old"; args=[]
+2017-05-05 21:08:31,949 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); (params [])
+2017-05-05 21:08:31,950 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); args=[]
+2017-05-05 21:08:32,096 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:32,097 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:32,098 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:32,113 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('contenttypes', '0001_initial', '2017-05-05 13:08:32.098057'); args=['contenttypes', '0001_initial', '2017-05-05 13:08:32.098057']
+2017-05-05 21:08:32,252 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys; args=None
+2017-05-05 21:08:32,252 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:32,253 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:32,257 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "codename" varchar(100) NOT NULL); (params None)
+2017-05-05 21:08:32,259 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "codename" varchar(100) NOT NULL); args=None
+2017-05-05 21:08:32,267 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE); (params None)
+2017-05-05 21:08:32,267 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE); args=None
+2017-05-05 21:08:32,268 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id")); (params None)
+2017-05-05 21:08:32,269 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id")); args=None
+2017-05-05 21:08:32,282 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(75) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL); (params None)
+2017-05-05 21:08:32,283 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(75) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL); args=None
+2017-05-05 21:08:32,285 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "auth_user_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "group_id" integer NOT NULL REFERENCES "auth_group" ("id")); (params None)
+2017-05-05 21:08:32,286 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE TABLE "auth_user_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "group_id" integer NOT NULL REFERENCES "auth_group" ("id")); args=None
+2017-05-05 21:08:32,287 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "auth_user_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id")); (params None)
+2017-05-05 21:08:32,288 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE TABLE "auth_user_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id")); args=None
+2017-05-05 21:08:32,290 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE UNIQUE INDEX "auth_permission_content_type_id_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); (params [])
+2017-05-05 21:08:32,294 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.004) CREATE UNIQUE INDEX "auth_permission_content_type_id_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); args=[]
+2017-05-05 21:08:32,295 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE INDEX "auth_permission_417f1b1c" ON "auth_permission" ("content_type_id"); (params [])
+2017-05-05 21:08:32,297 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) CREATE INDEX "auth_permission_417f1b1c" ON "auth_permission" ("content_type_id"); args=[]
+2017-05-05 21:08:32,297 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE UNIQUE INDEX "auth_group_permissions_group_id_0cd325b0_uniq" ON "auth_group_permissions" ("group_id", "permission_id"); (params [])
+2017-05-05 21:08:32,299 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) CREATE UNIQUE INDEX "auth_group_permissions_group_id_0cd325b0_uniq" ON "auth_group_permissions" ("group_id", "permission_id"); args=[]
+2017-05-05 21:08:32,299 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE INDEX "auth_group_permissions_0e939a4f" ON "auth_group_permissions" ("group_id"); (params [])
+2017-05-05 21:08:32,300 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE INDEX "auth_group_permissions_0e939a4f" ON "auth_group_permissions" ("group_id"); args=[]
+2017-05-05 21:08:32,301 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE INDEX "auth_group_permissions_8373b171" ON "auth_group_permissions" ("permission_id"); (params [])
+2017-05-05 21:08:32,302 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) CREATE INDEX "auth_group_permissions_8373b171" ON "auth_group_permissions" ("permission_id"); args=[]
+2017-05-05 21:08:32,302 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE UNIQUE INDEX "auth_user_groups_user_id_94350c0c_uniq" ON "auth_user_groups" ("user_id", "group_id"); (params [])
+2017-05-05 21:08:32,303 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE UNIQUE INDEX "auth_user_groups_user_id_94350c0c_uniq" ON "auth_user_groups" ("user_id", "group_id"); args=[]
+2017-05-05 21:08:32,303 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE INDEX "auth_user_groups_e8701ad4" ON "auth_user_groups" ("user_id"); (params [])
+2017-05-05 21:08:32,304 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE INDEX "auth_user_groups_e8701ad4" ON "auth_user_groups" ("user_id"); args=[]
+2017-05-05 21:08:32,305 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE INDEX "auth_user_groups_0e939a4f" ON "auth_user_groups" ("group_id"); (params [])
+2017-05-05 21:08:32,319 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE INDEX "auth_user_groups_0e939a4f" ON "auth_user_groups" ("group_id"); args=[]
+2017-05-05 21:08:32,319 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE UNIQUE INDEX "auth_user_user_permissions_user_id_14a6b632_uniq" ON "auth_user_user_permissions" ("user_id", "permission_id"); (params [])
+2017-05-05 21:08:32,320 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) CREATE UNIQUE INDEX "auth_user_user_permissions_user_id_14a6b632_uniq" ON "auth_user_user_permissions" ("user_id", "permission_id"); args=[]
+2017-05-05 21:08:32,321 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE INDEX "auth_user_user_permissions_e8701ad4" ON "auth_user_user_permissions" ("user_id"); (params [])
+2017-05-05 21:08:32,322 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE INDEX "auth_user_user_permissions_e8701ad4" ON "auth_user_user_permissions" ("user_id"); args=[]
+2017-05-05 21:08:32,322 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE INDEX "auth_user_user_permissions_8373b171" ON "auth_user_user_permissions" ("permission_id"); (params [])
+2017-05-05 21:08:32,323 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE INDEX "auth_user_user_permissions_8373b171" ON "auth_user_user_permissions" ("permission_id"); args=[]
+2017-05-05 21:08:32,428 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:32,429 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:32,431 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:32,433 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0001_initial', '2017-05-05 13:08:32.430904'); args=['auth', '0001_initial', '2017-05-05 13:08:32.430904']
+2017-05-05 21:08:32,548 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) PRAGMA foreign_keys; args=None
+2017-05-05 21:08:32,548 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:32,549 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:32,567 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "auth_user" ("id")); (params None)
+2017-05-05 21:08:32,570 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "auth_user" ("id")); args=None
+2017-05-05 21:08:32,571 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE INDEX "django_admin_log_417f1b1c" ON "django_admin_log" ("content_type_id"); (params [])
+2017-05-05 21:08:32,571 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE INDEX "django_admin_log_417f1b1c" ON "django_admin_log" ("content_type_id"); args=[]
+2017-05-05 21:08:32,572 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE INDEX "django_admin_log_e8701ad4" ON "django_admin_log" ("user_id"); (params [])
+2017-05-05 21:08:32,572 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE INDEX "django_admin_log_e8701ad4" ON "django_admin_log" ("user_id"); args=[]
+2017-05-05 21:08:32,750 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:32,752 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:32,753 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:32,756 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('admin', '0001_initial', '2017-05-05 13:08:32.753463'); args=['admin', '0001_initial', '2017-05-05 13:08:32.753463']
+2017-05-05 21:08:32,870 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys; args=None
+2017-05-05 21:08:32,870 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:32,871 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:32,886 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- ALTER TABLE "django_admin_log" RENAME TO "django_admin_log__old"; (params [])
+2017-05-05 21:08:32,889 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) ALTER TABLE "django_admin_log" RENAME TO "django_admin_log__old"; args=[]
+2017-05-05 21:08:32,891 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "action_time" datetime NOT NULL); (params None)
+2017-05-05 21:08:32,892 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "action_time" datetime NOT NULL); args=None
+2017-05-05 21:08:32,893 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- INSERT INTO "django_admin_log" ("content_type_id", "user_id", "action_flag", "object_id", "id", "object_repr", "action_time", "change_message") SELECT "content_type_id", "user_id", "action_flag", "object_id", "id", "object_repr", "action_time", "change_message" FROM "django_admin_log__old"; (params [])
+2017-05-05 21:08:32,894 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) INSERT INTO "django_admin_log" ("content_type_id", "user_id", "action_flag", "object_id", "id", "object_repr", "action_time", "change_message") SELECT "content_type_id", "user_id", "action_flag", "object_id", "id", "object_repr", "action_time", "change_message" FROM "django_admin_log__old"; args=[]
+2017-05-05 21:08:32,894 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- DROP TABLE "django_admin_log__old"; (params [])
+2017-05-05 21:08:32,897 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) DROP TABLE "django_admin_log__old"; args=[]
+2017-05-05 21:08:32,898 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE INDEX "django_admin_log_417f1b1c" ON "django_admin_log" ("content_type_id"); (params [])
+2017-05-05 21:08:32,899 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE INDEX "django_admin_log_417f1b1c" ON "django_admin_log" ("content_type_id"); args=[]
+2017-05-05 21:08:32,899 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE INDEX "django_admin_log_e8701ad4" ON "django_admin_log" ("user_id"); (params [])
+2017-05-05 21:08:32,900 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE INDEX "django_admin_log_e8701ad4" ON "django_admin_log" ("user_id"); args=[]
+2017-05-05 21:08:33,029 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:33,030 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:33,032 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:33,035 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('admin', '0002_logentry_remove_auto_add', '2017-05-05 13:08:33.031544'); args=['admin', '0002_logentry_remove_auto_add', '2017-05-05 13:08:33.031544']
+2017-05-05 21:08:33,147 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys; args=None
+2017-05-05 21:08:33,148 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:33,148 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:33,179 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; (params [])
+2017-05-05 21:08:33,182 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; args=[]
+2017-05-05 21:08:33,183 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL, "name" varchar(100) NULL); (params None)
+2017-05-05 21:08:33,184 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL, "name" varchar(100) NULL); args=None
+2017-05-05 21:08:33,184 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- INSERT INTO "django_content_type" ("model", "id", "name", "app_label") SELECT "model", "id", "name", "app_label" FROM "django_content_type__old"; (params [])
+2017-05-05 21:08:33,186 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) INSERT INTO "django_content_type" ("model", "id", "name", "app_label") SELECT "model", "id", "name", "app_label" FROM "django_content_type__old"; args=[]
+2017-05-05 21:08:33,186 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- DROP TABLE "django_content_type__old"; (params [])
+2017-05-05 21:08:33,187 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) DROP TABLE "django_content_type__old"; args=[]
+2017-05-05 21:08:33,188 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); (params [])
+2017-05-05 21:08:33,188 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); args=[]
+2017-05-05 21:08:33,204 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; (params [])
+2017-05-05 21:08:33,205 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) ALTER TABLE "django_content_type" RENAME TO "django_content_type__old"; args=[]
+2017-05-05 21:08:33,206 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params None)
+2017-05-05 21:08:33,227 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); args=None
+2017-05-05 21:08:33,228 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- INSERT INTO "django_content_type" ("model", "id", "app_label") SELECT "model", "id", "app_label" FROM "django_content_type__old"; (params [])
+2017-05-05 21:08:33,230 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) INSERT INTO "django_content_type" ("model", "id", "app_label") SELECT "model", "id", "app_label" FROM "django_content_type__old"; args=[]
+2017-05-05 21:08:33,231 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- DROP TABLE "django_content_type__old"; (params [])
+2017-05-05 21:08:33,232 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) DROP TABLE "django_content_type__old"; args=[]
+2017-05-05 21:08:33,232 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); (params [])
+2017-05-05 21:08:33,233 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) CREATE UNIQUE INDEX "django_content_type_app_label_76bd3d3b_uniq" ON "django_content_type" ("app_label", "model"); args=[]
+2017-05-05 21:08:33,395 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:33,396 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:33,398 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:33,401 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('contenttypes', '0002_remove_content_type_name', '2017-05-05 13:08:33.398696'); args=['contenttypes', '0002_remove_content_type_name', '2017-05-05 13:08:33.398696']
+2017-05-05 21:08:33,530 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys; args=None
+2017-05-05 21:08:33,530 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:33,532 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:33,556 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- ALTER TABLE "auth_permission" RENAME TO "auth_permission__old"; (params [])
+2017-05-05 21:08:33,583 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.025) ALTER TABLE "auth_permission" RENAME TO "auth_permission__old"; args=[]
+2017-05-05 21:08:33,584 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "codename" varchar(100) NOT NULL, "name" varchar(255) NOT NULL); (params None)
+2017-05-05 21:08:33,586 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "content_type_id" integer NOT NULL REFERENCES "django_content_type" ("id"), "codename" varchar(100) NOT NULL, "name" varchar(255) NOT NULL); args=None
+2017-05-05 21:08:33,586 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- INSERT INTO "auth_permission" ("content_type_id", "id", "name", "codename") SELECT "content_type_id", "id", "name", "codename" FROM "auth_permission__old"; (params [])
+2017-05-05 21:08:33,588 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) INSERT INTO "auth_permission" ("content_type_id", "id", "name", "codename") SELECT "content_type_id", "id", "name", "codename" FROM "auth_permission__old"; args=[]
+2017-05-05 21:08:33,588 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- DROP TABLE "auth_permission__old"; (params [])
+2017-05-05 21:08:33,592 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.003) DROP TABLE "auth_permission__old"; args=[]
+2017-05-05 21:08:33,594 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE UNIQUE INDEX "auth_permission_content_type_id_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); (params [])
+2017-05-05 21:08:33,595 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) CREATE UNIQUE INDEX "auth_permission_content_type_id_01ab375a_uniq" ON "auth_permission" ("content_type_id", "codename"); args=[]
+2017-05-05 21:08:33,595 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE INDEX "auth_permission_417f1b1c" ON "auth_permission" ("content_type_id"); (params [])
+2017-05-05 21:08:33,596 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE INDEX "auth_permission_417f1b1c" ON "auth_permission" ("content_type_id"); args=[]
+2017-05-05 21:08:33,795 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:33,796 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:33,798 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:33,801 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0002_alter_permission_name_max_length', '2017-05-05 13:08:33.798728'); args=['auth', '0002_alter_permission_name_max_length', '2017-05-05 13:08:33.798728']
+2017-05-05 21:08:33,924 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys; args=None
+2017-05-05 21:08:33,925 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:33,926 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) BEGIN; args=None
+2017-05-05 21:08:33,953 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params [])
+2017-05-05 21:08:33,957 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.003) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=[]
+2017-05-05 21:08:33,958 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "email" varchar(254) NOT NULL); (params None)
+2017-05-05 21:08:33,990 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.031) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "email" varchar(254) NOT NULL); args=None
+2017-05-05 21:08:33,992 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- INSERT INTO "auth_user" ("email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password") SELECT "email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password" FROM "auth_user__old"; (params [])
+2017-05-05 21:08:33,993 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) INSERT INTO "auth_user" ("email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password") SELECT "email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password" FROM "auth_user__old"; args=[]
+2017-05-05 21:08:33,995 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- DROP TABLE "auth_user__old"; (params [])
+2017-05-05 21:08:33,998 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) DROP TABLE "auth_user__old"; args=[]
+2017-05-05 21:08:34,141 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:34,143 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:34,144 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:34,147 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0003_alter_user_email_max_length', '2017-05-05 13:08:34.144040'); args=['auth', '0003_alter_user_email_max_length', '2017-05-05 13:08:34.144040']
+2017-05-05 21:08:34,237 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys; args=None
+2017-05-05 21:08:34,238 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:34,238 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:34,260 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params [])
+2017-05-05 21:08:34,263 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.003) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=[]
+2017-05-05 21:08:34,265 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(30) NOT NULL UNIQUE); (params None)
+2017-05-05 21:08:34,266 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(30) NOT NULL UNIQUE); args=None
+2017-05-05 21:08:34,267 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- INSERT INTO "auth_user" ("email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password") SELECT "email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password" FROM "auth_user__old"; (params [])
+2017-05-05 21:08:34,269 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "auth_user" ("email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password") SELECT "email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password" FROM "auth_user__old"; args=[]
+2017-05-05 21:08:34,270 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- DROP TABLE "auth_user__old"; (params [])
+2017-05-05 21:08:34,272 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) DROP TABLE "auth_user__old"; args=[]
+2017-05-05 21:08:34,404 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:34,405 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:34,407 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:34,409 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0004_alter_user_username_opts', '2017-05-05 13:08:34.406731'); args=['auth', '0004_alter_user_username_opts', '2017-05-05 13:08:34.406731']
+2017-05-05 21:08:34,505 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys; args=None
+2017-05-05 21:08:34,506 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:34,506 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:34,533 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params [])
+2017-05-05 21:08:34,537 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=[]
+2017-05-05 21:08:34,538 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "last_login" datetime NULL); (params None)
+2017-05-05 21:08:34,544 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "last_login" datetime NULL); args=None
+2017-05-05 21:08:34,546 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- INSERT INTO "auth_user" ("email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password") SELECT "email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password" FROM "auth_user__old"; (params [])
+2017-05-05 21:08:34,551 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.003) INSERT INTO "auth_user" ("email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password") SELECT "email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password" FROM "auth_user__old"; args=[]
+2017-05-05 21:08:34,555 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- DROP TABLE "auth_user__old"; (params [])
+2017-05-05 21:08:34,557 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) DROP TABLE "auth_user__old"; args=[]
+2017-05-05 21:08:34,695 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:34,696 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:34,698 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:34,701 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0005_alter_user_last_login_null', '2017-05-05 13:08:34.698446'); args=['auth', '0005_alter_user_last_login_null', '2017-05-05 13:08:34.698446']
+2017-05-05 21:08:34,794 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys; args=None
+2017-05-05 21:08:34,794 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:34,795 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:34,796 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:34,797 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:34,798 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:34,801 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0006_require_contenttypes_0002', '2017-05-05 13:08:34.798016'); args=['auth', '0006_require_contenttypes_0002', '2017-05-05 13:08:34.798016']
+2017-05-05 21:08:34,893 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys; args=None
+2017-05-05 21:08:34,894 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:34,895 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) BEGIN; args=None
+2017-05-05 21:08:34,954 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params [])
+2017-05-05 21:08:34,958 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.003) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=[]
+2017-05-05 21:08:34,959 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(30) NOT NULL UNIQUE); (params None)
+2017-05-05 21:08:34,961 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(30) NOT NULL UNIQUE); args=None
+2017-05-05 21:08:34,962 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- INSERT INTO "auth_user" ("email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password") SELECT "email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password" FROM "auth_user__old"; (params [])
+2017-05-05 21:08:34,964 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "auth_user" ("email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password") SELECT "email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password" FROM "auth_user__old"; args=[]
+2017-05-05 21:08:34,966 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- DROP TABLE "auth_user__old"; (params [])
+2017-05-05 21:08:34,967 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) DROP TABLE "auth_user__old"; args=[]
+2017-05-05 21:08:35,107 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:35,110 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:35,112 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:35,115 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0007_alter_validators_add_error_messages', '2017-05-05 13:08:35.111751'); args=['auth', '0007_alter_validators_add_error_messages', '2017-05-05 13:08:35.111751']
+2017-05-05 21:08:35,204 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys; args=None
+2017-05-05 21:08:35,204 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:35,205 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:35,223 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- ALTER TABLE "auth_user" RENAME TO "auth_user__old"; (params [])
+2017-05-05 21:08:35,226 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) ALTER TABLE "auth_user" RENAME TO "auth_user__old"; args=[]
+2017-05-05 21:08:35,227 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(150) NOT NULL UNIQUE); (params None)
+2017-05-05 21:08:35,229 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NULL, "is_superuser" bool NOT NULL, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(254) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL, "username" varchar(150) NOT NULL UNIQUE); args=None
+2017-05-05 21:08:35,229 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- INSERT INTO "auth_user" ("email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password") SELECT "email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password" FROM "auth_user__old"; (params [])
+2017-05-05 21:08:35,232 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "auth_user" ("email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password") SELECT "email", "is_active", "first_name", "username", "is_superuser", "last_login", "is_staff", "id", "date_joined", "last_name", "password" FROM "auth_user__old"; args=[]
+2017-05-05 21:08:35,233 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- DROP TABLE "auth_user__old"; (params [])
+2017-05-05 21:08:35,234 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) DROP TABLE "auth_user__old"; args=[]
+2017-05-05 21:08:35,384 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:35,385 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:35,387 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:35,390 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0008_alter_user_username_max_length', '2017-05-05 13:08:35.386802'); args=['auth', '0008_alter_user_username_max_length', '2017-05-05 13:08:35.386802']
+2017-05-05 21:08:35,482 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys; args=None
+2017-05-05 21:08:35,483 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:35,484 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:35,488 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL); (params None)
+2017-05-05 21:08:35,493 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.003) CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL); args=None
+2017-05-05 21:08:35,493 [MainThread:10924] [django.db.backends.schema:103] [schema:execute] [DEBUG]- CREATE INDEX "django_session_de54fa62" ON "django_session" ("expire_date"); (params [])
+2017-05-05 21:08:35,494 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) CREATE INDEX "django_session_de54fa62" ON "django_session" ("expire_date"); args=[]
+2017-05-05 21:08:35,650 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) PRAGMA foreign_keys = 0; args=None
+2017-05-05 21:08:35,651 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:35,652 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:35,655 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('sessions', '0001_initial', '2017-05-05 13:08:35.652582'); args=['sessions', '0001_initial', '2017-05-05 13:08:35.652582']
+2017-05-05 21:08:35,817 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:35,819 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-05-05 21:08:35,821 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
+2017-05-05 21:08:35,823 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
+2017-05-05 21:08:35,823 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:35,826 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('admin', 'logentry'); args=['admin', 'logentry']
+2017-05-05 21:08:36,010 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+2017-05-05 21:08:36,011 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:36,014 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add log entry', 1, 'add_logentry' UNION ALL SELECT 'Can change log entry', 1, 'change_logentry' UNION ALL SELECT 'Can delete log entry', 1, 'delete_logentry'; args=('Can add log entry', 1, 'add_logentry', 'Can change log entry', 1, 'change_logentry', 'Can delete log entry', 1, 'delete_logentry')
+2017-05-05 21:08:36,219 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+2017-05-05 21:08:36,222 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
+2017-05-05 21:08:36,225 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
+2017-05-05 21:08:36,226 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:36,229 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('auth', 'permission'); args=['auth', 'permission']
+2017-05-05 21:08:36,408 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
+2017-05-05 21:08:36,413 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
+2017-05-05 21:08:36,414 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:36,416 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('auth', 'group'); args=['auth', 'group']
+2017-05-05 21:08:36,619 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
+2017-05-05 21:08:36,622 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
+2017-05-05 21:08:36,624 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:36,627 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('auth', 'user'); args=['auth', 'user']
+2017-05-05 21:08:36,810 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+2017-05-05 21:08:36,812 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:36,817 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add permission', 2, 'add_permission' UNION ALL SELECT 'Can change permission', 2, 'change_permission' UNION ALL SELECT 'Can delete permission', 2, 'delete_permission' UNION ALL SELECT 'Can add group', 3, 'add_group' UNION ALL SELECT 'Can change group', 3, 'change_group' UNION ALL SELECT 'Can delete group', 3, 'delete_group' UNION ALL SELECT 'Can add user', 4, 'add_user' UNION ALL SELECT 'Can change user', 4, 'change_user' UNION ALL SELECT 'Can delete user', 4, 'delete_user'; args=('Can add permission', 2, 'add_permission', 'Can change permission', 2, 'change_permission', 'Can delete permission', 2, 'delete_permission', 'Can add group', 3, 'add_group', 'Can change group', 3, 'change_group', 'Can delete group', 3, 'delete_group', 'Can add user', 4, 'add_user', 'Can change user', 4, 'change_user', 'Can delete user', 4, 'delete_user')
+2017-05-05 21:08:37,020 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+2017-05-05 21:08:37,026 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
+2017-05-05 21:08:37,029 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
+2017-05-05 21:08:37,030 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:37,034 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('contenttypes', 'contenttype'); args=['contenttypes', 'contenttype']
+2017-05-05 21:08:37,187 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+2017-05-05 21:08:37,189 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:37,193 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add content type', 5, 'add_contenttype' UNION ALL SELECT 'Can change content type', 5, 'change_contenttype' UNION ALL SELECT 'Can delete content type', 5, 'delete_contenttype'; args=('Can add content type', 5, 'add_contenttype', 'Can change content type', 5, 'change_contenttype', 'Can delete content type', 5, 'delete_contenttype')
+2017-05-05 21:08:37,398 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+2017-05-05 21:08:37,401 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
+2017-05-05 21:08:37,405 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
+2017-05-05 21:08:37,406 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:37,410 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) INSERT INTO "django_content_type" ("app_label", "model") VALUES ('sessions', 'session'); args=['sessions', 'session']
+2017-05-05 21:08:37,588 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+2017-05-05 21:08:37,590 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) BEGIN; args=None
+2017-05-05 21:08:37,594 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.003) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT 'Can add session', 6, 'add_session' UNION ALL SELECT 'Can change session', 6, 'change_session' UNION ALL SELECT 'Can delete session', 6, 'delete_session'; args=('Can add session', 6, 'add_session', 'Can change session', 6, 'change_session', 'Can delete session', 6, 'delete_session')
+2017-05-05 21:08:37,785 [MainThread:10924] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+2017-05-05 21:08:47,286 [Dummy-1:10712] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:08:47,296 [Dummy-1:10712] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-05-05 21:14:11,831 [Dummy-1:10848] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:14:11,838 [Dummy-1:10848] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-05-05 21:17:47,725 [Dummy-1:3764] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:17:47,732 [Dummy-1:3764] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-05-05 21:24:10,420 [Dummy-1:7276] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:24:10,429 [Dummy-1:7276] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-05-05 21:25:24,597 [Dummy-1:4504] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:25:24,605 [Dummy-1:4504] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-05-05 21:29:37,592 [Dummy-1:10604] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:29:37,598 [Dummy-1:10604] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-05-05 21:30:50,447 [Dummy-1:9380] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:30:50,454 [Dummy-1:9380] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-05-05 21:32:34,731 [Dummy-1:5560] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:32:34,746 [Dummy-1:5560] [django.db.backends:90] [utils:execute] [DEBUG]- (0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-05-05 21:32:43,937 [Thread-3:8288] [django.server:131] [basehttp:log_message] [WARNING]- "GET /static/blog/css/bootstrap.css.map HTTP/1.1" 404 1691
+2017-05-05 21:34:19,469 [Dummy-1:9880] [django.db.backends:90] [utils:execute] [DEBUG]- (0.003) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-05 21:34:19,484 [Dummy-1:9880] [django.db.backends:90] [utils:execute] [DEBUG]- (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-05-05 21:34:28,343 [Thread-2:9980] [django.server:131] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 30423
+2017-05-05 21:34:28,534 [Thread-3:9444] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/css/bootstrap.css HTTP/1.1" 304 0
+2017-05-05 21:34:28,559 [Thread-4:10332] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/css/style.css HTTP/1.1" 304 0
+2017-05-05 21:34:28,604 [Thread-5:9988] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/js/jquery.min.js HTTP/1.1" 304 0
+2017-05-05 21:34:28,680 [Thread-6:10960] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/js/move-top.js HTTP/1.1" 304 0
+2017-05-05 21:34:28,688 [Thread-7:6336] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/js/easing.js HTTP/1.1" 304 0
+2017-05-05 21:34:28,817 [Thread-8:8204] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/css/nav.css HTTP/1.1" 304 0
+2017-05-05 21:34:28,842 [Thread-9:10648] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/js/easyResponsiveTabs.js HTTP/1.1" 304 0
+2017-05-05 21:34:28,858 [Thread-10:3764] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/js/main.js HTTP/1.1" 304 0
+2017-05-05 21:34:28,872 [Thread-11:9484] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/css/owl.carousel.css HTTP/1.1" 304 0
+2017-05-05 21:34:28,875 [Thread-12:10892] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/js/owl.carousel.js HTTP/1.1" 304 0
+2017-05-05 21:34:29,201 [Thread-13:3108] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/back.png HTTP/1.1" 304 0
+2017-05-05 21:34:29,216 [Thread-14:7876] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/logo.png HTTP/1.1" 304 0
+2017-05-05 21:34:29,239 [Thread-15:10416] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/img-sprite.png HTTP/1.1" 304 0
+2017-05-05 21:34:29,594 [Thread-16:8404] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pc.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:29,595 [Thread-17:8716] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pc1.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:29,648 [Thread-18:10996] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pc2.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:29,694 [Thread-19:1364] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pc3.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:29,728 [Thread-20:9260] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pic.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:29,739 [Thread-21:9784] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pic1.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:29,817 [Thread-23:10184] [django.server:131] [basehttp:log_message] [WARNING]- "GET /static/blog/css/AjaxLoader.gif HTTP/1.1" 404 1682
+2017-05-05 21:34:29,821 [Thread-24:10612] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/fa2.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:29,826 [Thread-25:9896] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pic2.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:29,828 [Thread-22:9244] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/fa.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:29,883 [Thread-26:9004] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/f3.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:29,937 [Thread-27:7676] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/f4.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:29,942 [Thread-28:7044] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pp12.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:29,960 [Thread-29:10340] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pp.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:29,991 [Thread-30:9536] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pp0.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,009 [Thread-31:7620] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pp01.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,045 [Thread-32:9312] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pp21.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,091 [Thread-34:32] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/mi2.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,093 [Thread-33:9796] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/mi1.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,097 [Thread-35:10272] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/mi3.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,142 [Thread-36:10328] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/up.png HTTP/1.1" 304 0
+2017-05-05 21:34:30,145 [Thread-37:10920] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/line1.png HTTP/1.1" 304 0
+2017-05-05 21:34:30,208 [Thread-40:2024] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pi2.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,210 [Thread-41:1112] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pi1.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,212 [Thread-39:9628] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pi.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,217 [Thread-42:11000] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pp11.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,233 [Thread-43:10528] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pp2.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,223 [Thread-38:3636] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/dot.png HTTP/1.1" 304 0
+2017-05-05 21:34:30,300 [Thread-44:7760] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/fa3.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,308 [Thread-45:10028] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/ar.png HTTP/1.1" 304 0
+2017-05-05 21:34:30,340 [Thread-46:3804] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/f1.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,351 [Thread-47:9908] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pic3.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,360 [Thread-48:10796] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pp1.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,392 [Thread-49:9576] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/pp22.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,429 [Thread-50:4916] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/line.png HTTP/1.1" 304 0
+2017-05-05 21:34:30,440 [Thread-51:9288] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/f2.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,443 [Thread-52:476] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/mi.jpg HTTP/1.1" 304 0
+2017-05-05 21:34:30,446 [Thread-53:9876] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/ar2.png HTTP/1.1" 304 0
+2017-05-05 21:34:30,448 [Thread-54:9732] [django.server:131] [basehttp:log_message] [INFO]- "GET /static/blog/images/fa1.jpg HTTP/1.1" 304 0
