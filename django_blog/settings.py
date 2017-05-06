@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'django_blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'blogdb',
+        'USER': 'root',
+        "PASSWORD": 'mangui710',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
@@ -207,3 +211,6 @@ LOGGING = {
 # Website INFO  Global Var
 SITE_NAME = 'AA的博客'
 SITE_DESCP = 'Python学习与技术分析'
+
+# 自定义用户model
+AUTH_USER_MODEL = 'blog.user'
