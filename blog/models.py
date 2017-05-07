@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 # Create your models here.
@@ -50,11 +51,11 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=50, verbose_name='文章标题')
     excerpt = models.CharField(max_length=200, verbose_name='文章摘要')
-    content = models.TextField(verbose_name='文章内容')
+    content = RichTextUploadingField(verbose_name='文章内容')
     click_count = models.IntegerField(default=0, verbose_name='点击次数')
     is_recommended = models.BooleanField(default=False, verbose_name='是否推荐')
     date_created = models.DateTimeField(auto_now_add=True, verbose_name='发布时间')
-    date_modified = models.DateTimeField(verbose_name='修改时间')
+    date_modified = models.DateTimeField(auto_now=True, verbose_name='修改时间')
     author = models.ForeignKey(User, verbose_name='作者')
     category = models.ForeignKey(Category, verbose_name='分类')
     tag = models.ManyToManyField(Tag, verbose_name='标签')
