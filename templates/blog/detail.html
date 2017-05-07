@@ -1,0 +1,7 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+                    <div class="number" style="background: white;border: 1px solid silver;border-radius: 5px;">
+			            <h3><a href="#">{{ post.title }}</a></h3>
+			            <p>{{ post.content|safe }}</p>
+		            </div>
+{% endblock content %}

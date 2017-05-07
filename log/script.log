@@ -1,0 +1,431 @@
+2017-05-06 11:20:28,501 [Thread-3:10688] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-05-06 11:20:28,650 [Thread-4:10932] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-05-06 12:29:11,177 [Thread-60:10452] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-05-06 12:29:11,444 [Thread-61:11112] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-05-06 13:05:46,250 [Thread-2:372] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/post/2/change/
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
+    return modelform_factory(self.model, **defaults)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\forms\models.py", line 548, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\forms\models.py", line 247, in __new__
+    opts.field_classes)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\forms\models.py", line 143, in fields_for_model
+    f.name, model.__name__)
+django.core.exceptions.FieldError: 'date_modified' cannot be specified for Post model form as it is a non-editable field
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\contrib\admin\options.py", line 544, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\contrib\admin\sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\contrib\admin\options.py", line 1512, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "c:\python34\Lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\contrib\admin\options.py", line 1438, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\contrib\admin\options.py", line 646, in get_form
+    % (e, self.__class__.__name__)
+django.core.exceptions.FieldError: 'date_modified' cannot be specified for Post model form as it is a non-editable field. Check fields/fieldsets/exclude attributes of class PostAdmin.
+2017-05-06 13:30:16,450 [Thread-52:4604] [django.request:152] [base:get_response] [WARNING]- Not Found: /admin/blog/post/3/change/
+2017-05-06 18:51:12,625 [Thread-119:8904] [django.request:152] [base:get_response] [WARNING]- Not Found: /single.html
+2017-05-06 21:13:19,418 [Thread-130:204] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 17, in index
+    return render(request, 'blog/index.html', locals())
+  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 242, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 6: 'static', expected 'endblock'. Did you forget to register or load this tag?
+2017-05-07 13:14:02,839 [Thread-210:1792] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 15, in index
+    return render(request, 'blog/index.html', context={'post_list':post_list})
+  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 238, in do_block
+    raise TemplateSyntaxError("'%s' tag with name '%s' appears more than once" % (bits[0], block_name))
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'content' appears more than once
+2017-05-07 13:15:23,416 [Thread-211:8368] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 15, in index
+    return render(request, 'blog/index.html', context={'post_list':post_list})
+  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 242, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_empty = parser.parse(('endfor',))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 122: 'endblock', expected 'endfor'. Did you forget to register or load this tag?
+2017-05-07 13:30:02,869 [Thread-345:9336] [django.request:152] [base:get_response] [WARNING]- Not Found: /single.html
+2017-05-07 15:26:28,068 [Thread-43:10140] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 77, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 15, in index
+    return render(request, 'blog/index.html', context={'post_list':post_list})
+  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 208, in render
+    return self._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 87, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2017-05-07 15:29:08,233 [Thread-2:1892] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 77, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 16, in index
+    return render(request, 'blog/index.html', context={'post_list':post_list})
+  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 208, in render
+    return self._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 87, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2017-05-07 15:29:43,253 [Thread-2:8792] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 77, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 16, in index
+    return render(request, 'blog/index.html', context={'post_list':post_list})
+  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 208, in render
+    return self._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 87, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2017-05-07 15:32:17,334 [Thread-3:760] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 77, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 16, in index
+    return render(request, 'blog/index.html', context={'post_list':post_list})
+  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 208, in render
+    return self._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 87, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+2017-05-07 19:13:41,302 [Thread-112:204] [django.request:152] [base:get_response] [WARNING]- Not Found: /post/7/index.html
+2017-05-07 20:20:51,170 [Thread-39:7016] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-05-07 20:20:51,254 [Thread-40:10228] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-05-07 21:06:45,029 [Thread-175:5324] [django.request:152] [base:get_response] [WARNING]- Not Found: /single.html
+2017-05-07 21:06:57,426 [Thread-185:8740] [django.request:152] [base:get_response] [WARNING]- Not Found: /single.html
+2017-05-07 21:09:30,569 [Thread-213:8016] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/05/07/_20170415230343.jpg
+2017-05-07 21:09:42,278 [Thread-215:10120] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/05/07/_20170415230343.jpg
+2017-05-07 21:15:36,643 [Thread-73:7624] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/05/07/_20170415230343_thumb.jpg
+2017-05-07 22:26:32,037 [Thread-13:160] [django.request:152] [base:get_response] [WARNING]- Not Found: /single.html
+2017-05-07 22:26:35,868 [Thread-16:7876] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/05/07/_20170415230343.jpg
+2017-05-07 22:26:49,689 [Thread-53:3812] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/05/07/_20170415230343.jpg
+2017-05-07 22:26:54,734 [Thread-56:9404] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/05/07/_20170415230343.jpg
+2017-05-07 22:53:32,073 [Thread-80:6776] [django.request:152] [base:get_response] [WARNING]- Not Found: /post/7/
