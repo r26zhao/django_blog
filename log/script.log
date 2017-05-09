@@ -429,3 +429,13 @@ django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
 2017-05-07 22:26:49,689 [Thread-53:3812] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/05/07/_20170415230343.jpg
 2017-05-07 22:26:54,734 [Thread-56:9404] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/05/07/_20170415230343.jpg
 2017-05-07 22:53:32,073 [Thread-80:6776] [django.request:152] [base:get_response] [WARNING]- Not Found: /post/7/
+2017-05-08 11:28:43,043 [Thread-8:116] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-05-08 11:28:43,071 [Thread-9:6480] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-05-08 15:08:50,227 [Thread-113:6128] [django.request:152] [base:get_response] [WARNING]- Not Found: /magazine.html
+2017-05-08 16:38:44,289 [Thread-312:9820] [django.request:152] [base:get_response] [WARNING]- Not Found: /archives.html
+2017-05-08 17:12:52,960 [Thread-616:5188] [django.request:152] [base:get_response] [WARNING]- Not Found: /cinema.html
+2017-05-08 19:37:33,298 [Thread-1489:9788] [django.request:152] [base:get_response] [WARNING]- Not Found: /post
+2017-05-08 19:37:40,750 [Thread-1490:6912] [django.request:152] [base:get_response] [WARNING]- Not Found: /post/a
+2017-05-08 19:38:34,558 [Thread-1497:6700] [django.request:152] [base:get_response] [WARNING]- Not Found: /post/a
+2017-05-08 23:42:51,873 [Thread-3:4456] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-05-08 23:42:52,325 [Thread-4:6880] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico

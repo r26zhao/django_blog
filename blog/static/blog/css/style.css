@@ -293,7 +293,7 @@ a.more:hover,.comment li a:hover{
 	background: #5261ac;
 	color: #fff;
 	padding: 10px 20px;
-	font-size: 1.35em;
+	font-size: 1.3em;
 	font-weight: 700;
 	display: block;
 	line-height: 1em;
@@ -364,10 +364,10 @@ a.more:hover,.comment li a:hover{
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-	font-size:1.4em;
+	font-size:1.2em;
 	color:#fff;
 	background:#ec098d ;
-	padding:10px 16px;
+	padding:10px 21px;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-weight:600;
 	text-transform:uppercase;

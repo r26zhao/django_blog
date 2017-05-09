@@ -192,8 +192,8 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-
 # 自定义日志输出信息
+'''
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': True,
@@ -270,7 +270,7 @@ LOGGING = {
         },
     }
 }
-
+'''
 # Website INFO  Global Var
 SITE_NAME = 'AA的博客'
 SITE_DESCP = 'Python学习与技术分析'

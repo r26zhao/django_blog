@@ -207,7 +207,7 @@ input#mobile_menu { display: none; }
 	transition: all 0.1s ease-in-out;
 	-moz-transition: all 0.1s ease-in-out; /* Firefox 4 */
 	-webkit-transition: all 0.1s ease-in-out; /* Safari and Chrome */
-	-o-transition: all 0.1s ease-in-outs; /* Opera */
+	-o-transition: all 0.1s ease-in-out; /* Opera */
 }
 /* start megamenu colors */
 .nav li a.color1{
@@ -233,7 +233,7 @@ input#mobile_menu { display: none; }
 .nav li a.color6{
 	background:#898989;
 	color: #ffffff;
-	width: 493px;
+	width: 420px;
 }
 .nav > li:hover > a{
 	color: #000;
@@ -251,13 +251,15 @@ input#mobile_menu { display: none; }
 }
 }
 @media(max-width: 800px) {
-.navigation {
-    float:none;
-    margin:10px 0;	
- }
+	.navigation {
+		float: none;
+		margin: 10px 0;
+	}
+}
 @media only screen and (max-width: 959px) {
- .nav > li > a{
-	padding:10px 12px;
+	.nav > li > a {
+		padding: 10px 12px;
+	}
 }
 @media only screen and (max-width:800px) {
 	.nav {
