@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8q@q!u=s#vgqz7=s)2au6w4ae@4mt8i=#76x6ll-x_jbs-_zh%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.aaron-zhao.com']
 
 
 # Application definition
@@ -193,7 +193,7 @@ CKEDITOR_CONFIGS = {
 }
 
 # 自定义日志输出信息
-'''
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': True,
@@ -270,7 +270,7 @@ LOGGING = {
         },
     }
 }
-'''
+
 # Website INFO  Global Var
 SITE_NAME = 'AA的博客'
 SITE_DESCP = 'Python学习与技术分析'
