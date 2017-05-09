@@ -1,0 +1,12 @@
+appdirs==1.4.3
+Django==1.10.6
+django-ckeditor==5.2.1
+Markdown==2.6.8
+olefile==0.44
+packaging==16.8
+Pillow==4.1.0
+Pygments==2.2.0
+PyMySQL==0.7.11
+pyparsing==2.2.0
+pytz==2017.2
+six==1.10.0
