@@ -972,6 +972,9 @@ i.line-in {
 }
 }
 @media(max-width:768px){
+.logo {
+	width: 40%;
+}
 .header-in {
 	width: 77%;
 }
@@ -1100,6 +1103,9 @@ i.line-in {
 }
 }
 @media(max-width:640px){
+.logo {
+	width: 40%;
+}
 .header-in {
 	width: 100%;
 }
@@ -1152,6 +1158,7 @@ i.line-in {
 @media(max-width:480px){
 .logo{
 	width:40%;
+	margin-top: 1em;
 }
 .logo img{
 	width:100%;
