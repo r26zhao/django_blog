@@ -69,8 +69,9 @@
 
 			            <div class="movie">
 				            <ul class="comment">
-					            <li><span>Category : <a href="single.html">{{ post.category.name }}</a> </span></li>
-					            <li><a href="#"><i> </i>5 Comments  </a></li>
+					            <li id="category"><span><a href="single.html">Category : {{ post.category.name }}</a> </span></li>
+					            <li><a href="#"><i></i>5</a></li>
+                                <li id="views"><a href="#"><i></i>{{ post.click_count }}</a></li>
 				            </ul>
 				            <a href="single.html" class="more">Read More </a>
 			                <div class="clearfix"> </div>

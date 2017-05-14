@@ -234,12 +234,27 @@ h2.resp-accordion {
 	text-decoration:none;
 	padding: 0 1em 0 0;
 }
+#views a i {
+	background: url(../images/views.png) no-repeat;
+	height: 16px;
+}
+#category span {
+	color: #ec6149;
+	padding: .2em .6em;
+	border: 1px solid #ec6149;
+	border-radius: 4px;
+	margin-right: 1em;
+}
+#category span a {
+	color: #ec6149;
+	padding: 0;
+}
 .comment li a i{
 	background: url(../images/img-sprite.png)no-repeat -77px -101px;
 	width: 22px;
 	height: 22px;
 	display: inline-block;
-	margin: 0 10px 0 0;
+	margin: 0 3px 0 0;
 	vertical-align: middle;
 }
 a.more{

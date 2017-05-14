@@ -52,7 +52,7 @@ class Post(models.Model):
     title = models.CharField(max_length=50, verbose_name='文章标题')
     excerpt = models.CharField(max_length=200, verbose_name='文章摘要')
     content = RichTextUploadingField(verbose_name='文章内容')
-    click_count = models.IntegerField(default=0, verbose_name='点击次数')
+    click_count = models.PositiveIntegerField(default=0, verbose_name='点击次数')
     is_recommended = models.BooleanField(default=False, verbose_name='是否推荐')
     date_created = models.DateTimeField(auto_now_add=True, verbose_name='发布时间')
     date_modified = models.DateTimeField(auto_now=True, verbose_name='修改时间')
@@ -67,6 +67,10 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def click_increase(self):
+        self.click_count += 1
+        self.save(update_fields=['click_count'])
 
 
 # Comment 评论

@@ -20,6 +20,7 @@ def index(request):
 
 def detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
+    post.click_increase()
     return render(request, 'blog/detail.html', context={'post': post})
 
 
