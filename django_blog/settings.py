@@ -84,8 +84,8 @@ DATABASES = {
         'NAME': 'blogdb',
         'USER': 'root',
         "PASSWORD": 'mangui710',
-        'HOST': '',
-        'PORT': '',
+        'HOST': '127.0.0.1',
+        'PORT': '3700',
     }
 }
 
@@ -128,6 +128,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'blog/static'),
 ]
@@ -193,7 +194,7 @@ CKEDITOR_CONFIGS = {
 }
 
 # 自定义日志输出信息
-
+'''
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': True,
@@ -270,10 +271,10 @@ LOGGING = {
         },
     }
 }
-
+'''
 # Website INFO  Global Var
 SITE_NAME = 'AA的博客'
-SITE_DESCP = 'Python学习与技术分析'
+SITE_DESCP = 'Python学习与技术分享'
 
 # 自定义用户model
 AUTH_USER_MODEL = 'blog.user'
