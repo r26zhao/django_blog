@@ -8,22 +8,43 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 {% load staticfiles %}
 <head>
+{% block site_info %}
 <title>{{ SITE_NAME }}</title>
+<meta name="keywords" content="{{ SITE_KEYWORDS }}"/>
+<meta name="description" content="{{ SITE_DESCP }}" />
+{% endblock site_info %}
 <link href="{% static 'blog/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
 <link rel="shortcut icon" href="{% static 'blog/images/favicon.ico' %}" />
-<link rel="bookmark"href="{% static 'blog/images/favicon.ico' %}" />
+<link rel="bookmark" href="{% static 'blog/images/favicon.ico' %}" />
 <!-- Baidu Verification-->
 <meta name="baidu-site-verification" content="KYsqOq4afw" />
 <!-- Baidu -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 <!-- Custom Theme files -->
+
+<!-- 百度自动推送 -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- 百度自动推送 -->
+
 <!--theme-style-->
 <link href="{% static 'blog/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charseutft=-8" />
-<meta name="keywords" content="{{ SITE_DESCP }}" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--fonts
 <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>

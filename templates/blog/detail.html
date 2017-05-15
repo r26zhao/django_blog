@@ -1,7 +1,22 @@
 {% extends 'blog/base.html' %}
+{% block site_info %}
+<title>{{ title }}</title>
+<meta name="keywords" content="{{ keywords }}"/>
+<meta name="description" content="{{ description }}" />
+{% endblock site_info %}
 {% block content %}
                     <div class="number" style="background: white;border: 1px solid silver;border-radius: 5px;">
 			            <h3><a href="#">{{ post.title }}</a></h3>
 			            <p>{{ post.content|safe }}</p>
+                        <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+</div>
+                    <script>
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":[],"bdPic":"","bdStyle":"0","bdSize":"16"}, "share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
 		            </div>
 {% endblock content %}

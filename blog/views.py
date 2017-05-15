@@ -10,7 +10,7 @@ logger = logging.getLogger('blog.views')
 
 # 获得全局变量
 def global_setting(request):
-    return {'SITE_NAME': settings.SITE_NAME, 'SITE_DESCP': settings.SITE_DESCP, }
+    return {'SITE_NAME': settings.SITE_NAME, 'SITE_DESCP': settings.SITE_DESCP, 'SITE_KEYWORDS': settings.SITE_KEYWORDS }
 
 
 def index(request):
@@ -21,7 +21,16 @@ def index(request):
 def detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.click_increase()
-    return render(request, 'blog/detail.html', context={'post': post})
+    tag_list = post.tag.all()
+    title = post.title
+    description = post.excerpt
+    keywords = post.category.name
+    for tag in tag_list:
+        keywords = keywords + ', ' + tag.name
+    return render(request, 'blog/detail.html', context={'post': post,
+                                                        'title':title,
+                                                        'keywords':keywords,
+                                                        'description':description,})
 
 
 def category(request):
