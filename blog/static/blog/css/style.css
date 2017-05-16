@@ -22,6 +22,7 @@ body a{
 h1,h2,h3,h4,h5,h6,label,p{
 	margin:0;	
 }
+
 .back{
 	position:relative;
 }
@@ -214,7 +215,7 @@ h2.resp-accordion {
 .number p{
 	font-size: 1em;
 	color: #494949;
-	line-height: 1.8em;
+	line-height: 1.5em;
 	padding: 1.2em 0 1em;
 }
 .number p span{
@@ -237,6 +238,12 @@ h2.resp-accordion {
 #views a i {
 	background: url(../images/views.png) no-repeat;
 	height: 16px;
+    margin: 0 4px 0 0;
+}
+#author_time {
+    font-size: 1.12em;
+    color: #2f2f2f;
+    padding: 0 0 0.5em 0;
 }
 #category span {
 	color: #ec6149;
@@ -249,6 +256,10 @@ h2.resp-accordion {
 	color: #ec6149;
 	padding: 0;
 }
+#paginate {
+    text-align: center;
+    font-size: 1.2em;
+}
 .comment li a i{
 	background: url(../images/img-sprite.png)no-repeat -77px -101px;
 	width: 22px;
@@ -260,15 +271,16 @@ h2.resp-accordion {
 a.more{
 	float:right;
 	display:block;	
-	font-size:1.2em;
+	font-size:1.12em;
 	color:#494949;
 	text-decoration:none;
+    padding: 0.4em 0 0 0;
 }
 a.more:hover,.comment li a:hover{
 	color:#ec098d;
 }
 .movie {
-	padding: 0.5em 0;
+	padding: 0 0 0.5em 0;
 }
 .feb b{
 	background: #f78f1d;
@@ -480,8 +492,8 @@ a.more:hover,.comment li a:hover{
 	color:#494949;
 	line-height:1.8em;
 	text-decoration:none;
-	font-size: 0.9em;
-	padding: 0 0 10px;
+	font-size: 1.2em;
+	/*padding: 0 0 10px;*/
 	display: block;
 }
 .grid-top ul li a:hover{

@@ -64,7 +64,10 @@
                     {% block content %}
                     {% for post in post_list %}
 		            <div class="number">
-			            <h3><a href="{% url 'blog:detail' post.pk %}">{{ post.title }}</a></h3>
+                        <div id="author_time">
+                            <span>{{ post.author }}&nbsp;&nbsp;&nbsp;{{ post.date_created|timesince }}前</span>
+                        </div>
+			            <h3><a href="{{ post.get_abs_url }}">{{ post.title }}</a></h3>
 			            <p>{{ post.excerpt }}</p>
 
 			            <div class="movie">
@@ -81,9 +84,14 @@
                         <p>暂时没有发布文章</p>
                     {% endfor %}
 
-			        <div class="older-top">
-				        <a href="#" class="older"><i> </i>older posts</a>
-				        <a href="#" class="older top-old"><i > </i>newer posts</a>
+			        <div class="older-top" style="text-align: center;" >
+                        {% if post_list.has_previous %}
+                        <a href="?page={{ post_list.previous_page_number }}" class="older"><i> </i>上一页</a>
+                        {% endif %}
+                        <span id="paginate">第{{ post_list.number }}页/共{{ post_list.paginator.num_pages }}页</span>
+                        {% if post_list.has_next %}
+				        <a href="?page={{ post_list.next_page_number }}" class="older top-old">下一页<i > </i></a>
+                        {% endif %}
 				        <div class="clearfix"> </div>
 			        </div>
                     {% endblock content %}

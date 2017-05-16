@@ -6,6 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html>
+{% load blog_tags %}
 {% load staticfiles %}
 <head>
 {% block site_info %}
@@ -141,7 +142,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <li><a href="cinema.html" class="color2"> Django </a></li>
                                 <li><a href="magazine.html" class="color3"> Python </a></li>
 						        <li><a href="javascript:void(0);" class="color4"> 其 他 </a></li>
-                                <li><a href="archives.html" class="color5"> GitHub </a></li>
+                                <li><a href="https://github.com/r26zhao" target="_blank" class="color5"> GitHub </a></li>
 						        <li><a href="javascript:void(0);" class="color6"> About </a></li>
 						        <div class="clearfix"></div>
 					        </ul>
@@ -322,14 +323,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<!---->
                     <div class="grid-top">
 				        <h4>分&nbsp&nbsp&nbsp类</h4>
+                        {% get_category as category_list %}
 				        <ul>
-					        <li><a href="single.html">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </a></li>
-					        <li><a href="single.html">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</a></li>
-					        <li><a href="single.html">When an unknown printer took a galley of type and scrambled it to make a type specimen book. </a> </li>
-					        <li><a href="single.html">It has survived not only five centuries, but also the leap into electronic typesetting</a> </li>
-					        <li><a href="single.html">Remaining essentially unchanged. It was popularised in the 1960s with the release of </a> </li>
-					        <li><a href="single.html">Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing </a> </li>
-					        <li><a href="single.html">Software like Aldus PageMaker including versionsof Lorem Ipsum.</a> </li>
+                            {% for category in category_list %}
+                             <li><a href="{% url 'blog:category' category.name %}">{{ category.name }} ({{ category.post_num }})</a></li>
+                            {% empty %}
+                             <li>暂时没有分类！</li>
+                            {% endfor %}
 				        </ul>
                     </div>
 				        <!---->
@@ -385,7 +385,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	    <i class="line-in line-in1"> </i>
 	    <i class="line-in line-in2"> </i>
 	</div>
-	<p class="footer-class">Copyright © 2015 Megblog Template by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+    <p class="footer-class">Copyright © 2017 AA的博客<br>鲁ICP备17020303号-1</p>
     <script type="text/javascript">
         $(document).ready(function() {
             /*

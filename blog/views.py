@@ -2,11 +2,22 @@ from django.shortcuts import render, get_object_or_404
 import logging
 from django.conf import settings
 from .models import *
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
 
 logger = logging.getLogger('blog.views')
 
 
 # Create your views here.
+
+# Paginator function
+def get_page(request, post_list):
+    paginator = Paginator(post_list, 8)
+    page = request.GET.get('page', 1)
+    try:
+        post_list = paginator.page(page)
+    except(EmptyPage, InvalidPage, PageNotAnInteger):
+        post_list = paginator.page(1)
+    return post_list
 
 # 获得全局变量
 def global_setting(request):
@@ -15,6 +26,7 @@ def global_setting(request):
 
 def index(request):
     post_list = Post.objects.all()
+    post_list = get_page(request, post_list)
     return render(request, 'blog/index.html', context={'post_list': post_list})
 
 
@@ -33,5 +45,8 @@ def detail(request, pk):
                                                         'description':description,})
 
 
-def category(request):
-    pass
+def category(request, name):
+    category = get_object_or_404(Category, name=name)
+    post_list = Post.objects.filter(category=category)
+    post_list = get_page(request, post_list)
+    return render(request, 'blog/index.html', context={'post_list':post_list})

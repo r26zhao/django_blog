@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from ckeditor_uploader.fields import RichTextUploadingField
+from  django.urls import reverse
 
 
 # Create your models here.
@@ -71,6 +72,8 @@ class Post(models.Model):
     def click_increase(self):
         self.click_count += 1
         self.save(update_fields=['click_count'])
+    def get_abs_url(self):
+        return reverse('blog:detail', kwargs={'pk':self.pk})
 
 
 # Comment 评论
