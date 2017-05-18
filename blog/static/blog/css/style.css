@@ -81,7 +81,7 @@ ul.social-in li  i.facebook:hover{
 .header-bottom {
 	padding: 0.3em 0 1em;	
 }
-.search input[type="text"] {
+.search input[type="search"] {
 	outline: none;
 	padding:8px 15px;
 	background: none;
@@ -235,6 +235,17 @@ h2.resp-accordion {
 	text-decoration:none;
 	padding: 0 1em 0 0;
 }
+.post_info ul {
+	list-style: none;
+}
+.post_info ul li {
+
+}
+.post_info ul li span{
+	display: inline-block;
+	font-size: 1.1em;
+	color: #777;
+}
 #views a i {
 	background: url(../images/views.png) no-repeat;
 	height: 16px;
@@ -244,6 +255,7 @@ h2.resp-accordion {
     font-size: 1.12em;
     color: #2f2f2f;
     padding: 0 0 0.5em 0;
+	color: #5261ac;
 }
 #category span {
 	color: #ec6149;
@@ -499,34 +511,58 @@ a.more:hover,.comment li a:hover{
 .grid-top ul li a:hover{
 	color:#00aedb;
 }
-.grid-top-in p{
+.grid-top-in ul{
 	color:#5261ac;
 	font-size:1.3em;
 	line-height: 1.7em;
 	padding: 0.5em 0 0;
+	list-style: none;
 }
-.grid-top-in p a{
+.grid-top-in ul li {
+	display: inline-block;
+}
+.grid-top-in ul li a{
 	color:#5261ac;
 	text-decoration:none;
 }
-.grid-top-in p a.bun{
+.grid-top-in ul li:nth-child(10n - 7) a{
 	font-size:0.8em;
 }
-.grid-top-in p a.lop{
+.grid-top-in ul li:nth-child(10n - 6) a{
 	color:#f78f1d;
 	font-size:1.3em;
 	font-weight: 700;
 }
-.grid-top-in p a.dan{
-	font-size:1.6em;
+.grid-top-in ul li:nth-child(10n - 5) a{
+	font-size:1em;
 	font-weight: 500;	
 }
-.grid-top-in p a.eva{
-	font-size:1.4em;	
+.grid-top-in ul li:nth-child(10n - 4) a{
+	font-size:1.6em;
 }
-.grid-top-in p a.jol{
-	font-size:1.4em;
-font-weight: 700;	
+.grid-top-in ul li:nth-child(10n - 3) a{
+	font-size:0.9em;
+	font-weight: 700;
+}
+.grid-top-in ul li:nth-child(10n - 2) a {
+	color: #ff0000;
+	font-size: 1.3em;
+}
+.grid-top-in ul li:nth-child(10n - 1) a {
+	font-size: 0.8em;
+	color: #00aedb;
+	font-weight: 700;
+}
+.grid-top-in ul li:nth-child(10) a {
+	font-size: 1.6em;
+}
+.grid-top-in ul li:nth-child(10n - 9) a{
+	font-size:0.8em;
+}
+.grid-top-in ul li:nth-child(10n - 8) a{
+	color:#8cc63f;
+	font-size:1.3em;
+	font-weight: 700;
 }
 .grid-top {
 	padding:1em 0 0.5em;
@@ -534,7 +570,7 @@ font-weight: 700;
 .content {
 	padding: 2em 0 0;
 }
-.grid-top-in p a:hover{
+.grid-top-in ul li a:hover{
 	color:#ec098d;
 }
 /*----*/

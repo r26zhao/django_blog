@@ -42,7 +42,8 @@ def detail(request, pk):
     return render(request, 'blog/detail.html', context={'post': post,
                                                         'title':title,
                                                         'keywords':keywords,
-                                                        'description':description,})
+                                                        'description':description,
+                                                        'tag_list':tag_list})
 
 
 def category(request, name):
@@ -50,3 +51,13 @@ def category(request, name):
     post_list = Post.objects.filter(category=category)
     post_list = get_page(request, post_list)
     return render(request, 'blog/index.html', context={'post_list':post_list})
+
+def search(request):
+    q = request.GET.get('q')
+    error_msg = ''
+    if not q:
+        error_msg = '请输入关键词'
+        return render(request, 'blog/search.html', context={'error_msg':error_msg})
+    post_list = Post.objects.filter(title__contains=q)
+    post_list = get_page(request,post_list)
+    return render(request, 'blog/search.html', context={'error_msg':error_msg, 'post_list':post_list})

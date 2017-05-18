@@ -113,8 +113,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <a href="/"><img src="{% static 'blog/images/logo.png' %}" alt="" ></a>
                         </div>
                         <div class="search">
-                            <form>
-                                <input type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" >
+                            <form role="search" method="get" action="{% url 'blog:search' %}">
+                                {% csrf_token %}
+                                <input type="search" name="q" placeholder="搜索" required>
                                 <input type="submit" value="SEARCH">
                             </form>
                         </div>
@@ -139,8 +140,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <input id="mobile_menu" type="checkbox">
                             <ul class="nav">
                                 <li><a class="color1" href="/"> 首 页 </a></li>
-                                <li><a href="cinema.html" class="color2"> Django </a></li>
-                                <li><a href="magazine.html" class="color3"> Python </a></li>
+                                <li><a href="{% url 'blog:category' 'Django' %}" class="color2"> Django </a></li>
+                                <li><a href="" class="color3"> Python </a></li>
 						        <li><a href="javascript:void(0);" class="color4"> 其 他 </a></li>
                                 <li><a href="https://github.com/r26zhao" target="_blank" class="color5"> GitHub </a></li>
 						        <li><a href="javascript:void(0);" class="color6"> About </a></li>
@@ -335,45 +336,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				        <!---->
                     <div class="grid-top-in">
                         <h4>标 签 云</h4>
-                        <p><a href="#" class="jol">Angelina Jolie</a>
-					        <a href="#" class="lop"> Cssauthor</a>
-					        <a href="#" class="bun">Aristokrasi Beyonce Blake</a>
-					        <a href="#" class="live">Lively Brad Pitt Cameron</a>
-					        <a href="#" class="dan">Diaz Daniel</a>
-					        <a href="#" class="jol"> Radcliffe David</a>
-					        <a href="#" class="live">Beckham Demi Moore Emma </a>
-					        <a href="#" class="eva">Watson Eva</a>
-					        <a href="#" class="live">Longoria Gisele </a>
-					        <a href="#" class="bun">Bundchen Gwyneth Paltrow</a>
-					        <a href="#" class="live">Halle Berry </a>
-					        <a href="#" class="jol">Harry Potter</a>
-					        <a href="#" class="live">Heidi Klum </a>
-					        <a href="#" class="bun">James Franco</a>
-					        <a href="#" class="live">Jennifer </a>
-					        <a href="#" class="lop"> Lopez Jessica</a>
-					        <a href="#" class="live">Alba Johnny Depp </a>
-					<a href="#" class="bun">Jon Hamm Jude</a>
-					<a href="#" class="eva">Law Kate Moss Kate</a>
-					<a href="#" class="live">Winslet Katie </a>
-					<a href="#" class="bun">Holmes Katy Perry</a>
-					<a href="#" class="live">Kim Kardashian </a>
-					<a href="#" class="dan">Kristen</a>
-					<a href="#" class="eva">Stewart</a>
-					<a href="#" class="live">Lady Gaga Madonna </a>
-					<a href="#" class="bun">Megan Fox Michelle</a>
-					<a href="#" class="live">Williams Natalie </a>
-					<a href="#" class="bun">Portman</a>
-					<a href="#" class="live">Nicole </a>
-					<a href="#" class="eva">Kidman Penelope</a>
-					<!---
-					<a href="#" class="live">Cruz Reese Witherspoon Reklam</a>
-					<a href="#" class="lop"> Rihanna</a>
-					<a href="#" class="live">Robert Pattin </a>
-					<a href="#" class="bun">Son Sarah</a>
-					<a href="#" class="live">Jessica </a>
-					<a href="#" class="jol">Parker Scar </a>
-					-->
-                        </p>
+                        <ul>
+                            {% get_tag as tag_list %}
+                            {% for tag in tag_list %}
+                            <li><a href="/">{{ tag.name }}</a></li>
+                            {% endfor %}
+                        </ul>
                     </div>
 				<!---->
                 </div>
