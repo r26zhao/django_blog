@@ -895,7 +895,7 @@ ul.social {
 	padding: 0 0.5em 0 0;
 	vertical-align:top;
 }
-.name input[type="text"],.name textarea {
+.name input[type="text"],.name textarea, .name input[type='email'] {
 	background: none;
 	outline: none;
 	border: 1px solid #838383;

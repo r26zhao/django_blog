@@ -75,7 +75,7 @@ class Post(models.Model):
     def get_abs_url(self):
         return reverse('blog:detail', kwargs={'pk':self.pk})
 
-
+'''
 # Comment 评论
 class Comment(models.Model):
     content = models.TextField(verbose_name='评论内容')
@@ -93,3 +93,4 @@ class Comment(models.Model):
 
     def __str__(self):
         return str(self.id)
+'''

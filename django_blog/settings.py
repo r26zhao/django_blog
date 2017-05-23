@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8q@q!u=s#vgqz7=s)2au6w4ae@4mt8i=#76x6ll-x_jbs-_zh%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.aaron-zhao.com']
 
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'blog',
     'ckeditor',
     'ckeditor_uploader',
+    #'django.contrib.sites',
+    #'django_comments',
 ]
 
 MIDDLEWARE = [
@@ -85,7 +87,7 @@ DATABASES = {
         'USER': 'root',
         "PASSWORD": 'mangui710',
         'HOST': '127.0.0.1',
-        'PORT': '3700',
+        'PORT': '3306',
     }
 }
 
@@ -188,8 +190,8 @@ CKEDITOR_CONFIGS = {
                 'codesnippet',
                 'uploadimage',
                 'uploadfile',
+                'prism',
             ]),
-        'codeSnippet_theme':'monokai_sublime'
     }
 }
 
@@ -276,6 +278,6 @@ LOGGING = {
 SITE_NAME = 'Python学习、Django技术交流与分享-AA的博客'
 SITE_DESCP = 'AA的博客是分享学习Python技术与经验的个人博客，由Python、Django以及资源分享等分类组成，内容主要是Django博客开发。'
 SITE_KEYWORDS = 'AA的博客, Python技术分享, Django博客开发, Django技术交流'
-
+#SITE_ID = 1
 # 自定义用户model
 AUTH_USER_MODEL = 'blog.user'

@@ -64,8 +64,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</script>
 <link href="{% static 'blog/css/nav.css' %}" rel="stylesheet" type="text/css" media="all"/>
 <!--highlight-->
-<link href="{% static 'ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai.css' %}" rel="stylesheet">
-<script src="{% static 'ckeditor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js' %}"></script>
+<link rel="stylesheet" href="{% static 'blog/css/prism.css' %}">
 <script src="{% static 'blog/js/easyResponsiveTabs.js' %}" type="text/javascript"></script>
 		    <script type="text/javascript">
 			    $(document).ready(function () {
@@ -96,7 +95,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   	});
 </script>
 -->
-<script>hljs.initHighlightingOnLoad();</script>
+<!--
+    <script>hljs.initHighlightingOnLoad();</script>
+-->
 </head>
 <body>
 <!--header-->
@@ -123,9 +124,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				    </div>
 				    <div class="header-top-on">
 					    <ul class="social-in">
+                            <!--
 						    <li><a href="#"><i> </i></a></li>
 						    <li><a href="#"><i class="facebook"> </i></a></li>
 						    <li><a href="#"><i class="tin"> </i></a></li>
+						    -->
+                            <li><a href="#" data-toggle=""></a></li>
 					    </ul>
 				    </div>
 				<div class="clearfix"> </div>
@@ -158,6 +162,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	            <div class="col-md-8 content-top">
                     {% block content %}
                     {% endblock content %}
+                    {% block comment %}
+                    {% endblock comment %}
 	            </div>
 	<!---->
 		        <div class="col-md-4 content-bottom">
@@ -379,5 +385,8 @@ $(function () {
 });
 //selc.setAttribute("class", "img-responsive");
 </script>
+<script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
+{% block comment_script %}
+{% endblock comment_script %}
 </body>
 </html>

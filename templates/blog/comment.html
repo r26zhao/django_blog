@@ -1,0 +1,120 @@
+{% block comment %}
+{% load comments %}
+<div style="background: #ebebeb; padding: 1em;">
+    <div class="simply">
+				<div class="story">
+					<h4 class="stories stories-in"><span>Write comment</span></h4>
+				</div>
+                {% get_comment_form for post as comment_form %}
+				<form class="comment_form" action="{% comment_form_target %}" method="post" id="commen_form">
+                    {% csrf_token %}
+                    {{ comment_form.object_pk }}
+                    {{ comment_form.content_type }}
+                    {{ comment_form.timestamp }}
+                    {{ comment_form.submit_date }}
+                    {{ comment_form.security_hash }}
+					<div class="name">
+						<span class="sit-in">Name:</span>
+						<input type="text" id="id_name" name="name" placeholder="用户名" value="{{ user.username }}" >
+					</div>
+					<div class="name name-at">
+						<span class="sit-in">Email:</span>
+						<input type="email" id="id_email" name="email" placeholder="邮箱" value="{{ user.email }}" >
+					</div>
+					<div class="name name-on">
+						<span class="sit-in">Website:</span>
+						<input type="text" value="" >
+					</div>
+					<div class="name name-in">
+						<span class="sit-in">Comment:</span>
+						<textarea id="id_comment" rows="6" name="comment" placeholder="请输入评论内容"> </textarea>
+					</div>
+                    <p style="display:none;">
+                        <label for="id_honeypot">如果你在该字段中输入任何内容，你的评论就会被视为垃圾评论。</label> <input type="text" name="honeypot" id="id_honeypot">
+                    </p>
+					<input type="submit" id="submit_button" name="submit" value="Post Comment">
+                    <input type="hidden" name="next" value="{% url 'blog:detail' post.id %}"/>
+				</form>
+				<div class="clearfix"> </div>
+			</div>
+			<!---->
+    <div class="comment-top">
+				<div class="story">
+                    {% get_comment_count for post as comment_count %}
+					<h4 class="stories "><span>comments ({{ comment_count }})</span></h4>
+				</div>
+				<!---->
+                {% get_comment_list for post as comment_list %}
+                {% for comment in comment_list %}
+                <div class="comments-top-top" name="c{{ comment.id }}">
+					<div class="top-comment-left">
+						<img class="img-responsive" src="{% static 'blog/images/co.png' %}" alt="">
+					</div>
+					<div class="top-comment-right">
+						<div class="right-comment">
+							<h5>{{ comment.user_name }}</h5>
+							<span>{{ comment.submit_date|timesince }}</span>
+							<div class="clearfix"> </div>
+						</div>
+						<p>{{ comment.comment }}</p>
+						<a href="#" class="reply">Reply</a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+                {% empty %}
+                    <p>暂无评论</p>
+                {% endfor %}
+			<!---->
+			</div>
+</div>
+{% endblock comment %}
+
+{% block comment_script %}
+
+<script type="text/javascript">
+$(document).ready(function () {
+    $("#commen_form").submit(function () {
+        if ($("#id_honeypot").val().length!=0){
+            alert("Stop!辣鸡评论!");
+            return false;
+         }
+        if ($("#id_name").val().length==0){
+            alert("Error:请输入您的用户名");
+            $("#id_name").focus();
+            return false;
+         }
+          if ($("#id_email").val().length==0){
+            alert("Error:请输入您的邮箱地址");
+            $("#id_email").focus();
+            return false;
+         }
+        var email = $("#id_email").val();
+        if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)){
+            alert("Error:邮箱不正确！请重新输入");
+            $("#id_email").focus();
+            return false;
+        }
+        if ($("#id_comment").val().length==0){
+            alert("Error:请输入您的评论");
+            $("#id_comment").focus();
+            return false;
+         }
+        $("#id_timestamp").value = event.timeStamp;
+        $.ajax({
+            type: 'POST',
+            data: $("#commen_form").serialize(),
+            url: "{% comment_form_target %}",
+            cache: false,
+            dataType: 'html',
+            success: function (html, textStatus) {
+                window.location.reload();
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("评论出错" + errorThrown);
+            }
+        });
+        return false;
+    });
+});
+</script>
+{% endblock comment_script %}
