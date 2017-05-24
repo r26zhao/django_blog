@@ -230,7 +230,7 @@ h2.resp-accordion {
 }
 .comment li span,.comment li a {
 	display:inline-block;	
-	font-size:1.12em;
+	/*font-size:1.12em;*/
 	color:#494949;
 	text-decoration:none;
 	padding: 0 1em 0 0;

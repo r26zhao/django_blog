@@ -11,7 +11,9 @@
                             <ul>
                                 <li>
                                     <span><h3><a href="#">{{ post.title }}</a></h3></span>
-                                    <span style="float: right; line-height: 2em">阅读：({{ post.click_count }})&nbsp;&nbsp;评论：(0)</span>
+                                    <span style="float: right; line-height: 2em">阅读：({{ post.click_count }})&nbsp;&nbsp;评论：(<a href="#SOHUCS" id="changyan_count_unit"></a>)</span>
+                                    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js">
+</script>
                                 </li>
                                 <li style="padding-top: 0.5em">
                                     <span>作者：{{ post.author }}&nbsp;&nbsp;</span>
@@ -52,6 +54,6 @@ var conf = 'prod_1b41adedd70b452211bfe91ccb08a95f';
 var width = window.innerWidth || document.documentElement.clientWidth;
 if (width < 960) {
 window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
- 
+
 {% endblock comment %}
 
