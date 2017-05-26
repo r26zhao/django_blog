@@ -199,26 +199,26 @@ h2.resp-accordion {
 	background:#fafafa;
 }
 /*----*/
-.number h3{
+.post h3{
 	font-size:1.5em;
 
 	font-weight:700;
 	line-height:1.3em;
 }
-.number h3 a{
+.post h3 a{
 	text-decoration:none;
 	color:#000;
 }
-.number h3 a:hover{
+.post h3 a:hover{
 	color:#5261ac;
 }
-.number p{
+.post p{
 	font-size: 1em;
 	color: #494949;
 	line-height: 1.5em;
 	padding: 1.2em 0 1em;
 }
-.number p span{
+.post p span{
 	padding:0.3em 0 0;
 	display:block;
 }
@@ -309,7 +309,7 @@ a.more:hover,.comment li a:hover{
 	margin: 0 0 0 13%;
 	display: block;
 }
-.number {
+.post {
 	position: relative;
 	margin:0em 0 2em;
 	padding: 1em 1em 0 1em;
@@ -1057,10 +1057,10 @@ i.line-in {
 .feb {
 	left: -7%;
 }
-.number {
+.post {
 	margin: 0em 0 0.5em;
 }
-.number h3 {
+.post h3 {
 	font-size: 2em;
 }
 .content-bottom {
@@ -1242,7 +1242,7 @@ i.line-in {
 .feb b {
   font-size: 1.2em;
 }
-.number h3 {
+.post h3 {
 	font-size: 1.5em;
 }
 .comment li span, .comment li a ,a.more{
@@ -1372,10 +1372,10 @@ h3.cinema {
 .caption p {
   font-size: 0.9em;
 }
-.number h3 {
+.post h3 {
   font-size: 1.2em;
 }
-.number p {
+.post p {
   font-size: 0.9em;
   height: 60px;
   overflow: hidden;
@@ -1545,7 +1545,7 @@ a.reply {
 .sin-bottom {
   padding: 0 0 1em;
 }
-.number h3 {
+.post h3 {
   font-size: 1.1em;
   margin: 0 0 0 8%;
 }

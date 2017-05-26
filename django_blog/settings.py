@@ -144,12 +144,10 @@ CKEDITOR_UPLOAD_PATH = 'upload/'
 CKEDITOR_IMAGE_BACKEND = 'pillow'
 CKEDITOR_CONFIGS = {
     'default': {
-        #'update': ['Image', 'Update', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak'],
         'skin': 'moono',
         'language':'zh-cn',
         'width': '750px',
         'height': '500px',
-        # 'skin': 'office2013',
         'toolbar_Basic': [
             ['Source', '-', 'Bold', 'Italic']
         ],
@@ -157,8 +155,8 @@ CKEDITOR_CONFIGS = {
             {'name': 'basicstyles',
                 'items': ['Bold', 'Italic', 'Underline', 'Strike']},
             {'name': 'paragraph',
-                'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-',
-                       'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']},
+             'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote',
+                       '-','JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']},
             {'name': 'links', 'items': ['Link', 'Unlink', 'Anchor', '-', 'RemoveFormat']},
             {'name': 'insert',
              'items': ['Image', '-', 'Flash', 'Iframe', '-', 'Table', 'CodeSnippet', 'Templates']},
@@ -168,19 +166,16 @@ CKEDITOR_CONFIGS = {
             {'name': 'special', 'items': ['Subscript', 'Superscript', '-', 'HorizontalRule',
                                           'SpecialChar', 'Smiley']},
             {'name': 'tools', 'items': ['Undo', 'Redo', '-', 'Source', 'Preview', 'Save', '-', 'Maximize']}
-           # {'name': 'codesnippet', 'items': ['Codesnippet']}
         ],
-        'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
+        'toolbar': 'YourCustomToolbarConfig',
         'tabSpaces': 4,
         'extraPlugins': ','.join(
             [
-                # your extra plugins here
                 'div',
                 'autolink',
                 'autoembed',
                 'embedsemantic',
                 'autogrow',
-                # 'devtools',
                 'widget',
                 'lineutils',
                 'clipboard',
