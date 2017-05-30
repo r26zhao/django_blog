@@ -145,8 +145,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <ul class="nav">
                                 <li><a class="color1" href="/"> 首 页 </a></li>
                                 <li><a href="{% url 'blog:category' 'Django' %}" class="color2"> Django </a></li>
-                                <li><a href="" class="color3"> Python </a></li>
-						        <li><a href="javascript:void(0);" class="color4"> 其 他 </a></li>
+                                <li><a href="{% url 'blog:category' 'Python笔记' %}" class="color3"> Python </a></li>
+						        <li><a href="{% url 'blog:category' 'Other' %}" class="color4"> 其 他 </a></li>
                                 <li><a href="https://github.com/r26zhao" target="_blank" class="color5"> GitHub </a></li>
 						        <li><a href="javascript:void(0);" class="color6"> About </a></li>
 						        <div class="clearfix"></div>
