@@ -40,8 +40,12 @@ INSTALLED_APPS = [
     'blog',
     'ckeditor',
     'ckeditor_uploader',
-    #'django.contrib.sites',
-    #'django_comments',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.weibo',
 ]
 
 MIDDLEWARE = [
@@ -273,6 +277,33 @@ LOGGING = {
 SITE_NAME = 'Python学习、Django技术交流与分享-AA的博客'
 SITE_DESCP = 'AA的博客是分享学习Python技术与经验的个人博客，由Python、Django以及资源分享等分类组成，内容主要是Django博客开发。'
 SITE_KEYWORDS = 'AA的博客, Python技术分享, Django博客开发, Django技术交流'
-#SITE_ID = 1
+
 # 自定义用户model
 AUTH_USER_MODEL = 'blog.user'
+
+# django-allauth相关设置
+AUTHENTICATION_BACKENDS = (
+# django admin所使用的用户登录与django-allauth无关
+    'django.contrib.auth.backends.ModelBackend',
+
+# `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+# 前面我们app里添加了django.contrib.sites,需要设置SITE_ID
+SITE_ID = 1
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+LOGIN_REDIRECT_URL = '/'
+
+# Email setting
+# SMTP服务器，我使用的是sendclound的服务
+EMAIL_HOST = 'smtp.sendcloud.net'
+EMAIL_HOST_USER = 'Aaroon_test_N05MI9'
+EMAIL_HOST_PASSWORD = 'u7qFYbkRKK08PMtR'
+EMAIL_PORT = 25
+# 是否使用了SSL 或者TLS
+#EMAIL_USE_SSL = True
+#EMAIL_USE_TLS = True
+# 默认发件人，不设置的话django默认使用的webmaster@localhost
+DEFAULT_FROM_EMAIL = 'Aaron-Zhao <noreply@aaron-zhao.com>'

@@ -47,7 +47,12 @@ h1,h2,h3,h4,h5,h6,label,p{
 	margin-top: 0.7em;
 }
 ul.social-in li{
-	display: inline-block;	
+	display: inline-block;
+	padding: 0.5em 1em;
+}
+ul.social-in li a{
+	font-size: 1.35em;
+	color: rgba(0,0,0,.5);
 }
 ul.social-in li  i{
 	background: url(../images/img-sprite.png)no-repeat -19px -16px;
@@ -220,7 +225,7 @@ h2.resp-accordion {
 }
 .post p span{
 	padding:0.3em 0 0;
-	display:block;
+	/*display:block;*/
 }
 .comment{
 	float:left;
