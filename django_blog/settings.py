@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8q@q!u=s#vgqz7=s)2au6w4ae@4mt8i=#76x6ll-x_jbs-_zh%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.aaron-zhao.com']
 
@@ -299,16 +299,16 @@ SOCIALACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Email setting
 # SMTP服务器，我使用的是sendclound的服务
-EMAIL_HOST = 'smtp.qq.com'
-EMAIL_HOST_USER = 'rudy710@qq.com'
-EMAIL_HOST_PASSWORD = 'bguqzpoxqlhccaig'
+EMAIL_HOST = 'smtp.mxhichina.com'
+EMAIL_HOST_USER = 'support@aaron-zhao.com'
+EMAIL_HOST_PASSWORD = 'NoraaCy710'
 EMAIL_PORT = 465
 #EMAIL_HOST = 'smtpcloud.sohu.com'
-#EMAIL_HOST_USER = 'Aaroon_test_N05MI9'
+#EMAIL_HOST_USER = 'Aaroon_test_N05MI9'  'bguqzpoxqlhccaig' qq
 #EMAIL_HOST_PASSWORD = 'u7qFYbkRKK08PMtR'
 #EMAIL_PORT = 25
 # 是否使用了SSL 或者TLS
 EMAIL_USE_SSL = True
 #EMAIL_USE_TLS = True
 # 默认发件人，不设置的话django默认使用的webmaster@localhost
-DEFAULT_FROM_EMAIL = 'Aaron-Zhao <rudy710@qq.com>'
+DEFAULT_FROM_EMAIL = 'Support <support@aaron-zhao.com>'
