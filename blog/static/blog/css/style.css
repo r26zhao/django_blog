@@ -227,13 +227,13 @@ h2.resp-accordion {
 	padding:0.3em 0 0;
 	/*display:block;*/
 }
-.comment{
+.post-footer{
 	float:left;
 }
-.comment li{
+.post-footer li{
 	display:inline-block;	
 }
-.comment li span,.comment li a {
+.post-footer li span,.post-footer li a {
 	display:inline-block;	
 	/*font-size:1.12em;*/
 	color:#494949;
@@ -277,7 +277,7 @@ h2.resp-accordion {
     text-align: center;
     font-size: 1.2em;
 }
-.comment li a i{
+.post-footer li a i{
 	background: url(../images/img-sprite.png)no-repeat -77px -101px;
 	width: 22px;
 	height: 22px;
@@ -293,7 +293,7 @@ a.more{
 	text-decoration:none;
     padding: 0.4em 0 0 0;
 }
-a.more:hover,.comment li a:hover{
+a.more:hover,.post-footer li a:hover{
 	color:#ec098d;
 }
 .movie {
@@ -1250,7 +1250,7 @@ i.line-in {
 .post h3 {
 	font-size: 1.5em;
 }
-.comment li span, .comment li a ,a.more{
+.post-footer li span, .post-footer li a ,a.more{
 	font-size: 1em;
 }
 .stories span {
@@ -1394,7 +1394,7 @@ h3.cinema {
 .row_8 {
   border: 5px solid #fafafa;
 }
-.comment li span, .comment li a, a.more {
+.post-footer li span, .post-footer li a, a.more {
   font-size: 0.87em;
 }
 a.more {
