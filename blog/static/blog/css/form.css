@@ -8,6 +8,8 @@
     background: #00aedb;
     color: white;
     padding: 0.7em 0.7em;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
 }
 .local-header{
     margin-bottom: 15px;
@@ -18,10 +20,6 @@
 .login{
     padding: 0 15px 20px;
 }
-.primaryAction{
-    background: #00aedb;
-    color: white;
-}
 .social-login{
     background: #ebebeb;
     margin: 0 0 0 15px;
@@ -30,6 +28,8 @@
     background: #00aedb;
     color: white;
     padding: 0.7em 0.7em;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
 }
 .social-header{
     margin-bottom: 15px;
@@ -63,3 +63,42 @@
 .weibo i{
     background: url(../images/weibo.png) no-repeat;
 }
+.secondaryAction{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.new_user{
+    float: right;
+    color: #00aedb;
+}
+.primaryAction{
+    background: #00aedb;
+    border-color: #00aedb;
+    border-radius: 4px;
+    color: white;
+    display: block;
+    margin-bottom: 15px;
+    padding: 3px 15px;
+}
+.auth-message{
+    background-color: #00aedb;
+    margin-right: 15px;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0.75em 1.25em;
+    opacity: .5;
+}
+.auth-message strong{
+    font-size: 1.25em;
+    color: black;
+}
+.close{
+    opacity: 1;
+}
+/*
+.close i{
+    background: url(../images/close.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}*/

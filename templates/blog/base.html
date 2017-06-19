@@ -16,7 +16,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 {% endblock site_info %}
 {% block extra_head %}
 {% endblock extra_head %}
-<link href="{% static 'blog/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <link rel="shortcut icon" href="{% static 'blog/images/favicon.ico' %}" />
 <link rel="bookmark" href="{% static 'blog/images/favicon.ico' %}" />
@@ -102,6 +102,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--
     <script>hljs.initHighlightingOnLoad();</script>
 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <!--header-->
@@ -156,7 +157,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
             </div>
         {% block message %}
+        {% if messages %}
+         <div id="myAlert" class="alert alert-success auth-message">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+	        {% for message in messages %}
+	        <strong>{{message}}</strong>
+	        {% endfor %}
+         </div>
+         <script>
+            $(function(){
+                $(".close").click(function(){
+                $("#myAlert").alert();
+                });
+            });
+         </script>
+        {% endif %}
         {% endblock message %}
+
 		    {% block gallery %}
 
             {% endblock gallery %}

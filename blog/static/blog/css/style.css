@@ -22,7 +22,9 @@ body a{
 h1,h2,h3,h4,h5,h6,label,p{
 	margin:0;	
 }
-
+.content-top{
+	padding:0;
+}
 .back{
 	position:relative;
 }
