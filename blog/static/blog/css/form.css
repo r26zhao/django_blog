@@ -1,0 +1,65 @@
+.form-group label{
+    display: none;
+}
+.checkbox label{
+    display: block;
+}
+.local-header h4{
+    background: #00aedb;
+    color: white;
+    padding: 0.7em 0.7em;
+}
+.local-header{
+    margin-bottom: 15px;
+}
+.local-login{
+    background: #ebebeb;
+}
+.login{
+    padding: 0 15px 20px;
+}
+.primaryAction{
+    background: #00aedb;
+    color: white;
+}
+.social-login{
+    background: #ebebeb;
+    margin: 0 0 0 15px;
+}
+.social-header h4{
+    background: #00aedb;
+    color: white;
+    padding: 0.7em 0.7em;
+}
+.social-header{
+    margin-bottom: 15px;
+}
+.social-provider{
+    padding: 0 15px 15px;
+}
+.social-provider a{
+    width: 100%;
+    display: block;
+    text-align: center;
+    border: solid 1px;
+    border-color: #66afe9;
+    border-radius: 4px;
+    padding: 6px 12px;
+}
+.social-provider a:hover{
+    color: white;
+    background-color: #00aedb;
+}
+.social-provider a i{
+    width: 16px;
+    height: 19px;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.github i{
+    background: url(../images/github.png) no-repeat;
+}
+.weibo i{
+    background: url(../images/weibo.png) no-repeat;
+}

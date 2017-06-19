@@ -14,7 +14,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="keywords" content="{{ SITE_KEYWORDS }}"/>
 <meta name="description" content="{{ SITE_DESCP }}" />
 {% endblock site_info %}
+{% block extra_head %}
+{% endblock extra_head %}
 <link href="{% static 'blog/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+
 <link rel="shortcut icon" href="{% static 'blog/images/favicon.ico' %}" />
 <link rel="bookmark" href="{% static 'blog/images/favicon.ico' %}" />
 <!-- Baidu Verification-->
@@ -43,6 +46,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <!--theme-style-->
 <link href="{% static 'blog/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'blog/css/form.css' %}" rel="stylesheet" type="text/css" />
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charseutft=-8" />
@@ -124,8 +128,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				    </div>
 				    <div class="header-top-on">
 					    <ul class="social-in">
-                            <li><a href="#">登陆</a></li>
-                            <li><a href="#">注册</a></li>
+                            <li><a href="{% url 'account_login' %}">登陆</a></li>
+                            <li><a href="{% url 'account_signup' %}">注册</a></li>
 					    </ul>
 				    </div>
 				<div class="clearfix"> </div>
@@ -151,6 +155,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                 </div>
             </div>
+        {% block message %}
+        {% endblock message %}
 		    {% block gallery %}
 
             {% endblock gallery %}
@@ -163,6 +169,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	            </div>
 	<!---->
 		        <div class="col-md-4 content-bottom">
+                {% block sidebar %}
 			        <div class="story"><h4  class="stories"><span>推荐阅读</span></h4></div>
 			        <!---->
                     <div class="cd-tabs">
@@ -345,6 +352,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             {% endfor %}
                         </ul>
                     </div>
+                {% endblock sidebar %}
 				<!---->
                 </div>
                 <div class="clearfix"></div>

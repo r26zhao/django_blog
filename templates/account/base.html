@@ -1,0 +1,37 @@
+{% extends 'blog/base.html' %}
+{% load socialaccount %}
+{% block message %}
+{% if messages %}
+    <div>
+      <strong>Messages:</strong>
+      <ul>
+	{% for message in messages %}
+	    <li>{{message}}</li>
+	{% endfor %}
+      </ul>
+    </div>
+{% endif %}
+{% endblock message %}
+
+{% block content %}
+    <div class="local-login">
+    {% block local-account %}
+    {% endblock local-account %}
+    </div>
+{% endblock content %}
+
+{% block sidebar %}
+    <div class="social-login">
+        <div class="social-header"><h4>第三方账号登录</h4></div>
+        {% get_providers as socialaccount_providers %}
+        {% for provider in socialaccount_providers %}
+        <div class="social-provider">
+            <a title="{{provider.name}}" class="{{provider.id}}"
+               href="{% provider_login_url provider.id process='login' scope=scope auth_params=auth_params %}">
+                <i></i>
+                {{provider.name}}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock sidebar %}
