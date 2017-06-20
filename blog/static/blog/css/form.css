@@ -16,6 +16,7 @@
 }
 .local-login{
     background: #ebebeb;
+    min-height: 160.433px;
 }
 .login{
     padding: 0 15px 20px;
@@ -109,4 +110,7 @@
     float: right;
     padding: 4px 15px;
     background-color: #0275d8;
+}
+.confirm{
+    padding: 0 15px 20px;
 }
