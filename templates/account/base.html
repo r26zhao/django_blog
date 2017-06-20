@@ -16,7 +16,7 @@
         {% for provider in socialaccount_providers %}
         <div class="social-provider">
             <a title="{{provider.name}}" class="{{provider.id}}"
-               href="{% provider_login_url provider.id process='login' scope=scope auth_params=auth_params %}">
+               href="{% provider_login_url provider.id scope=scope auth_params=auth_params %}">
                 <i></i>
                 {{provider.name}}
             </a>

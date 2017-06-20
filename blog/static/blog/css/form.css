@@ -102,3 +102,11 @@
     height: 20px;
     display: inline-block;
 }*/
+.sign-button{
+    display: inline-block;
+}
+.already-button{
+    float: right;
+    padding: 4px 15px;
+    background-color: #0275d8;
+}
