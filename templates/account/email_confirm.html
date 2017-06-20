@@ -1,0 +1,22 @@
+{% extends 'account/base.html' %}
+{% load i18n %}
+{% load account %}
+
+{% block local-account %}
+    <div class="local-header"><h4>确认E-mail邮箱</h4></div>
+{% if confirmation %}
+{% user_display confirmation.email_address.user as user_display %}
+    <div class="confirm">
+    <p>{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for user {{ user_display }}.{% endblocktrans %}</p>
+    </div>
+    <form class="login" method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+        {% csrf_token %}
+        <button class="primaryAction" type="submit">{% trans 'Confirm' %}</button>
+    </form>
+{% else %}
+{% url 'account_email' as email_url %}
+    <div class="confirm">
+        <p>{% blocktrans %}This e-mail confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new e-mail confirmation request</a>.{% endblocktrans %}</p>
+    </div>
+{% endif %}
+{% endblock local-account %}
