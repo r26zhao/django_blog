@@ -195,7 +195,6 @@ CKEDITOR_CONFIGS = {
             ]),
     }
 }
-
 # 自定义日志输出信息
 LOGGING = {
     'version': 1,
@@ -205,10 +204,17 @@ LOGGING = {
             'format': '%(asctime)s [%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(module)s:%(funcName)s] [%(levelname)s]- %(message)s'}  #日志格式
     },
     'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse',
+        },
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
     },
     'handlers': {
         'mail_admins': {
             'level': 'ERROR',
+            'filters':['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler',
             'include_html': True,
             },
@@ -229,9 +235,10 @@ LOGGING = {
             'formatter':'standard',
             },
         'console':{
-            'level': 'DEBUG',
+            'level': 'INFO',
+            'filters':['require_debug_true'],
             'class': 'logging.StreamHandler',
-            'formatter': 'standard'
+            'formatter': 'standard',
         },
         'request_handler': {
             'level':'DEBUG',
@@ -252,12 +259,12 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'handlers': ['default', 'console'],
+            'handlers': ['default', 'mail_admins'],
             'level': 'DEBUG',
             'propagate': False
         },
         'django.request': {
-            'handlers': ['request_handler'],
+            'handlers': ['request_handler', 'console', 'mail_admins'],
             'level': 'DEBUG',
             'propagate': False,
             },
@@ -267,7 +274,7 @@ LOGGING = {
             'propagate': False
         },
         'blog.views': {
-            'handlers': ['default', 'error'],
+            'handlers': ['default', 'error', 'mail_admins'],
             'level': 'DEBUG',
             'propagate': True
         },
@@ -316,7 +323,7 @@ EMAIL_USE_SSL = True
 #EMAIL_USE_TLS = True
 # 默认发件人，不设置的话django默认使用的webmaster@localhost
 DEFAULT_FROM_EMAIL = 'Support <support@aaron-zhao.com>'
-ADMINS = (('Aaron', 'postmaster@aaron-zhao.com'),)
+ADMINS = (('Aaron', 'rudy710@qq.com'),)
 #非空链接，却发生404错误，发送通知MANAGERS
 SEND_BROKEN_LINK_EMAILS = True
 MANAGERS = ADMINS

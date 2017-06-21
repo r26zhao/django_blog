@@ -1,221 +1,39 @@
-2017-05-06 11:20:28,501 [Thread-3:10688] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
-2017-05-06 11:20:28,650 [Thread-4:10932] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
-2017-05-06 12:29:11,177 [Thread-60:10452] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
-2017-05-06 12:29:11,444 [Thread-61:11112] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
-2017-05-06 13:05:46,250 [Thread-2:372] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/post/2/change/
+2017-06-21 23:09:38,564 [Thread-42:9884] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/mekpfc.png
+2017-06-21 23:09:38,588 [Thread-43:15728] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/refrie.png
+2017-06-21 23:09:38,571 [Thread-41:11472] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/ltmjux.png
+2017-06-21 23:09:38,638 [Thread-44:11172] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/gjgjcb.png
+2017-06-21 23:09:38,655 [Thread-45:2408] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/jvzbxh.png
+2017-06-21 23:09:39,036 [Thread-46:12312] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/mekpfc.png
+2017-06-21 23:41:19,240 [Thread-12:14284] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/ltmjux.png
+2017-06-21 23:41:19,257 [Thread-13:1832] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/mekpfc.png
+2017-06-21 23:41:19,317 [Thread-14:14536] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/refrie.png
+2017-06-21 23:41:19,322 [Thread-15:8320] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/jvzbxh.png
+2017-06-21 23:41:19,334 [Thread-16:9772] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/gjgjcb.png
+2017-06-21 23:41:19,793 [Thread-17:13916] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/ltmjux.png
+2017-06-21 23:41:19,815 [Thread-18:324] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/mekpfc.png
+2017-06-21 23:41:19,823 [Thread-19:16328] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/gjgjcb.png
+2017-06-21 23:41:19,838 [Thread-20:6428] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/refrie.png
+2017-06-21 23:41:19,853 [Thread-21:11788] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/jvzbxh.png
+2017-06-21 23:46:22,007 [Thread-67:15196] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/mekpfc.png
+2017-06-21 23:46:22,011 [Thread-66:5264] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/ltmjux.png
+2017-06-21 23:46:22,027 [Thread-68:14056] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/refrie.png
+2017-06-21 23:46:22,076 [Thread-69:14676] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/jvzbxh.png
+2017-06-21 23:46:22,095 [Thread-70:10940] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/gjgjcb.png
+2017-06-21 23:46:22,638 [Thread-71:16176] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/ltmjux.png
+2017-06-21 23:46:22,656 [Thread-72:16136] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/mekpfc.png
+2017-06-21 23:46:22,668 [Thread-73:15476] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/gjgjcb.png
+2017-06-21 23:46:22,681 [Thread-74:9968] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/refrie.png
+2017-06-21 23:46:22,696 [Thread-75:10844] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/jvzbxh.png
+2017-06-21 23:47:06,779 [Thread-77:13740] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/mekpfc.png
+2017-06-21 23:52:23,537 [Thread-79:5828] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /tag/Pycharm-acitve/
 Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\contrib\admin\options.py", line 642, in get_form
-    return modelform_factory(self.model, **defaults)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\forms\models.py", line 548, in modelform_factory
-    return type(form)(class_name, (form,), form_class_attrs)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\forms\models.py", line 247, in __new__
-    opts.field_classes)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\forms\models.py", line 143, in fields_for_model
-    f.name, model.__name__)
-django.core.exceptions.FieldError: 'date_modified' cannot be specified for Post model form as it is a non-editable field
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
     response = get_response(request)
   File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
   File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\contrib\admin\options.py", line 544, in wrapper
-    return self.admin_site.admin_view(view)(*args, **kwargs)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
-    response = view_func(request, *args, **kwargs)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
-    response = view_func(request, *args, **kwargs)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\contrib\admin\sites.py", line 211, in inner
-    return view(request, *args, **kwargs)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\contrib\admin\options.py", line 1512, in change_view
-    return self.changeform_view(request, object_id, form_url, extra_context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
-    return bound_func(*args, **kwargs)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
-    response = view_func(request, *args, **kwargs)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
-    return func.__get__(self, type(self))(*args2, **kwargs2)
-  File "c:\python34\Lib\contextlib.py", line 30, in inner
-    return func(*args, **kwds)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\contrib\admin\options.py", line 1438, in changeform_view
-    ModelForm = self.get_form(request, obj)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\contrib\admin\options.py", line 646, in get_form
-    % (e, self.__class__.__name__)
-django.core.exceptions.FieldError: 'date_modified' cannot be specified for Post model form as it is a non-editable field. Check fields/fieldsets/exclude attributes of class PostAdmin.
-2017-05-06 13:30:16,450 [Thread-52:4604] [django.request:152] [base:get_response] [WARNING]- Not Found: /admin/blog/post/3/change/
-2017-05-06 18:51:12,625 [Thread-119:8904] [django.request:152] [base:get_response] [WARNING]- Not Found: /single.html
-2017-05-06 21:13:19,418 [Thread-130:204] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
-Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 510, in parse
-    compile_func = self.tags[command]
-KeyError: 'static'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
-    response = get_response(request)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 17, in index
-    return render(request, 'blog/index.html', locals())
-  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
-    content = loader.render_to_string(template_name, context, request, using=using)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 67, in render_to_string
-    template = get_template(template_name, using=using)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 21, in get_template
-    return engine.get_template(template_name)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 39, in get_template
-    return Template(self.engine.get_template(template_name), self)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\engine.py", line 160, in get_template
-    template, origin = self.find_template(template_name)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\engine.py", line 134, in find_template
-    name, template_dirs=dirs, skip=skip,
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
-    contents, origin, origin.template_name, self.engine,
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 191, in __init__
-    self.nodelist = self.compile_nodelist()
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 233, in compile_nodelist
-    return parser.parse()
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 518, in parse
-    raise self.error(token, e)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 516, in parse
-    compiled_result = compile_func(self, token)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
-    nodelist = parser.parse()
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 518, in parse
-    raise self.error(token, e)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 516, in parse
-    compiled_result = compile_func(self, token)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 242, in do_block
-    nodelist = parser.parse(('endblock',))
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 512, in parse
-    self.invalid_block_tag(token, command, parse_until)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
-    get_text_list(["'%s'" % p for p in parse_until], 'or'),
-django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 6: 'static', expected 'endblock'. Did you forget to register or load this tag?
-2017-05-07 13:14:02,839 [Thread-210:1792] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
-Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
-    response = get_response(request)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 15, in index
-    return render(request, 'blog/index.html', context={'post_list':post_list})
-  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
-    content = loader.render_to_string(template_name, context, request, using=using)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 67, in render_to_string
-    template = get_template(template_name, using=using)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 21, in get_template
-    return engine.get_template(template_name)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 39, in get_template
-    return Template(self.engine.get_template(template_name), self)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\engine.py", line 160, in get_template
-    template, origin = self.find_template(template_name)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\engine.py", line 134, in find_template
-    name, template_dirs=dirs, skip=skip,
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
-    contents, origin, origin.template_name, self.engine,
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 191, in __init__
-    self.nodelist = self.compile_nodelist()
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 233, in compile_nodelist
-    return parser.parse()
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 518, in parse
-    raise self.error(token, e)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 516, in parse
-    compiled_result = compile_func(self, token)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
-    nodelist = parser.parse()
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 518, in parse
-    raise self.error(token, e)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 516, in parse
-    compiled_result = compile_func(self, token)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 238, in do_block
-    raise TemplateSyntaxError("'%s' tag with name '%s' appears more than once" % (bits[0], block_name))
-django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'content' appears more than once
-2017-05-07 13:15:23,416 [Thread-211:8368] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
-Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 510, in parse
-    compile_func = self.tags[command]
-KeyError: 'endblock'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
-    response = get_response(request)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 15, in index
-    return render(request, 'blog/index.html', context={'post_list':post_list})
-  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
-    content = loader.render_to_string(template_name, context, request, using=using)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 67, in render_to_string
-    template = get_template(template_name, using=using)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 21, in get_template
-    return engine.get_template(template_name)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 39, in get_template
-    return Template(self.engine.get_template(template_name), self)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\engine.py", line 160, in get_template
-    template, origin = self.find_template(template_name)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\engine.py", line 134, in find_template
-    name, template_dirs=dirs, skip=skip,
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
-    contents, origin, origin.template_name, self.engine,
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 191, in __init__
-    self.nodelist = self.compile_nodelist()
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 233, in compile_nodelist
-    return parser.parse()
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 518, in parse
-    raise self.error(token, e)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 516, in parse
-    compiled_result = compile_func(self, token)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
-    nodelist = parser.parse()
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 518, in parse
-    raise self.error(token, e)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 516, in parse
-    compiled_result = compile_func(self, token)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 242, in do_block
-    nodelist = parser.parse(('endblock',))
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 518, in parse
-    raise self.error(token, e)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 516, in parse
-    compiled_result = compile_func(self, token)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
-    nodelist_empty = parser.parse(('endfor',))
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 512, in parse
-    self.invalid_block_tag(token, command, parse_until)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
-    get_text_list(["'%s'" % p for p in parse_until], 'or'),
-django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 122: 'endblock', expected 'endfor'. Did you forget to register or load this tag?
-2017-05-07 13:30:02,869 [Thread-345:9336] [django.request:152] [base:get_response] [WARNING]- Not Found: /single.html
-2017-05-07 15:26:28,068 [Thread-43:10140] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
-Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 77, in reverse
-    extra, resolver = resolver.namespace_dict[ns]
-KeyError: 'blog'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
-    response = get_response(request)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 15, in index
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 59, in tag
     return render(request, 'blog/index.html', context={'post_list':post_list})
   File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
     content = loader.render_to_string(template_name, context, request, using=using)
@@ -223,332 +41,531 @@ Traceback (most recent call last):
     return template.render(context, request)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 66, in render
     return self.template.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 208, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 207, in render
     return self._render(context)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
     return self.nodelist.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
     bit = node.render_annotated(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 174, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 177, in render
     return compiled_parent._render(context)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
     return self.nodelist.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
     bit = node.render_annotated(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 70, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 72, in render
     result = block.nodelist.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
     bit = node.render_annotated(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 209, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 216, in render
     nodelist.append(node.render_annotated(context))
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 439, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 458, in render
     url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 87, in reverse
-    raise NoReverseMatch("%s is not a registered namespace" % key)
-django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
-2017-05-07 15:29:08,233 [Thread-2:1892] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'tag' with arguments '('',)' not found. 1 pattern(s) tried: ['tag/(?P<slug>[a-zA-Z0-9_\\-\\u4e00-\\u9fa5]+)/$']
+2017-06-21 23:57:45,790 [Thread-4:15760] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
 Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 77, in reverse
-    extra, resolver = resolver.namespace_dict[ns]
-KeyError: 'blog'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
     response = get_response(request)
   File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
   File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 16, in index
-    return render(request, 'blog/index.html', context={'post_list':post_list})
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 30, in index
+    return render(request, 'blog/index.html', context={'post_list': post_list})
   File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
     content = loader.render_to_string(template_name, context, request, using=using)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
     return template.render(context, request)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 66, in render
     return self.template.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 208, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 207, in render
     return self._render(context)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
     return self.nodelist.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
     bit = node.render_annotated(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 174, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 177, in render
     return compiled_parent._render(context)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
     return self.nodelist.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
     bit = node.render_annotated(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 70, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 72, in render
     result = block.nodelist.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
     bit = node.render_annotated(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 209, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 216, in render
     nodelist.append(node.render_annotated(context))
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 439, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 458, in render
     url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 87, in reverse
-    raise NoReverseMatch("%s is not a registered namespace" % key)
-django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
-2017-05-07 15:29:43,253 [Thread-2:8792] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'tag' with arguments '('',)' not found. 1 pattern(s) tried: ['tag/(?P<slug>[a-zA-Z0-9_\\-\\u4e00-\\u9fa5]+)/$']
+2017-06-21 23:59:37,689 [Thread-48:7864] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/ltmjux.png
+2017-06-21 23:59:37,727 [Thread-49:1364] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/mekpfc.png
+2017-06-21 23:59:37,750 [Thread-50:10768] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/gjgjcb.png
+2017-06-21 23:59:37,764 [Thread-51:12888] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/refrie.png
+2017-06-21 23:59:37,784 [Thread-52:8884] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/jvzbxh.png
+2017-06-21 23:59:38,189 [Thread-53:2252] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/ltmjux.png
+2017-06-21 23:59:38,226 [Thread-55:11392] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/refrie.png
+2017-06-21 23:59:38,228 [Thread-54:5384] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/mekpfc.png
+2017-06-21 23:59:38,234 [Thread-56:14964] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/gjgjcb.png
+2017-06-21 23:59:38,256 [Thread-57:7692] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/jvzbxh.png
+2017-06-22 00:03:58,785 [Thread-5:11348] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/ltmjux.png
+2017-06-22 00:03:58,819 [Thread-6:8652] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/mekpfc.png
+2017-06-22 00:03:58,839 [Thread-7:11584] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/refrie.png
+2017-06-22 00:03:58,859 [Thread-8:14196] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/gjgjcb.png
+2017-06-22 00:03:58,879 [Thread-9:13924] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/jvzbxh.png
+2017-06-22 00:03:59,226 [Thread-10:13116] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/ltmjux.png
+2017-06-22 00:03:59,246 [Thread-11:11444] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/mekpfc.png
+2017-06-22 00:03:59,258 [Thread-12:12264] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/refrie.png
+2017-06-22 00:03:59,272 [Thread-13:11968] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/jvzbxh.png
+2017-06-22 00:03:59,280 [Thread-14:3912] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/gjgjcb.png
+2017-06-22 00:11:34,112 [Thread-2:14052] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
 Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 77, in reverse
-    extra, resolver = resolver.namespace_dict[ns]
-KeyError: 'blog'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
     response = get_response(request)
   File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
   File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 16, in index
-    return render(request, 'blog/index.html', context={'post_list':post_list})
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 30, in index
+    return render(request, 'blog/index.html', context={'post_list': post_list})
   File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
     content = loader.render_to_string(template_name, context, request, using=using)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
     return template.render(context, request)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 66, in render
     return self.template.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 208, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 207, in render
     return self._render(context)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
     return self.nodelist.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
     bit = node.render_annotated(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 174, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 177, in render
     return compiled_parent._render(context)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
     return self.nodelist.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
     bit = node.render_annotated(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 70, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 72, in render
     result = block.nodelist.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
     bit = node.render_annotated(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 209, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 216, in render
     nodelist.append(node.render_annotated(context))
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 439, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 458, in render
     url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 87, in reverse
-    raise NoReverseMatch("%s is not a registered namespace" % key)
-django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
-2017-05-07 15:32:17,334 [Thread-3:760] [django.request:132] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'tag' with arguments '('Pycharm 2017¼¤»îÂë',)' not found. 1 pattern(s) tried: ['tag/(?P<slug>[a-zA-Z0-9_\\-\\u4e00-\\u9fa5]+)/$']
+2017-06-22 00:14:01,098 [Thread-2:10772] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
 Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 77, in reverse
-    extra, resolver = resolver.namespace_dict[ns]
-KeyError: 'blog'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
     response = get_response(request)
   File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
   File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 16, in index
-    return render(request, 'blog/index.html', context={'post_list':post_list})
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 30, in index
+    return render(request, 'blog/index.html', context={'post_list': post_list})
   File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
     content = loader.render_to_string(template_name, context, request, using=using)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
     return template.render(context, request)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 66, in render
     return self.template.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 208, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 207, in render
     return self._render(context)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
     return self.nodelist.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
     bit = node.render_annotated(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 174, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 177, in render
     return compiled_parent._render(context)
   File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
     return self.nodelist.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
     bit = node.render_annotated(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 70, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 72, in render
     result = block.nodelist.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 994, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
     bit = node.render_annotated(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 209, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 216, in render
     nodelist.append(node.render_annotated(context))
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 961, in render_annotated
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
     return self.render(context)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 439, in render
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 458, in render
     url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
-  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 87, in reverse
-    raise NoReverseMatch("%s is not a registered namespace" % key)
-django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
-2017-05-07 19:13:41,302 [Thread-112:204] [django.request:152] [base:get_response] [WARNING]- Not Found: /post/7/index.html
-2017-05-07 20:20:51,170 [Thread-39:7016] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
-2017-05-07 20:20:51,254 [Thread-40:10228] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
-2017-05-07 21:06:45,029 [Thread-175:5324] [django.request:152] [base:get_response] [WARNING]- Not Found: /single.html
-2017-05-07 21:06:57,426 [Thread-185:8740] [django.request:152] [base:get_response] [WARNING]- Not Found: /single.html
-2017-05-07 21:09:30,569 [Thread-213:8016] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/05/07/_20170415230343.jpg
-2017-05-07 21:09:42,278 [Thread-215:10120] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/05/07/_20170415230343.jpg
-2017-05-07 21:15:36,643 [Thread-73:7624] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/05/07/_20170415230343_thumb.jpg
-2017-05-07 22:26:32,037 [Thread-13:160] [django.request:152] [base:get_response] [WARNING]- Not Found: /single.html
-2017-05-07 22:26:35,868 [Thread-16:7876] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/05/07/_20170415230343.jpg
-2017-05-07 22:26:49,689 [Thread-53:3812] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/05/07/_20170415230343.jpg
-2017-05-07 22:26:54,734 [Thread-56:9404] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/05/07/_20170415230343.jpg
-2017-05-07 22:53:32,073 [Thread-80:6776] [django.request:152] [base:get_response] [WARNING]- Not Found: /post/7/
-2017-05-08 11:28:43,043 [Thread-8:116] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
-2017-05-08 11:28:43,071 [Thread-9:6480] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
-2017-05-08 15:08:50,227 [Thread-113:6128] [django.request:152] [base:get_response] [WARNING]- Not Found: /magazine.html
-2017-05-08 16:38:44,289 [Thread-312:9820] [django.request:152] [base:get_response] [WARNING]- Not Found: /archives.html
-2017-05-08 17:12:52,960 [Thread-616:5188] [django.request:152] [base:get_response] [WARNING]- Not Found: /cinema.html
-2017-05-08 19:37:33,298 [Thread-1489:9788] [django.request:152] [base:get_response] [WARNING]- Not Found: /post
-2017-05-08 19:37:40,750 [Thread-1490:6912] [django.request:152] [base:get_response] [WARNING]- Not Found: /post/a
-2017-05-08 19:38:34,558 [Thread-1497:6700] [django.request:152] [base:get_response] [WARNING]- Not Found: /post/a
-2017-05-08 23:42:51,873 [Thread-3:4456] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
-2017-05-08 23:42:52,325 [Thread-4:6880] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
-2017-05-09 23:13:40,699 [Thread-3:3852] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/bootstrap.css
-2017-05-09 23:13:40,730 [Thread-4:15196] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/style.css
-2017-05-09 23:13:40,806 [Thread-5:16592] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/nav.css
-2017-05-09 23:13:40,841 [Thread-6:16180] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai.css
-2017-05-09 23:13:40,902 [Thread-7:18300] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js
-2017-05-09 23:13:41,013 [Thread-8:16324] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/style.css
-2017-05-09 23:13:41,107 [Thread-9:17764] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/nav.css
-2017-05-09 23:13:41,120 [Thread-10:6108] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js
-2017-05-09 23:13:41,131 [Thread-11:3472] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai.css
-2017-05-09 23:14:12,489 [Thread-13:3932] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/bootstrap.css
-2017-05-09 23:14:12,562 [Thread-15:18220] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/style.css
-2017-05-09 23:14:12,589 [Thread-16:18092] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/move-top.js
-2017-05-09 23:14:12,603 [Thread-17:14352] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/easing.js
-2017-05-09 23:14:12,631 [Thread-18:17276] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/nav.css
-2017-05-09 23:14:12,636 [Thread-19:17980] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai.css
-2017-05-09 23:14:12,647 [Thread-20:18040] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js
-2017-05-09 23:14:12,691 [Thread-21:18044] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/easyResponsiveTabs.js
-2017-05-09 23:14:12,833 [Thread-22:18072] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/main.js
-2017-05-09 23:14:12,872 [Thread-23:18328] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/owl.carousel.css
-2017-05-09 23:14:12,876 [Thread-24:8452] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/owl.carousel.js
-2017-05-09 23:14:12,879 [Thread-25:18064] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/style.css
-2017-05-09 23:14:12,957 [Thread-26:17784] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/move-top.js
-2017-05-09 23:14:13,009 [Thread-27:17780] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/easing.js
-2017-05-09 23:14:13,089 [Thread-28:17856] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/nav.css
-2017-05-09 23:14:13,138 [Thread-29:17092] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai.css
-2017-05-09 23:14:13,140 [Thread-30:14916] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js
-2017-05-09 23:14:13,216 [Thread-32:14736] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/easyResponsiveTabs.js
-2017-05-09 23:14:13,266 [Thread-31:4696] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/main.js
-2017-05-09 23:14:13,401 [Thread-34:17900] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/owl.carousel.css
-2017-05-09 23:14:13,402 [Thread-33:15028] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/back.png
-2017-05-09 23:14:13,415 [Thread-35:14160] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/logo.png
-2017-05-09 23:14:13,422 [Thread-36:9832] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/owl.carousel.js
-2017-05-09 23:14:13,781 [Thread-38:15040] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp1.jpg
-2017-05-09 23:14:13,809 [Thread-37:14976] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp11.jpg
-2017-05-09 23:14:14,097 [Thread-39:17976] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp12.jpg
-2017-05-09 23:14:14,148 [Thread-40:2252] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp.jpg
-2017-05-09 23:14:14,219 [Thread-41:5840] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp0.jpg
-2017-05-09 23:14:14,268 [Thread-42:14376] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp01.jpg
-2017-05-09 23:14:14,311 [Thread-43:15480] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp2.jpg
-2017-05-09 23:14:14,378 [Thread-44:18404] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp21.jpg
-2017-05-09 23:14:14,430 [Thread-45:17532] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp22.jpg
-2017-05-09 23:14:14,673 [Thread-46:18344] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi.jpg
-2017-05-09 23:14:14,733 [Thread-47:18348] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi1.jpg
-2017-05-09 23:14:14,935 [Thread-48:17424] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi2.jpg
-2017-05-09 23:14:15,001 [Thread-49:17576] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi3.jpg
-2017-05-09 23:15:55,562 [Thread-52:900] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/bootstrap.css
-2017-05-09 23:15:55,615 [Thread-53:11344] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/style.css
-2017-05-09 23:15:55,618 [Thread-54:2364] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/move-top.js
-2017-05-09 23:15:55,623 [Thread-55:15008] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/easing.js
-2017-05-09 23:15:55,625 [Thread-56:15012] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/nav.css
-2017-05-09 23:15:55,632 [Thread-57:16512] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai.css
-2017-05-09 23:15:55,635 [Thread-58:16520] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js
-2017-05-09 23:15:55,680 [Thread-59:16540] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/owl.carousel.css
-2017-05-09 23:15:56,012 [Thread-60:15576] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/easyResponsiveTabs.js
-2017-05-09 23:15:56,034 [Thread-61:15592] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/main.js
-2017-05-09 23:15:56,049 [Thread-62:15644] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/owl.carousel.js
-2017-05-09 23:15:56,188 [Thread-63:15672] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/back.png
-2017-05-09 23:15:56,208 [Thread-64:15680] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp1.jpg
-2017-05-09 23:15:56,229 [Thread-65:15688] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp11.jpg
-2017-05-09 23:15:56,239 [Thread-66:15764] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp12.jpg
-2017-05-09 23:15:56,248 [Thread-67:15768] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp.jpg
-2017-05-09 23:15:56,264 [Thread-68:15776] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp0.jpg
-2017-05-09 23:15:56,520 [Thread-69:15784] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp01.jpg
-2017-05-09 23:15:56,783 [Thread-70:15788] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp2.jpg
-2017-05-09 23:15:56,814 [Thread-72:15808] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp22.jpg
-2017-05-09 23:15:56,816 [Thread-71:15800] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp21.jpg
-2017-05-09 23:15:56,827 [Thread-73:15816] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi.jpg
-2017-05-09 23:15:56,829 [Thread-74:16588] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi1.jpg
-2017-05-09 23:15:56,839 [Thread-75:16604] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi2.jpg
-2017-05-09 23:15:56,882 [Thread-76:15872] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi3.jpg
-2017-05-09 23:16:00,295 [Thread-77:15996] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/back.png
-2017-05-09 23:16:00,599 [Thread-79:16004] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp11.jpg
-2017-05-09 23:16:00,603 [Thread-78:16016] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp1.jpg
-2017-05-09 23:16:00,605 [Thread-80:16040] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp12.jpg
-2017-05-09 23:16:00,616 [Thread-81:16072] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp.jpg
-2017-05-09 23:16:00,625 [Thread-83:16148] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp01.jpg
-2017-05-09 23:16:00,627 [Thread-82:16168] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp0.jpg
-2017-05-09 23:16:00,782 [Thread-84:16112] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp2.jpg
-2017-05-09 23:16:00,930 [Thread-85:16216] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp21.jpg
-2017-05-09 23:16:00,935 [Thread-86:16176] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp22.jpg
-2017-05-09 23:16:00,937 [Thread-87:15756] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi.jpg
-2017-05-09 23:16:00,960 [Thread-88:16232] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi1.jpg
-2017-05-09 23:16:00,990 [Thread-89:16256] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi2.jpg
-2017-05-09 23:16:01,011 [Thread-90:16276] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi3.jpg
-2017-05-09 23:16:02,825 [Thread-91:16292] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
-2017-05-09 23:16:06,024 [Thread-93:15844] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/bootstrap.css
-2017-05-09 23:16:06,126 [Thread-95:15856] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/move-top.js
-2017-05-09 23:16:06,128 [Thread-96:16360] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/easing.js
-2017-05-09 23:16:06,130 [Thread-94:16328] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/style.css
-2017-05-09 23:16:06,132 [Thread-97:15912] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/nav.css
-2017-05-09 23:16:06,200 [Thread-98:16184] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai.css
-2017-05-09 23:16:06,291 [Thread-99:16196] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/owl.carousel.css
-2017-05-09 23:16:06,305 [Thread-100:16240] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js
-2017-05-09 23:16:06,349 [Thread-101:16300] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/easyResponsiveTabs.js
-2017-05-09 23:16:06,354 [Thread-102:16312] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/main.js
-2017-05-09 23:16:06,428 [Thread-103:15832] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/js/owl.carousel.js
-2017-05-09 23:16:06,450 [Thread-104:16320] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/back.png
-2017-05-09 23:16:06,580 [Thread-105:15840] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/logo.png
-2017-05-09 23:16:06,611 [Thread-106:16336] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp1.jpg
-2017-05-09 23:16:06,634 [Thread-107:16340] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp11.jpg
-2017-05-09 23:16:06,652 [Thread-108:15880] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp12.jpg
-2017-05-09 23:16:06,663 [Thread-109:16368] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp.jpg
-2017-05-09 23:16:06,678 [Thread-110:9808] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp0.jpg
-2017-05-09 23:16:06,859 [Thread-111:7460] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp01.jpg
-2017-05-09 23:16:06,870 [Thread-112:16376] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp2.jpg
-2017-05-09 23:16:06,885 [Thread-113:16400] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp21.jpg
-2017-05-09 23:16:06,891 [Thread-114:16380] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/pp22.jpg
-2017-05-09 23:16:06,899 [Thread-115:15936] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi.jpg
-2017-05-09 23:16:06,901 [Thread-116:16392] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi1.jpg
-2017-05-09 23:16:06,975 [Thread-117:15924] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi2.jpg
-2017-05-09 23:16:07,084 [Thread-118:16420] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/images/mi3.jpg
-2017-05-09 23:16:07,241 [Thread-119:15952] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
-2017-05-09 23:16:57,921 [Thread-120:15812] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/blog/css/bootstrap.css
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'tag' with arguments '('Pycharm 2017¼¤»îÂë',)' not found. 1 pattern(s) tried: ['tag/(?P<slug>[a-zA-Z0-9_\\-\\u4e00-\\u9fa5]+)/$']
+2017-06-22 00:17:33,479 [Thread-3:9576] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 30, in index
+    return render(request, 'blog/index.html', context={'post_list': post_list})
+  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'tag' with arguments '('Pycharm 2017¼¤»îÂë',)' not found. 1 pattern(s) tried: ['tag/(?P<slug>[a-zA-Z0-9_\\-\\u4e00-\\u9fa5]+)/$']
+2017-06-22 00:21:13,852 [Thread-2:3028] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 30, in index
+    return render(request, 'blog/index.html', context={'post_list': post_list})
+  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'tag' with arguments '('Pycharm 2017¼¤»îÂë',)' not found. 1 pattern(s) tried: ['tag/(?P<slug>[a-zA-Z0-9_\\-\\u4e00-\\u9fa5]+)/$']
+2017-06-22 00:22:50,563 [Thread-1:10408] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 30, in index
+    return render(request, 'blog/index.html', context={'post_list': post_list})
+  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'tag' with arguments '('Pycharm 2017¼¤»îÂë',)' not found. 1 pattern(s) tried: ['tag/(?P<slug>[a-zA-Z0-9_\\-\\u4e00-\\u9fa5]+)/$']
+2017-06-22 00:22:57,154 [Thread-3:11900] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 30, in index
+    return render(request, 'blog/index.html', context={'post_list': post_list})
+  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'tag' with arguments '('Pycharm 2017¼¤»îÂë',)' not found. 1 pattern(s) tried: ['tag/(?P<slug>[a-zA-Z0-9_\\-\\u4e00-\\u9fa5]+)/$']
+2017-06-22 00:24:41,548 [Thread-5:8044] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/css/changelists.css
+2017-06-22 00:24:41,581 [Thread-7:13128] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/core.js
+2017-06-22 00:24:41,584 [Thread-8:8408] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2017-06-22 00:24:41,589 [Thread-9:10256] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+2017-06-22 00:24:41,598 [Thread-10:15904] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/jquery.init.js
+2017-06-22 00:24:41,650 [Thread-11:13280] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/actions.min.js
+2017-06-22 00:24:41,655 [Thread-12:11860] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/urlify.js
+2017-06-22 00:24:41,670 [Thread-13:2492] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2017-06-22 00:24:41,675 [Thread-14:14932] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/prepopulate.min.js
+2017-06-22 00:24:41,680 [Thread-15:12808] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/core.js
+2017-06-22 00:24:41,714 [Thread-16:7552] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/img/search.svg
+2017-06-22 00:24:41,727 [Thread-17:13216] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/img/icon-yes.svg
+2017-06-22 00:24:41,730 [Thread-18:7248] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/img/icon-no.svg
+2017-06-22 00:24:41,734 [Thread-19:11068] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2017-06-22 00:24:41,768 [Thread-20:13340] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/jquery.init.js
+2017-06-22 00:24:41,802 [Thread-21:8748] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+2017-06-22 00:24:41,834 [Thread-22:14008] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/actions.min.js
+2017-06-22 00:24:41,867 [Thread-23:11488] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/urlify.js
+2017-06-22 00:24:41,897 [Thread-24:13012] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/prepopulate.min.js
+2017-06-22 00:24:41,925 [Thread-25:3856] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2017-06-22 00:24:42,014 [Thread-26:8140] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/img/search.svg
+2017-06-22 00:24:42,024 [Thread-27:13876] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/img/icon-yes.svg
+2017-06-22 00:24:42,030 [Thread-28:6836] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/img/icon-no.svg
+2017-06-22 00:24:42,036 [Thread-29:11600] [django.request:152] [base:get_response] [WARNING]- Not Found: /static/admin/img/tooltag-add.svg
+2017-06-22 00:24:45,525 [Thread-30:10392] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 30, in index
+    return render(request, 'blog/index.html', context={'post_list': post_list})
+  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'tag' with arguments '('Pycharm 2017¼¤»îÂë',)' not found. 1 pattern(s) tried: ['tag/(?P<slug>[a-zA-Z0-9_\\-\\u4e00-\\u9fa5]+)/$']
+2017-06-22 00:25:05,549 [Thread-31:10940] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\zry71\PycharmProjects\django_blog\blog\views.py", line 30, in index
+    return render(request, 'blog/index.html', context={'post_list': post_list})
+  File "C:\Envs\blogproject_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\template\defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Envs\blogproject_env\lib\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'tag' with arguments '('Pycharm 2017¼¤»îÂë',)' not found. 1 pattern(s) tried: ['tag/(?P<slug>[a-zA-Z0-9_\\-\\u4e00-\\u9fa5]+)/$']
+2017-06-22 00:26:23,598 [Thread-85:6388] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/ltmjux.png
+2017-06-22 00:26:23,623 [Thread-82:15788] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/gjgjcb.png
+2017-06-22 00:26:23,626 [Thread-84:2928] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/mekpfc.png
+2017-06-22 00:26:23,636 [Thread-86:6360] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/jvzbxh.png
+2017-06-22 00:26:23,638 [Thread-83:15640] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/refrie.png
+2017-06-22 00:26:24,129 [Thread-90:15656] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/mekpfc.png
+2017-06-22 00:26:24,142 [Thread-91:15232] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/ltmjux.png
+2017-06-22 00:26:24,154 [Thread-87:12352] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/jvzbxh.png
+2017-06-22 00:26:24,153 [Thread-89:15280] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/refrie.png
+2017-06-22 00:26:24,163 [Thread-88:9280] [django.request:152] [base:get_response] [WARNING]- Not Found: /media/upload/2017/06/15/gjgjcb.png
