@@ -197,7 +197,6 @@ CKEDITOR_CONFIGS = {
 }
 
 # 自定义日志输出信息
-'''
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': True,
@@ -274,7 +273,7 @@ LOGGING = {
         },
     }
 }
-'''
+
 # Website INFO  Global Var
 SITE_NAME = 'Python学习、Django技术交流与分享-AA的博客'
 SITE_DESCP = 'AA的博客是分享学习Python技术与经验的个人博客，由Python、Django以及资源分享等分类组成，内容主要是Django博客开发。'
