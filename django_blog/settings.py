@@ -241,7 +241,7 @@ LOGGING = {
             'backupCount': 5,
             'formatter':'standard',
             },
-        'scprits_handler': {
+        'scripts_handler': {
             'level':'DEBUG',
             'class':'logging.handlers.RotatingFileHandler',
             'filename':'log/script.log',
@@ -262,7 +262,7 @@ LOGGING = {
             'propagate': False,
             },
         'scripts': {
-            'handlers': ['scprits_handler'],
+            'handlers': ['scripts_handler'],
             'level': 'INFO',
             'propagate': False
         },
@@ -316,3 +316,7 @@ EMAIL_USE_SSL = True
 #EMAIL_USE_TLS = True
 # 默认发件人，不设置的话django默认使用的webmaster@localhost
 DEFAULT_FROM_EMAIL = 'Support <support@aaron-zhao.com>'
+ADMINS = (('Aaron', 'postmaster@aaron-zhao.com'),)
+#非空链接，却发生404错误，发送通知MANAGERS
+SEND_BROKEN_LINK_EMAILS = True
+MANAGERS = ADMINS
