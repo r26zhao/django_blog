@@ -46,8 +46,8 @@ def detail(request, pk):
                                                         'tag_list':tag_list})
 
 
-def category(request, name):
-    category = get_object_or_404(Category, name=name)
+def category(request, slug):
+    category = get_object_or_404(Category, slug=slug)
     post_list = Post.objects.filter(category=category)
     post_list = get_page(request, post_list)
     return render(request, 'blog/index.html', context={'post_list':post_list})

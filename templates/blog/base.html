@@ -8,6 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 {% load blog_tags %}
 {% load staticfiles %}
+{% load account %}
 <head>
 {% block site_info %}
 <title>{{ SITE_NAME }}</title>
@@ -129,8 +130,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				    </div>
 				    <div class="header-top-on">
 					    <ul class="social-in">
+                            {% if user.is_authenticated %}
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">头像</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">我的消息</a></li>
+                                    <li><a href="#">更换头像</a></li>
+                                    <li><a href="#">更改密码</a></li>
+                                    <li><a href="#">登出</a></li>
+                                </ul>
+                            </li>
+                            {% else %}
                             <li><a href="{% url 'account_login' %}?next={{ request.path }}">登陆</a></li>
                             <li><a href="{% url 'account_signup' %}">注册</a></li>
+                            {% endif %}
 					    </ul>
 				    </div>
 				<div class="clearfix"> </div>
@@ -145,9 +158,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <input id="mobile_menu" type="checkbox">
                             <ul class="nav">
                                 <li><a class="color1" href="/"> 首 页 </a></li>
-                                <li><a href="{% url 'blog:category' 'Django' %}" class="color2"> Django </a></li>
-                                <li><a href="{% url 'blog:category' 'Python笔记' %}" class="color3"> Python </a></li>
-						        <li><a href="{% url 'blog:category' 'Other' %}" class="color4"> 其 他 </a></li>
+                                <li><a href="{% url 'blog:category' 'django' %}" class="color2"> Django </a></li>
+                                <li><a href="{% url 'blog:category' 'python-study-notes' %}" class="color3"> Python </a></li>
+						        <li><a href="{% url 'blog:category' 'other' %}" class="color4"> 其 他 </a></li>
                                 <li><a href="https://github.com/r26zhao" target="_blank" class="color5"> GitHub </a></li>
 						        <li><a href="javascript:void(0);" class="color6"> About </a></li>
 						        <div class="clearfix"></div>
@@ -353,7 +366,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         {% get_category as category_list %}
 				        <ul>
                             {% for category in category_list %}
-                             <li><a href="{% url 'blog:category' category.name %}">{{ category.name }} ({{ category.post_num }})</a></li>
+                             <li><a href="{% url 'blog:category' category.slug %}">{{ category.name }} ({{ category.post_num }})</a></li>
                             {% empty %}
                              <li>暂时没有分类！</li>
                             {% endfor %}

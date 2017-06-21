@@ -27,7 +27,7 @@ class User(AbstractUser):
 # Tag 标签
 class Tag(models.Model):
     name = models.CharField(max_length=30, verbose_name='标签名称')
-
+    slug = models.SlugField(max_length=50, default='', blank=False)
     class Meta:
         verbose_name = '标签'
         verbose_name_plural = verbose_name
@@ -39,7 +39,7 @@ class Tag(models.Model):
 # Category 分类
 class Category(models.Model):
     name = models.CharField(max_length=30, verbose_name='分类名称')
-
+    slug = models.SlugField(max_length=50, default='', blank=False)
     class Meta:
         verbose_name = '分类'
         verbose_name_plural = verbose_name

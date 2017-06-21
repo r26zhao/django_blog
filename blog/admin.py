@@ -7,7 +7,13 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'date_created', 'date_modified', 'category', 'author', 'is_recommended',)
     list_editable = ('category', 'author', 'is_recommended',)
 
+class TagAdmin(admin.ModelAdmin):
+    pass
+
+class CategoryAdmin(admin.ModelAdmin):
+    pass
+
 admin.site.register(Post, PostAdmin)
-admin.site.register(Category)
-admin.site.register(Tag)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Tag, TagAdmin)
 admin.site.register(User)
