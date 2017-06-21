@@ -52,6 +52,12 @@ def category(request, slug):
     post_list = get_page(request, post_list)
     return render(request, 'blog/index.html', context={'post_list':post_list})
 
+def tag(request, slug):
+    tag = get_object_or_404(Tag, slug=slug)
+    post_list = Post.objects.filter(tag__in=[tag])
+    post_list = get_page(request, post_list)
+    return render(request, 'blog/index.html', context={'post_list':post_list})
+
 def search(request):
     q = request.GET.get('q')
     error_msg = ''

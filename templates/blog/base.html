@@ -378,7 +378,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <ul>
                             {% get_tag as tag_list %}
                             {% for tag in tag_list %}
-                            <li><a href="/">{{ tag.name }}</a></li>
+                            <li><a href="{% url 'blog:tag' tag.slug %}">{{ tag.name }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
