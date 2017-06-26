@@ -1,7 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from ckeditor_uploader.fields import RichTextUploadingField
-from  django.urls import reverse
+from django.urls import reverse
+from imagekit.models import ProcessedImageField
+from imagekit.processors import ResizeToFill
 
 
 # Create your models here.
@@ -9,11 +11,13 @@ from  django.urls import reverse
 # 用户模型.
 # 第一种：采用的继承方式扩展用户信息（本系统采用）
 # 扩展：关联的方式去扩展用户信息
+
 class User(AbstractUser):
-    avatar = models.ImageField(upload_to='avatar/%Y/%m', default='avatar/default.png', max_length=200, blank=True,
-                               null=True, verbose_name='用户头像')
+    nickname = models.CharField(max_length=30, blank=True, null=True, verbose_name='昵称')
     qq = models.CharField(max_length=20, blank=True, null=True, verbose_name='QQ号码')
     url = models.URLField(max_length=100, blank=True, null=True, verbose_name='个人网页地址')
+    avatar = ProcessedImageField(upload_to='avatar',default='avatar/default.png', verbose_name='头像',
+                                 processors=[ResizeToFill(85,85)],)
 
     class Meta:
         verbose_name = '用户'
@@ -23,6 +27,13 @@ class User(AbstractUser):
     def __str__(self):
         return self.username
 
+    def save(self, *args, **kwargs):
+        if len(self.avatar.name.split('/')) == 1:
+            print('before:%s' % self.avatar.name)
+            self.avatar.name = self.username + '/' + self.avatar.name
+        super(User, self).save()
+        print('after:%s' % self.avatar.name)
+        print('avatar_path: %s' % self.avatar.path)
 
 # Tag 标签
 class Tag(models.Model):

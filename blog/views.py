@@ -1,8 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 import logging
 from django.conf import settings
 from .models import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
+from .forms import UserDetailForm
+from django.contrib.auth.decorators import login_required
+
 
 logger = logging.getLogger('blog.views')
 
@@ -67,3 +70,18 @@ def search(request):
     post_list = Post.objects.filter(title__contains=q)
     post_list = get_page(request,post_list)
     return render(request, 'blog/search.html', context={'error_msg':error_msg, 'post_list':post_list})
+
+@login_required
+def account_profile(request):
+    messages = []
+    if request.method == 'POST':
+        request_dic = getattr(request, 'POST')
+        print(request_dic)
+        print(request.FILES)
+        form = UserDetailForm(request.POST, request.FILES, instance=request.user)
+        if form.is_valid():
+            form.save()
+            messages.append('资料修改成功！')
+    form = UserDetailForm(instance=request.user)
+    return render(request, 'account/user_detail.html', context={'form':form,
+                                                                'messages':messages,})

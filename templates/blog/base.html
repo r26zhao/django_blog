@@ -132,12 +132,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					    <ul class="social-in">
                             {% if user.is_authenticated %}
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">头像</a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <img class="img-rounded" src="{{ request.user.avatar.url }}">
+                                    <span class="username">
+                                        {% if request.user.nickname %}
+                                            {{ request.user.nickname }}
+                                        {% else %}
+                                            {{ request.user.username }}
+                                        {% endif %}
+                                    </span>
+                                    <i></i>
+                                </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">我的消息</a></li>
-                                    <li><a href="#">更换头像</a></li>
-                                    <li><a href="#">更改密码</a></li>
-                                    <li><a href="#">登出</a></li>
+                                    <li><a href="#">消息</a></li>
+                                    <li><a href="{% url 'blog:account_profile' %}">设置</a></li>
+                                    <li><a href="{% url 'account_logout' %}?next={{ request.path }}">登出</a></li>
                                 </ul>
                             </li>
                             {% else %}
@@ -177,13 +186,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	        <strong>{{message}}</strong>
 	        {% endfor %}
          </div>
-         <script>
-            $(function(){
-                $(".close").click(function(){
-                $("#myAlert").alert();
-                });
-            });
-         </script>
         {% endif %}
         {% endblock message %}
 
@@ -411,6 +413,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </script>
     <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 </div>
+<!--
 <script>
 $(function () {
     $(window).ready(function () {
@@ -419,6 +422,7 @@ $(function () {
 });
 //selc.setAttribute("class", "img-responsive");
 </script>
+-->
 <script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
 {% block comment_script %}
 {% endblock comment_script %}

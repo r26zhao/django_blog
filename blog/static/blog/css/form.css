@@ -1,5 +1,5 @@
-.form-group label{
-    display: none;
+.asteriskField{
+    color: orangered;
 }
 .checkbox label{
     display: block;
@@ -113,4 +113,40 @@
 }
 .confirm{
     padding: 0 15px 20px;
+}
+#div_id_avatar label span{
+    display: none;
+}
+#div_id_avatar{
+    display: inline-block;
+}
+.avatar{
+    display: inline-block;
+    float: right;
+}
+.dropdown a img{
+    max-width: 39px;
+    height: auto;
+    float: left;
+    margin-right: 5px;
+}
+.dropdown a{
+    display: inline-block;
+}
+.dropdown a:hover{
+    color: #0f74a8;
+    background-color: #ebebeb;
+}
+.dropdown i{
+    background: url(../images/play3.png) no-repeat;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    float: right;
+    margin-left: 8px;
+    margin-top: 15px;
+}
+.username{
+    font-size: 1.4em;
+    float: left;
 }

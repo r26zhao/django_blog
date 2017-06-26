@@ -50,19 +50,14 @@ h1,h2,h3,h4,h5,h6,label,p{
 }
 ul.social-in li{
 	display: inline-block;
-	padding: 0.5em 1em;
+	padding: 0 1em;
+    margin-top: 10px;
 }
 ul.social-in li a{
 	font-size: 1.35em;
 	color: rgba(0,0,0,.5);
 }
-ul.social-in li  i{
-	background: url(../images/img-sprite.png)no-repeat -19px -16px;
-	width: 43px;
-	height: 43px;
-	display: inline-block;
-	vertical-align: middle;
-}
+
 ul.social-in li  i.tin{
 	background-position:-250px -16px;
 }
@@ -83,7 +78,7 @@ ul.social-in li  i.facebook:hover{
 	position:relative;
 	width:60%;
 	border: 1px solid #ededed;
-	margin-top: 0.9em;
+	margin-top: 20px;
 }
 .header-bottom {
 	padding: 0.3em 0 1em;	
@@ -218,6 +213,13 @@ h2.resp-accordion {
 }
 .post h3 a:hover{
 	color:#5261ac;
+}
+.post img{
+	max-width: 100%;
+	height: auto;
+	border: solid 5px;
+	border-radius: 4px;
+	border-color: #4c4c4c;
 }
 .post p{
 	font-size: 1em;

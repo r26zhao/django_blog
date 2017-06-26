@@ -1,0 +1,35 @@
+{% extends 'account/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block local-account %}
+    <div class="local-header"><h4>个人资料</h4></div>
+    <form class="login" method="post" enctype="multipart/form-data" action="{% url 'blog:account_profile' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="avatar">
+            <img src="{{ request.user.avatar.url }}">
+        </div>
+        <button class="primaryAction" type="submit">更新资料</button>
+    </form>
+{% endblock local-account %}
+
+{% block sidebar %}
+    <div class="social-login user_profile">
+        <div class="social-header">
+            <h4>{% if request.user.nickname %}{{ request.user.nickname }}{% else %}{{ request.user.username }}{% endif %}-Profile</h4>
+        </div>
+        <div class="social-provider">
+            <a class="basic_info"
+               href="{% url 'blog:account_profile' %}">
+                <i></i>
+                基本信息
+            </a>
+        </div><div class="social-provider">
+            <a class="basic_info"
+               href="{% url 'account_change_password' %}">
+                <i></i>
+                更改密码
+            </a>
+        </div>
+    </div>
+{% endblock sidebar %}

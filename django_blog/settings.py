@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.weibo',
-    'crispy_forms'
+    'crispy_forms',
+    'imagekit',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
@@ -146,6 +147,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # 富文本编辑器设置
+
 CKEDITOR_UPLOAD_PATH = 'upload/'
 CKEDITOR_IMAGE_BACKEND = 'pillow'
 CKEDITOR_CONFIGS = {
@@ -174,6 +176,7 @@ CKEDITOR_CONFIGS = {
             {'name': 'tools', 'items': ['Undo', 'Redo', '-', 'Source', 'Preview', 'Save', '-', 'Maximize']}
         ],
         'toolbar': 'YourCustomToolbarConfig',
+        'image_previewText':' ',
         'tabSpaces': 4,
         'extraPlugins': ','.join(
             [
@@ -307,6 +310,7 @@ LOGIN_URL = '/accounts/login'
 SOCIALACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_CONFIRMATION_COOLDOWN = 180
+ACCOUNT_LOGOUT_ON_GET = True
 
 # Email setting
 # SMTP服务器，我使用的是sendclound的服务
