@@ -23,7 +23,7 @@
                                     <span>
                                         关键字：
                                         {% for tag in tag_list %}
-                                        <a href="/">{{ tag.name }}&nbsp;&nbsp;</a>
+                                        <a href="{% url 'blog:tag' tag.slug %}">{{ tag.name }}&nbsp;&nbsp;</a>
                                         {% endfor %}
                                     </span>
                                 </li>
