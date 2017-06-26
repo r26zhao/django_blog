@@ -7,7 +7,7 @@
         {% csrf_token %}
         {{ form|crispy }}
         <div class="avatar">
-            <img src="{{ request.user.avatar.url }}">
+            <img class="img-rounded" src="{{ request.user.avatar.url }}">
         </div>
         <button class="primaryAction" type="submit">更新资料</button>
     </form>
@@ -28,7 +28,7 @@
             <a class="basic_info"
                href="{% url 'account_change_password' %}">
                 <i></i>
-                更改密码
+                修改密码
             </a>
         </div>
     </div>

@@ -1,0 +1,9 @@
+{% extends "account/base.html" %}
+{% load i18n %}
+
+{% block local-account %}
+    <div class="local-header"><h4>{% trans "Sign Up Closed" %}</h4></div>
+    <div class="confirm">
+        <p>{% trans "We are sorry, but the sign up is currently closed." %}</p>
+    </div>
+{% endblock local-account %}
