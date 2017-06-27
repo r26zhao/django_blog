@@ -1,5 +1,18 @@
 {% extends 'blog/base.html' %}
 {% load staticfiles %}
+
+{% block site_info %}
+{% if title %}
+<title>{{ title }}</title>
+<meta name="keywords" content="{{ keywords }}"/>
+<meta name="description" content="{{ description }}" />
+{% else %}
+<title>{{ SITE_NAME }}</title>
+<meta name="keywords" content="{{ SITE_KEYWORDS }}"/>
+<meta name="description" content="{{ SITE_DESCP }}" />
+{% endif %}
+{% endblock site_info %}
+
 		    {% block gallery %}
             <div class="gallery" style="display: none;">
                 <h1>图文推荐</h1>

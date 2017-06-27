@@ -285,9 +285,9 @@ LOGGING = {
 }
 
 # Website INFO  Global Var
-SITE_NAME = 'Python学习、Django技术交流与分享-AA的博客'
+SITE_NAME = 'Python学习笔记、Django学习笔记 - AA的博客'
 SITE_DESCP = 'AA的博客是分享学习Python技术与经验的个人博客，由Python、Django以及资源分享等分类组成，内容主要是Django博客开发。'
-SITE_KEYWORDS = 'AA的博客, Python技术分享, Django博客开发, Django技术交流'
+SITE_KEYWORDS = 'AA的博客, Python学习笔记, Django博客开发, Django学习笔记'
 
 # 自定义用户model
 AUTH_USER_MODEL = 'blog.user'

@@ -37,7 +37,7 @@ def detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.click_increase()
     tag_list = post.tag.all()
-    title = post.title
+    title = post.title + ' - AA的博客'
     description = post.excerpt
     keywords = post.category.name
     for tag in tag_list:
@@ -53,13 +53,25 @@ def category(request, slug):
     category = get_object_or_404(Category, slug=slug)
     post_list = Post.objects.filter(category=category)
     post_list = get_page(request, post_list)
-    return render(request, 'blog/index.html', context={'post_list':post_list})
+    title = category.name + ' - AA的博客'
+    keywords = category.name
+    description = category.name
+    return render(request, 'blog/index.html', context={'post_list':post_list,
+                                                       'title':title,
+                                                       'keywords':keywords,
+                                                       'description':description})
 
 def tag(request, slug):
     tag = get_object_or_404(Tag, slug=slug)
     post_list = Post.objects.filter(tag__in=[tag])
     post_list = get_page(request, post_list)
-    return render(request, 'blog/index.html', context={'post_list':post_list})
+    title = tag.name + ' - AA的博客'
+    keywords = tag.name
+    description = tag.name
+    return render(request, 'blog/index.html', context={'post_list': post_list,
+                                                       'title': title,
+                                                       'keywords': keywords,
+                                                       'description': description})
 
 def search(request):
     q = request.GET.get('q')

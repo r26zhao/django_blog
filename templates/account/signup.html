@@ -1,6 +1,13 @@
 {% extends 'account/base.html' %}
 {% load i18n %}
 {% load crispy_forms_tags %}
+
+{% block site_info %}
+<title>用户注册-AA的博客</title>
+<meta name="keywords" content="用户注册"/>
+<meta name="description" content="{{ SITE_DESCP }}" />
+{% endblock site_info %}
+
 {% block local-account %}
     <div class="local-header"><h4>注册</h4></div>
     <form class="login signup" method="post" action="{% url 'account_signup' %}">
