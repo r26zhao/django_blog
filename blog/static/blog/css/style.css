@@ -39,6 +39,10 @@ h1,h2,h3,h4,h5,h6,label,p{
 .main-top{
 	position:relative;
 }
+.content-bottom{
+    padding-left: 30px;
+    padding-right: 0;
+}
 .logo,.header-in {
 	float:left;
 }
@@ -51,8 +55,8 @@ h1,h2,h3,h4,h5,h6,label,p{
 }
 ul.social-in li{
 	display: inline-block;
-	padding: 0 1em;
     margin-top: 10px;
+    margin-left: 10px;
 }
 ul.social-in li a{
 	font-size: 1.35em;

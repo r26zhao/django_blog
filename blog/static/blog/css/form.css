@@ -23,7 +23,6 @@
 }
 .social-login{
     background: #ebebeb;
-    margin: 0 0 0 15px;
 }
 .social-header h4{
     background: #00aedb;
@@ -83,7 +82,6 @@
 }
 .auth-message{
     background-color: #00aedb;
-    margin-right: 15px;
     margin-bottom: 0;
     text-align: center;
     padding: 0.75em 1.25em;
