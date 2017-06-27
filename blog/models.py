@@ -83,7 +83,7 @@ class Post(models.Model):
     def click_increase(self):
         self.click_count += 1
         self.save(update_fields=['click_count'])
-    def get_abs_url(self):
+    def get_absolute_url(self):
         return reverse('blog:detail', kwargs={'pk':self.pk})
 
 '''

@@ -14,3 +14,13 @@ def get_category():
 def get_tag():
     tag_list = Tag.objects.all()
     return tag_list
+
+@register.simple_tag
+def get_reading_rank(num=5):
+    post_list = Post.objects.all().order_by('-click_count')[:num]
+    return post_list
+
+@register.simple_tag
+def get_recent_post(num=5):
+    post_list = Post.objects.all()[:num]
+    return post_list

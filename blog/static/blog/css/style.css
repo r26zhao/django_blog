@@ -31,6 +31,7 @@ h1,h2,h3,h4,h5,h6,label,p{
 .back img {
   position: absolute;
 }
+
 .main {
 	background:#fff;
 	padding:2em ;
@@ -398,6 +399,7 @@ a.more:hover,.post-footer li a:hover{
 .top-men {
 	padding: 4em 0 0.5em;
 }
+
 /*----*/
 .cd-tabs-navigation {
   width: 360px;

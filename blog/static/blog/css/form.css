@@ -150,3 +150,23 @@
     font-size: 1.4em;
     float: left;
 }
+.post_rank{
+    margin-top: 12px;
+    padding-left: 5px;
+    border: solid 1px;
+    border-radius: 4px;
+    border-color: #00aedb;
+}
+.post_rank h5{
+    font-size: 1.2em;
+    line-height: 1.8em;
+}
+.post_rank h5 a{
+    text-decoration: none;
+    color: #0E2231;
+    display: block;
+}
+.post_rank h5 a:hover{
+    text-decoration: none;
+    color: #ec098d;
+}

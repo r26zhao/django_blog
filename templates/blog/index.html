@@ -67,18 +67,18 @@
                         <div id="author_time">
                             <span>{{ post.author }}&nbsp;&nbsp;&nbsp;{{ post.date_created|timesince }}前</span>
                         </div>
-			            <h3><a href="{{ post.get_abs_url }}">{{ post.title }}</a></h3>
+			            <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
 			            <p>{{ post.excerpt }}</p>
 
 			            <div class="movie">
 				            <ul class="post-footer">
 					            <li id="category"><span><a href="{% url 'blog:category' post.category.name %}">Category : {{ post.category.name }}</a> </span></li>
-					            <li><a href="{{ post.get_abs_url }}"><i></i><span id = "sourceId::{{ post.id }}" class = "cy_cmt_count" ></span></a></li>
+					            <li><a href="{{ post.get_absolute_url }}"><i></i><span id = "sourceId::{{ post.id }}" class = "cy_cmt_count" ></span></a></li>
                                 <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cyt1Muemh">
 </script>
-                                <li id="views"><a href="{{ post.get_abs_url }}"><i></i>{{ post.click_count }}</a></li>
+                                <li id="views"><a href="{{ post.get_absolute_url }}"><i></i>{{ post.click_count }}</a></li>
 				            </ul>
-				            <a href="{{ post.get_abs_url }}" class="more">Read More </a>
+				            <a href="{{ post.get_absolute_url }}" class="more">Read More </a>
 			                <div class="clearfix"> </div>
 			            </div>
 		            </div>

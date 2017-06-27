@@ -207,113 +207,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="cd-tabs">
 			            <nav>
 				            <ul class="cd-tabs-navigation">
-					            <li><a data-content="fashion"  href="#0">点击排行<i> </i></a></li>
-                                <li><a data-content="cinema" href="#0" class="selected fashion1">最新文章<i> </i></a></li>
-					            <li><a data-content="television" href="#0" class="fashion2">随机推荐<i> </i></a></li>
+					            <li><a data-content="fashion"  href="#0">评论排行<i> </i></a></li>
+                                <li><a data-content="cinema" href="#0" class="selected fashion1">阅读排行<i> </i></a></li>
+					            <li><a data-content="television" href="#0" class="fashion2">最新文章<i> </i></a></li>
                             </ul>
 			            </nav>
 	                    <ul class="cd-tabs-content">
 		                    <li data-content="fashion" >
 		                        <div class="top-men">
-			                        <div class="men">
-				                        <div class="grid-men">
-					                        <a href="single.html"><img src="{% static 'blog/images/pp1.jpg' %}" class="img-responsive" alt=""> </a>
-                                        </div>
-				                        <div class="men-grid">
-					                        <h5><a href="single.html">Lorem Ipsum is simply dummy text of the printing</a> </h5>
-					                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-				                        </div>
-				                        <div class="clearfix"></div>
-			                        </div>
-			                        <div class="men">
-				                        <div class="grid-men">
-					                        <a href="single.html"><img src="{% static 'blog/images/pp11.jpg' %}" class="img-responsive" alt=""> </a>
-				                        </div>
-				                        <div class="men-grid">
-					                        <h5><a href="single.html">Lorem Ipsum is simply dummy text of the printing </a></h5>
-					                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-				                        </div>
-				                        <div class="clearfix"></div>
-			                        </div>
-			                        <div class="men">
-				                        <div class="grid-men">
-					                        <a href="single.html"><img src="{% static 'blog/images/pp12.jpg' %}" class="img-responsive" alt=""> </a>
-				                        </div>
-				                        <div class="men-grid">
-					                        <h5><a href="single.html">Lorem Ipsum is simply dummy text of the printing </a></h5>
-					                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-				                        </div>
-			                            <div class="clearfix"></div>
-			                        </div>
-		                        </div>
+                                    {% get_reading_rank as post_list %}
+                                    {% for post in post_list %}
+                                    <div class="post_rank">
+                                        <h5><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
+                                    </div>
+                                    {% endfor %}
+                                </div>
                             </li>
                             <li data-content="cinema" class="selected">
 		                        <div class="top-men">
-			                        <div class="men">
-				                        <div class="grid-men">
-					                        <a href="single.html"><img src="{% static 'blog/images/pp.jpg' %}" class="img-responsive" alt=""> </a>
-				                        </div>
-				                        <div class="men-grid">
-					                        <h5><a href="single.html">Lorem Ipsum is simply dummy text of the printing </a></h5>
-					                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-				                        </div>
-				                        <div class="clearfix"></div>
-			                        </div>
-			                        <div class="men">
-				                        <div class="grid-men">
-					                        <a href="single.html"><img src="{% static 'blog/images/pp0.jpg' %}" class="img-responsive" alt=""> </a>
-                                        </div>
-				                        <div class="men-grid">
-					                        <h5><a href="single.html">Lorem Ipsum is simply dummy text of the printing</a> </h5>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-				                        </div>
-				                        <div class="clearfix"></div>
-			                        </div>
-			                        <div class="men">
-				                <div class="grid-men">
-					                <a href="single.html"><img src="{% static 'blog/images/pp01.jpg' %}" class="img-responsive" alt=""> </a>
-                                </div>
-				                <div class="men-grid">
-					                <h5><a href="single.html">Lorem Ipsum is simply dummy text of the printing </a></h5>
-					                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-				                </div>
-				                <div class="clearfix"></div>
-			                </div>
+                                    {% get_reading_rank as post_list %}
+                                    {% for post in post_list %}
+                                    <div class="post_rank">
+                                        <h5><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
+                                    </div>
+                                    {% endfor %}
                                 </div>
                             </li>
                             <li data-content="television" >
-	                            <div class="top-men">
-			                        <div class="men">
-				                        <div class="grid-men">
-					                        <a href="single.html"><img src="{% static 'blog/images/pp2.jpg' %}" class="img-responsive" alt=""> </a>
-				                        </div>
-				                        <div class="men-grid">
-					                        <h5><a href="single.html">Lorem Ipsum is simply dummy text of the printing </a></h5>
-					                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-				                        </div>
-				                        <div class="clearfix"></div>
-			                        </div>
-			                        <div class="men">
-				                        <div class="grid-men">
-					                        <a href="single.html"><img src="{% static 'blog/images/pp21.jpg' %}" class="img-responsive" alt=""> </a>
-				                        </div>
-				                        <div class="men-grid">
-					                        <h5><a href="single.html">Lorem Ipsum is simply dummy text of the printing </a></h5>
-					                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-				                        </div>
-				                        <div class="clearfix"></div>
-			                        </div>
-			                        <div class="men">
-				                        <div class="grid-men">
-					                        <a href="single.html"><img src="{% static 'blog/images/pp22.jpg' %}" class="img-responsive" alt=""> </a>
-                                        </div>
-                                        <div class="men-grid">
-                                            <h5><a href="single.html">Lorem Ipsum is simply dummy text of the printing</a> </h5>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-                                        </div>
-			                            <div class="clearfix"></div>
-			                        </div>
-		                        </div>
+                                <div class="top-men">
+                                    {% get_recent_post as post_list %}
+                                    {% for post in post_list %}
+                                    <div class="post_rank">
+                                        <h5><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
+                                    </div>
+                                    {% endfor %}
+                                </div>
                             </li>
                             <div class="clearfix"></div>
 	                    </ul>
