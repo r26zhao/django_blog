@@ -54,10 +54,12 @@ class Category(models.Model):
     class Meta:
         verbose_name = '分类'
         verbose_name_plural = verbose_name
+        ordering = ['-id']
 
     def __str__(self):
         return self.name
-
+    def get_absolute_url(self):
+        return reverse('blog:category', kwargs={'slug':self.slug})
 
 # Post 文章类
 class Post(models.Model):

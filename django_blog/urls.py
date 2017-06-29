@@ -17,10 +17,20 @@ from django.conf.urls import url,include
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib import admin
+from django.views.generic.base import RedirectView
+from django.contrib.sitemaps.views import sitemap
+from blog.sitemaps import PostSitemap, CategorySitemap
+
+sitemaps = {
+    'posts':PostSitemap,
+    'category':CategorySitemap,
+}
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('blog.urls')),
     url(r'', include('ckeditor_uploader.urls')),
     url(r'^accounts/', include('allauth.urls')),
+    url(r'^favicon\.ico$', RedirectView.as_view(url='static/blog/images/favicon.ico')),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps':sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
