@@ -34,4 +34,5 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
     url(r'^favicon\.ico$', RedirectView.as_view(url='static/blog/images/favicon.ico')),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps':sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    url(r'^robots\.txt$', include('robots.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
