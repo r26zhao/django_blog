@@ -19,11 +19,12 @@ from django.conf import settings
 from django.contrib import admin
 from django.views.generic.base import RedirectView
 from django.contrib.sitemaps.views import sitemap
-from blog.sitemaps import PostSitemap, CategorySitemap
+from blog.sitemaps import PostSitemap, CategorySitemap, TagSitemap
 
 sitemaps = {
     'posts':PostSitemap,
     'category':CategorySitemap,
+    'tag':TagSitemap,
 }
 
 urlpatterns = [

@@ -18,3 +18,13 @@ class CategorySitemap(Sitemap):
 
     def lastmod(self, obj):
         return obj.post_set.all()[0].date_created
+
+class TagSitemap(Sitemap):
+    priority = 0.9
+    changefreq = 'weekly'
+
+    def items(self):
+        return Tag.objects.all()
+
+    def lastmod(self, obj):
+        return obj.post_set.all()[0].date_created
