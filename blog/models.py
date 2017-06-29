@@ -42,6 +42,7 @@ class Tag(models.Model):
     class Meta:
         verbose_name = '标签'
         verbose_name_plural = verbose_name
+        ordering = ['-id']
 
     def __str__(self):
         return self.name
