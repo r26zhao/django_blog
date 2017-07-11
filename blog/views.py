@@ -1,11 +1,12 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404
+from django.http import JsonResponse
 import logging
 from django.conf import settings
 from .models import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
 from .forms import UserDetailForm
 from django.contrib.auth.decorators import login_required
-
+from easy_comment.forms import CommentForm
 
 logger = logging.getLogger('blog.views')
 
@@ -42,11 +43,29 @@ def detail(request, pk):
     keywords = post.category.name
     for tag in tag_list:
         keywords = keywords + ', ' + tag.name
+    if request.method == 'POST':
+        print('request is ajax:%s' % request.is_ajax())
+        print(request.POST)
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)
+            new_comment.post = post
+            new_comment.user = request.user
+            new_comment.user_name = request.user.nickname if request.user.nickname is not None else request.user.username
+            new_comment.save()
+            msg = 'success!'
+            location = '#c' + str(new_comment.id)
+            return JsonResponse({'msg':msg, 'location':location})
+        else:
+            return JsonResponse({'msg':'评论出错'})
+    else:
+        comment_form = CommentForm()
     return render(request, 'blog/detail.html', context={'post': post,
                                                         'title':title,
                                                         'keywords':keywords,
                                                         'description':description,
-                                                        'tag_list':tag_list})
+                                                        'tag_list':tag_list,
+                                                        'form':comment_form,})
 
 
 def category(request, slug):
