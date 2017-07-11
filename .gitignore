@@ -1,2 +1,4 @@
 log/
 media/
+blog/migrations
+easy_comment/migrations
