@@ -149,8 +149,15 @@ $(window).load(function () {
         }
         else {
             var offset = sessionStorage.getItem('offsetTop');
-
-            $('body,html').animate({scrollTop:offset}, 300);
+            if (sessionStorage.getItem('hrf') == window.location.href){
+                    $('body,html').animate({scrollTop:offset}, 300);
+            }
+            else {
+                    sessionStorage.setItem('hrf', window.location.href);
+            }
+        }
+        if (sessionStorage.getItem('reply')){
+            sessionStorage.removeItem('reply');
         }
     });
 });

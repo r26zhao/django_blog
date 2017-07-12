@@ -24,3 +24,8 @@ def get_reading_rank(num=5):
 def get_recent_post(num=5):
     post_list = Post.objects.all()[:num]
     return post_list
+
+@register.simple_tag
+def get_comment_rank(num=5):
+    post_list = Post.objects.annotate(comment_num = Count('comment')).order_by('-comment_num')
+    return post_list[:num]

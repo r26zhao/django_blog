@@ -229,7 +229,7 @@ var _hmt = _hmt || [];
 	                    <ul class="cd-tabs-content">
 		                    <li data-content="fashion" >
 		                        <div class="top-men">
-                                    {% get_reading_rank as post_list %}
+                                    {% get_comment_rank as post_list %}
                                     {% for post in post_list %}
                                     <div class="post_rank">
                                         <h5><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
