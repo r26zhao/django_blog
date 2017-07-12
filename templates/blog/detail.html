@@ -88,12 +88,9 @@
     <h3>{{ user_count }}人参与，{{ nodes.count }}条评论</h3>
 </div>
 <div class="comment-list">
+{% if nodes.count > 0 %}
     {% recursetree nodes %}
-        <div class="row
-{% if node.is_root_node %}
-comment-root
-{% else %}
-comment-leaf
+        <div class="row {% if node.is_root_node %}comment-root{% else %}comment-leaf
 {% endif %}" id="c{{ node.id }}">
             <div class="col-md-1 comment-left">
                 <a class="comment-avatar">
@@ -104,6 +101,10 @@ comment-leaf
                 <span class="comment-user"><strong>
                     {{ node.user_name }}
                 </strong></span>
+                {% if not node.is_root_node %}
+                <span class="glyphicon glyphicon-share-alt"></span>
+                <span class="comment-reply-to">@{{ node.parent.user_name }}</span>
+                {% endif %}
                 <span class="comment-time pull-right">{{ node.submit_date|timesince }}前</span>
                 <div class="comment-content">
                     <p>{{ node.content|safe }}</p>
@@ -125,8 +126,12 @@ comment-leaf
 
         {% endif %}
         </div>
-
     {% endrecursetree %}
+{% else %}
+<div class="jumbotron">
+    <h4>暂无评论，快来抢沙发</h4>
+</div>
+{% endif %}
 </div>
 <script>
 $(window).scroll(function () {
