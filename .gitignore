@@ -2,4 +2,3 @@ log/
 media/
 blog/migrations
 easy_comment/migrations
-django_blog/settings.py

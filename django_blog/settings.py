@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8q@q!u=s#vgqz7=s)2au6w4ae@4mt8i=#76x6ll-x_jbs-_zh%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.aaron-zhao.com']
 
@@ -98,7 +98,7 @@ DATABASES = {
         'USER': 'root',
         "PASSWORD": 'mangui710',
         'HOST': '127.0.0.1',
-        'PORT': '3700',
+        'PORT': '3306',
     }
 }
 
@@ -202,15 +202,18 @@ CKEDITOR_CONFIGS = {
             ]),
     },
     'comment':{
-        'toolbar': 'Custom',
-        'toolbar_Custom': [
-            ['Bold', 'Italic', 'Underline'],
-            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
-            ['Link', 'Unlink'],
-            ['RemoveFormat', 'Source']
-        ],
         'width':'720px',
         'height':'150px',
+        'image_previewText':' ',
+        'tabSpaces': 4,
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline', 'Format', 'RemoveFormat'],
+            ['NumberedList', 'BulletedList'],
+            ['Blockquote', 'CodeSnippet'],
+            ['Image', 'Link', 'Unlink']
+        ],
+        'extraPlugins': ','.join(['codesnippet','uploadimage','prism','widget','lineutils',]),
     },
 }
 # 自定义日志输出信息
