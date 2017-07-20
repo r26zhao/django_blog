@@ -1,22 +1,16 @@
 from django import forms
-from .models import *
+from .models import Comment
 
 class CommentForm(forms.ModelForm):
     honeypot = forms.CharField(required=False,
-                               label='If you enter anything in this field, you comment will be treated as spam!',)
+                               label='If you enter anything in this field, you comment will be treated as spam!')
     class Meta:
         model = Comment
-        fields = ('content', 'parent')
+        fields = ('content', 'parent', 'post')
 
+    # 验证honeypot字段，如果有输入，则是垃圾评论
     def clean_honeypot(self):
         value = self.cleaned_data['honeypot']
         if value:
-            raise forms.ValidationError(self.fields['honeypot'].label)
-        return value
-
-    def clean_content(self):
-        value = self.cleaned_data['content']
-        print(value.replace('&nbsp;', ''))
-        if value.replace('&nbsp;', '') == '<p></p>':
-            raise forms.ValidationError('评论不能为空！')
+            return forms.ValidationError(self.fields['honeypot'].error_message)
         return value
