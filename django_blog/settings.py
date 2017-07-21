@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8q@q!u=s#vgqz7=s)2au6w4ae@4mt8i=#76x6ll-x_jbs-_zh%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.aaron-zhao.com']
 
@@ -93,7 +93,7 @@ DATABASES = {
         'USER': 'root',
         "PASSWORD": 'mangui710',
         'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'PORT': '3700',
     }
 }
 
