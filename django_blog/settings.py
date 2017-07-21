@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'imagekit',
     'robots',
+    'mptt',
+    'easy_comment',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
@@ -137,9 +139,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'blog/static'),
-]
 
 # Media root 设置
 MEDIA_URL = '/media/'
@@ -149,6 +148,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CKEDITOR_UPLOAD_PATH = 'upload/'
 CKEDITOR_IMAGE_BACKEND = 'pillow'
+CKEDITOR_ALLOW_NONIMAGE_FILES = False
 CKEDITOR_CONFIGS = {
     'default': {
         'skin': 'moono',
@@ -195,7 +195,23 @@ CKEDITOR_CONFIGS = {
                 'uploadfile',
                 'prism',
             ]),
+    },
+    'comment': {
+        # 编辑器的宽高请根据你的页面自行设置
+        'width': '720px',
+        'height': '150px',
+        'image_previewText': ' ',
+        'tabSpaces': 4,
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline', 'Format', 'RemoveFormat'],
+            ['NumberedList', 'BulletedList'],
+            ['Blockquote', 'CodeSnippet'],
+            ['Image', 'Link', 'Unlink']
+        ],
+        'extraPlugins': ','.join(['codesnippet', 'uploadimage', 'prism', 'widget', 'lineutils', ]),
     }
+
 }
 # 自定义日志输出信息
 LOGGING = {
@@ -330,3 +346,6 @@ ADMINS = (('Aaron', 'rudy710@qq.com'),)
 #非空链接，却发生404错误，发送通知MANAGERS
 SEND_BROKEN_LINK_EMAILS = True
 MANAGERS = ADMINS
+
+# easy_comment setting
+COMMENT_ENTRY_MODEL = 'blog.post'
