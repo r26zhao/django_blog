@@ -1,8 +1,5 @@
 {% extends 'blog/base.html' %}
 {% load staticfiles %}
-{% load crispy_forms_tags %}
-{% load mptt_tags %}
-{% load comment_tags %}
 {% block site_info %}
 <title>{{ title }}</title>
 <meta name="keywords" content="{{ keywords }}"/>
@@ -14,12 +11,13 @@
                             <ul>
                                 <li>
                                     <span><h3><a href="#">{{ post.title }}</a></h3></span>
+                                    <span style="float: right; line-height: 2em">阅读：({{ post.click_count }})&nbsp;&nbsp;评论：(<a href="#SOHUCS" id="changyan_count_unit"></a>)</span>
+                                    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js">
+</script>
                                 </li>
                                 <li style="padding-top: 0.5em">
                                     <span>作者：{{ post.author }}&nbsp;&nbsp;</span>
                                     <span>发表于：{{ post.date_created }}</span>
-                                    <span class="pull-right">评论：({{ post.comment_set.all.count }})</span>
-                                    <span class="pull-right">阅读：({{ post.click_count }})&nbsp;&nbsp;</span>
                                 </li>
                                 <li>
                                     <span>
@@ -32,7 +30,6 @@
                             </ul>
                         </div>
 			            <p>{{ post.content|safe }}</p>
-<!-- 百度分享
                         <div class="bdsharebuttonbox">
     <a href="#" class="bds_more" data-cmd="more">分享到：</a>
     <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
@@ -43,182 +40,20 @@
                         <script>
     window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":[],"bdPic":"","bdStyle":"0","bdSize":"16"}, "share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
 </script>
--->
 </div>
 
 {% endblock content %}
 
 {% block comment %}
-<script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
-<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
-<div id="cmt-form">
-{% if request.user.is_authenticated %}
-<div class="comment-header">
-    <a class="comment-avatar">
-        <img class="img-rounded" src="{{ request.user.avatar.url }}">
-    </a>
-    <span><strong>
-        {% if request.user.nickname %}
-            {{ request.user.nickname }}
-        {% else %}
-            {{ request.user.username }}
-        {% endif %}
-    </strong></span>
-    <span class="glyphicon glyphicon-edit"></span>
-    <span id="reply-to" style="display:none;">回复：<a class="reply-to-name" href="javascript:void(0);">@Aaron</a></span>
-</div>
-<form class="comment-form" method="post" action="{{ post.get_absolute_url }}">
-    {% csrf_token %}
-    {% for field in form %}
-    {{ field }}
-    {{ field.errors }}
-    {% endfor %}
-    <button class="btn btn-primary pull-right" type="submit">提交评论</button>
-</form>
-<button class="btn btn-danger pull-right" id="cancel-reply" style="display: none">取消回复</button>
-{% else %}
-<div class="jumbotron">
-    <h3 class="text-center"><a href="{% url 'account_login' %}?next={{ request.path }}">登录</a>后参与评论</h3>
-</div>
-{% endif %}
-</div>
-{% get_comments post as nodes %}
-{% get_comments_user_count post as user_count %}
-<div class="comment-count">
-    <h3>{{ user_count }}人参与，{{ nodes.count }}条评论</h3>
-</div>
-<div class="comment-list">
-{% if nodes.count > 0 %}
-    {% recursetree nodes %}
-        <div class="row {% if node.is_root_node %}comment-root{% else %}comment-leaf
-{% endif %}" id="c{{ node.id }}">
-            <div class="col-md-1 comment-left">
-                <a class="comment-avatar">
-                    <img class="img-rounded" src="{{ node.user.avatar.url }}">
-                </a>
-            </div>
-            <div class="col-md-11 comment-right">
-                <span class="comment-user"><strong>
-                    {{ node.user_name }}
-                </strong></span>
-                {% if not node.is_root_node %}
-                <span class="glyphicon glyphicon-share-alt"></span>
-                <span class="comment-reply-to">@{{ node.parent.user_name }}</span>
-                {% endif %}
-                <span class="comment-time pull-right">{{ node.submit_date|timesince }}前</span>
-                <div class="comment-content">
-                    <p>{{ node.content|safe }}</p>
-                </div>
-                <a class="like" href="javascript:void(0);"><span class="glyphicon glyphicon-thumbs-up"></span> 0</a>
-                <a class="dislike" href="javascript:void(0);"><span class="glyphicon glyphicon-thumbs-down"></span> 0</a>
-                <a class="comment-reply" id="a-{{ node.id }}" href="#cmt-form">
-                    回复
-                </a>
-                <span id="r-{{ node.id }}" style="display: none">@{{ node.user_name }}</span>
-            </div>
-        </div>
-        <div class="comment-children {% if node.is_root_node %}
-        comment-first-gen
-        {% endif %}">
-        {% if not node.is_leaf_node %}
+<!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="{{ post.id }}" ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cyt1Muemh';
+var conf = 'prod_1b41adedd70b452211bfe91ccb08a95f';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
 
-            {{ children }}
-
-        {% endif %}
-        </div>
-    {% endrecursetree %}
-{% else %}
-<div class="jumbotron">
-    <h4>暂无评论，快来抢沙发</h4>
-</div>
-{% endif %}
-</div>
-<script>
-$(window).scroll(function () {
-   if ($(document).scrollTop() != 0){
-       sessionStorage.setItem('offsetTop', $(window).scrollTop());
-   }
-});
-$(window).load(function () {
-    $(function () {
-        if (sessionStorage.getItem('anchor')){
-            var t = $(sessionStorage.getItem('cid')).offset().top;
-            window.location.hash = sessionStorage.getItem('cid');
-            $('body,html').animate({scrollTop:t}, 300);
-            sessionStorage.removeItem('anchor');
-        }
-        else {
-            var offset = sessionStorage.getItem('offsetTop');
-            if (sessionStorage.getItem('hrf') == window.location.href){
-                    $('body,html').animate({scrollTop:offset}, 300);
-            }
-            else {
-                    sessionStorage.setItem('hrf', window.location.href);
-            }
-        }
-        if (sessionStorage.getItem('reply')){
-            sessionStorage.removeItem('reply');
-        }
-    });
-});
-$(document).ready(function () {
-    $("#cancel-reply").click(function () {
-        sessionStorage.removeItem('reply');
-        document.getElementById('reply-to').style.display = 'none';
-        document.getElementById('cancel-reply').style.display = 'none';
-    });
-    $(".comment-reply").click(function () {
-        pid = $(this).attr('ID').replace('a-','');
-        sessionStorage.setItem('reply', true);
-        sessionStorage.setItem('pid', pid);
-        $(".reply-to-name").text($("#r-"+pid).text());
-        document.getElementById('reply-to').style.display = '';
-        document.getElementById('cancel-reply').style.display = '';
-    });
-    $.ajaxSetup({
-        data: {csrfmiddlewaretoken: '{{ csrf_token }}' }
-    });
-    $(".comment-form").submit(function (e) {
-        if ($("#id_honeypot").val().length > 0){
-        alert("spam!");
-        return false;
-        }
-        pid = $('#id_parent option:selected').val();
-        if (sessionStorage.getItem('reply')){
-            pid = sessionStorage.getItem('pid');
-            sessionStorage.removeItem('reply');
-        }
-        content = CKEDITOR.instances.id_content.getData();
-        list = content.replace(/<.*?>/ig,"").replace(/&nbsp;/ig, "");
-        list = list.replace(/\s/g, "");
-        if (list == ""){
-            alert("评论不能为空！！");
-            $(".comment-form")[0].reset();
-            window.location.reload();
-            return false;
-        }
-        e.preventDefault();
-        $.ajax({
-            type:'post',
-            url:'{{ post.get_absolute_url }}',
-            data:{
-                'csrfmiddlewaretoken':$("input[name='csrfmiddlewaretoken']").val(),
-                'honeypot':$("#id_honeypot").val(),
-                'content':CKEDITOR.instances.id_content.getData(),
-                'parent':pid
-            },
-            dataType:"json",
-            success:function (json) {
-                if (json.msg == 'success!'){
-                    sessionStorage.setItem('anchor', true);
-                    sessionStorage.setItem('cid', json.location);
-                }
-                $(".comment-form")[0].reset();
-                //alert(json.msg);
-                window.location.reload();
-            }
-        });
-    });
-});
-</script>
 {% endblock comment %}
+

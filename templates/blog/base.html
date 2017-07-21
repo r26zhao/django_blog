@@ -67,6 +67,7 @@ var _hmt = _hmt || [];
 <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <link href='http://fonts.useso.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
 -->
+
 <script type="text/javascript" src="{% static 'blog/js/move-top.js' %}"></script>
 <script type="text/javascript" src="{% static 'blog/js/easing.js' %}"></script>
 				<script type="text/javascript">
@@ -229,7 +230,7 @@ var _hmt = _hmt || [];
 	                    <ul class="cd-tabs-content">
 		                    <li data-content="fashion" >
 		                        <div class="top-men">
-                                    {% get_comment_rank as post_list %}
+                                    {% get_reading_rank as post_list %}
                                     {% for post in post_list %}
                                     <div class="post_rank">
                                         <h5><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>

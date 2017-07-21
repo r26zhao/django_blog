@@ -29,11 +29,11 @@ class User(AbstractUser):
 
     def save(self, *args, **kwargs):
         if len(self.avatar.name.split('/')) == 1:
-            #print('before:%s' % self.avatar.name)
+            print('before:%s' % self.avatar.name)
             self.avatar.name = self.username + '/' + self.avatar.name
         super(User, self).save()
-        #print('after:%s' % self.avatar.name)
-        #print('avatar_path: %s' % self.avatar.path)
+        print('after:%s' % self.avatar.name)
+        print('avatar_path: %s' % self.avatar.path)
 
 # Tag 标签
 class Tag(models.Model):
