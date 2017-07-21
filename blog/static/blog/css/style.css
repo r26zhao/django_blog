@@ -31,7 +31,10 @@ h1,h2,h3,h4,h5,h6,label,p{
 .back img {
   position: absolute;
 }
-
+.last-modified{
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
 .main {
 	background:#fff;
 	padding:2em ;

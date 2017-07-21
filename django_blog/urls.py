@@ -36,4 +36,5 @@ urlpatterns = [
     url(r'^sitemap\.xml$', sitemap, {'sitemaps':sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     url(r'^robots\.txt$', include('robots.urls')),
     url(r'', include('easy_comment.urls')),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
