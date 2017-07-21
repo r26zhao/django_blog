@@ -15,7 +15,7 @@
                                 <li style="padding-top: 0.5em">
                                     <span>作者：{{ post.author }}&nbsp;&nbsp;</span>
                                     <span>发表于：{{ post.date_created }}</span>
-                                    <span class="pull-right">评论：(0)</span>
+                                    <span class="pull-right">评论：({{ post.comment_set.all.count }})</span>
                                     <span class="pull-right" style="margin-right: 10px">阅读：({{ post.click_count }})</span>
                                 </li>
                                 <li>

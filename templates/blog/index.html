@@ -86,7 +86,7 @@
 			            <div class="movie">
 				            <ul class="post-footer">
 					            <li id="category"><span><a href="{% url 'blog:category' post.category.slug %}">Category : {{ post.category.name }}</a> </span></li>
-					            <li><a href="{{ post.get_absolute_url }}"><i></i>0</a></li>
+					            <li><a href="{{ post.get_absolute_url }}"><i></i>{{ post.comment_set.all.count }}</a></li>
                                 <li id="views"><a href="{{ post.get_absolute_url }}"><i></i>{{ post.click_count }}</a></li>
 				            </ul>
 				            <a href="{{ post.get_absolute_url }}" class="more">Read More </a>
