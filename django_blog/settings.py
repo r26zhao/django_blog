@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8q@q!u=s#vgqz7=s)2au6w4ae@4mt8i=#76x6ll-x_jbs-_zh%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.aaron-zhao.com']
 
@@ -95,7 +95,7 @@ DATABASES = {
         'USER': 'root',
         "PASSWORD": 'mangui710',
         'HOST': '127.0.0.1',
-        'PORT': '3700',
+        'PORT': '3306',
     }
 }
 
@@ -334,7 +334,7 @@ ACCOUNT_LOGOUT_ON_GET = True
 # SMTP服务器，我使用的是sendclound的服务
 EMAIL_HOST = 'smtp.mxhichina.com'
 EMAIL_HOST_USER = 'support@aaron-zhao.com'
-EMAIL_HOST_PASSWORD = 'Manguimg710O'
+EMAIL_HOST_PASSWORD = '1234'
 EMAIL_PORT = 465
 #EMAIL_HOST = 'smtpcloud.sohu.com'
 #EMAIL_HOST_USER = 'Aaroon_test_N05MI9'  'bguqzpoxqlhccaig' qq
