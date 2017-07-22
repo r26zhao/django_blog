@@ -58,6 +58,11 @@
 .comment-content{
     margin: 5px 0;
 }
+.comment-content img{
+    max-width: 100%;
+    height: auto;
+    border: solid 1px;
+}
 .like{
     margin-right: 15px;
 }

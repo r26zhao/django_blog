@@ -151,6 +151,7 @@ CKEDITOR_IMAGE_BACKEND = 'pillow'
 CKEDITOR_ALLOW_NONIMAGE_FILES = False
 CKEDITOR_RESTRICT_BY_USER = True
 CKEDITOR_RESTRICT_BY_DATE = True
+CKEDITOR_BROWSE_SHOW_DIRS = True
 CKEDITOR_CONFIGS = {
     'default': {
         'skin': 'moono',
@@ -333,7 +334,7 @@ ACCOUNT_LOGOUT_ON_GET = True
 # SMTP服务器，我使用的是sendclound的服务
 EMAIL_HOST = 'smtp.mxhichina.com'
 EMAIL_HOST_USER = 'support@aaron-zhao.com'
-EMAIL_HOST_PASSWORD = '1234'
+EMAIL_HOST_PASSWORD = 'Manguimg710O'
 EMAIL_PORT = 465
 #EMAIL_HOST = 'smtpcloud.sohu.com'
 #EMAIL_HOST_USER = 'Aaroon_test_N05MI9'  'bguqzpoxqlhccaig' qq
@@ -351,3 +352,4 @@ MANAGERS = ADMINS
 
 # easy_comment setting
 COMMENT_ENTRY_MODEL = 'blog.post'
+ROBOTS_USE_HOST = False
