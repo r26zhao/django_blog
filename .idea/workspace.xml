@@ -27,8 +27,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="338" column="16" lean-forward="true" selection-start-line="338" selection-start-column="16" selection-end-line="338" selection-end-column="16" />
+            <state relative-caret-position="301">
+              <caret line="337" column="27" lean-forward="false" selection-start-line="337" selection-start-column="27" selection-end-line="337" selection-end-column="27" />
               <folding>
                 <element signature="e#4127#5956#0" expanded="false" />
               </folding>
@@ -94,7 +94,7 @@
         <entry file="file://C:/Envs/blogproject_env/Lib/site-packages/notifications/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
-              <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="28" />
+              <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -856,7 +856,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35325265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1240,7 +1240,7 @@
     <entry file="file://C:/Envs/blogproject_env/Lib/site-packages/notifications/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="28" />
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1255,8 +1255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="338" column="16" lean-forward="true" selection-start-line="338" selection-start-column="16" selection-end-line="338" selection-end-column="16" />
+        <state relative-caret-position="301">
+          <caret line="337" column="27" lean-forward="false" selection-start-line="337" selection-start-column="27" selection-end-line="337" selection-end-column="27" />
           <folding>
             <element signature="e#4127#5956#0" expanded="false" />
           </folding>
