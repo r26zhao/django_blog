@@ -221,6 +221,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+    });
+</script>
 <!-- 百度自动推送 -->
 <script>
 (function(){

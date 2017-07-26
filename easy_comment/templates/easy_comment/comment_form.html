@@ -54,14 +54,14 @@
         // if true,说明是提交评论后刷新的页面，将位置跳到新评论处
         if (sessionStorage.getItem('anchor')){
             var top = $(sessionStorage.getItem('new_comment')).offset().top;
-            $('body,html').animate({scrollTop:top}, 300);
+            $('body,html').animate({scrollTop:top}, 50);
             window.location.hash = sessionStorage.getItem('new_comment');
             sessionStorage.removeItem('anchor');
         }
         else {
             var offset = sessionStorage.getItem('offsetTop');
             if (sessionStorage.getItem('hrf') == window.location.href){
-                    $('body,html').animate({scrollTop:offset}, 300);
+                    $('body,html').animate({scrollTop:offset}, 100);
             }
             else {
                     sessionStorage.setItem('hrf', window.location.href);

@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8q@q!u=s#vgqz7=s)2au6w4ae@4mt8i=#76x6ll-x_jbs-_zh%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.aaron-zhao.com']
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'robots',
     'mptt',
     'easy_comment',
+    'notifications',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
@@ -95,7 +96,7 @@ DATABASES = {
         'USER': 'root',
         "PASSWORD": 'mangui710',
         'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'PORT': '3700',
     }
 }
 
@@ -345,7 +346,7 @@ EMAIL_USE_SSL = True
 #EMAIL_USE_TLS = True
 # 默认发件人，不设置的话django默认使用的webmaster@localhost
 DEFAULT_FROM_EMAIL = 'Support <support@aaron-zhao.com>'
-ADMINS = (('Aaron', 'rudy710@qq.com'),)
+ADMINS = (('Aaron', 'rudy710@qq.com'), ('Doge', 'zry710@gmail.com'))
 #非空链接，却发生404错误，发送通知MANAGERS
 SEND_BROKEN_LINK_EMAILS = True
 MANAGERS = ADMINS
@@ -353,3 +354,6 @@ MANAGERS = ADMINS
 # easy_comment setting
 COMMENT_ENTRY_MODEL = 'blog.post'
 ROBOTS_USE_HOST = False
+
+# notification setting
+NOTIFICATIONS_USE_JSONFIELD=True

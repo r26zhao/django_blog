@@ -20,6 +20,7 @@ from django.contrib import admin
 from django.views.generic.base import RedirectView
 from django.contrib.sitemaps.views import sitemap
 from blog.sitemaps import PostSitemap, CategorySitemap, TagSitemap
+import notifications.urls
 
 sitemaps = {
     'posts':PostSitemap,
@@ -36,5 +37,5 @@ urlpatterns = [
     url(r'^sitemap\.xml$', sitemap, {'sitemaps':sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     url(r'^robots\.txt$', include('robots.urls')),
     url(r'', include('easy_comment.urls')),
-
+    url(r'^inbox/notifications/', include(notifications.urls, namespace='notifications')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
