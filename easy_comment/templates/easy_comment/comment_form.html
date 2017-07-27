@@ -38,11 +38,6 @@
 <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
 <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
 <script>
-    $(window).scroll(function () {
-        if ($(document).scrollTop() != 0){
-        sessionStorage.setItem('offsetTop', $(window).scrollTop());
-        }
-    });
     $(window).load(function () {
         if (!$(".comment-reply").hasClass('no-login')){
             $(".comment-form")[0].reset();
@@ -57,15 +52,6 @@
             $('body,html').animate({scrollTop:top}, 50);
             window.location.hash = sessionStorage.getItem('new_comment');
             sessionStorage.removeItem('anchor');
-        }
-        else {
-            var offset = sessionStorage.getItem('offsetTop');
-            if (sessionStorage.getItem('hrf') == window.location.href){
-                    $('body,html').animate({scrollTop:offset}, 100);
-            }
-            else {
-                    sessionStorage.setItem('hrf', window.location.href);
-            }
         }
     });
     $(document).ready(function () {

@@ -53,7 +53,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="logo">
                             <a href="/"><img src="{% static 'blog/images/logo.png' %}" alt="" ></a>
                         </div>
-                        <div class="search">
+                        <div class="search pull-right">
                             <form role="search" method="get" action="{% url 'blog:search' %}">
                                 {% csrf_token %}
                                 <input type="search" name="q" placeholder="搜索" required>
@@ -65,6 +65,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				    <div class="header-top-on">
 					    <ul class="social-in">
                             {% if user.is_authenticated %}
+                            <li class="bell">
+                                <a href="{% url 'notifications:all' %}" style="display: inline-block; font-size: 1.4em">
+                                    <i class="glyphicon glyphicon-bell"></i>
+                                </a>
+                            </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <img class="img-rounded" src="{{ request.user.avatar.url }}">
@@ -257,10 +262,9 @@ var _hmt = _hmt || [];
 <script type="text/javascript">
     $(document).ready(function() {
         $().UItoTop({ easingType: 'easeOutQuart' });
-
+        $(".comment-content img").removeAttr('style');
     });
 </script>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script type="text/javascript" src="{% static 'blog/js/move-top.js' %}"></script>
 <script type="text/javascript" src="{% static 'blog/js/easing.js' %}"></script>
 <script src="{% static 'blog/js/easyResponsiveTabs.js' %}" type="text/javascript"></script>

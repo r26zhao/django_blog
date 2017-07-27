@@ -14,22 +14,22 @@ def get_recipient():
 
 ADMINS = get_recipient()
 
-def comment_handle(sender, instance, **kwargs):
-    recipient = ADMINS.exclude(id=instance.user.id)
-    if not instance.parent is None:
-        recipient = recipient.exclude(id=instance.parent.user.id)
-        if recipient.count() > 0:
-            notify.send(instance.user, recipient=recipient,
-                        verb='在 %s 中回复了 %s' % (instance.post.title, instance.parent.user_name),
-                        description=instance.content)
-        if not instance.user_name == instance.parent.user_name:
-            notify.send(instance.user, recipient=instance.parent.user, verb='在 %s 中@了你' % instance.post.title,
-                        description=instance.content)
-    else:
-        if recipient.count() > 0:
-            notify.send(instance.user, recipient=recipient, verb='在 %s 中发表了评论' % instance.post.title,
-                        description=instance.content)
-
+def comment_handle(sender, instance, created, **kwargs):
+    if created:
+        recipient = ADMINS.exclude(id=instance.user.id)
+        if not instance.parent is None:
+            recipient = recipient.exclude(id=instance.parent.user.id)
+            if recipient.count() > 0:
+                notify.send(instance.user, recipient=recipient,
+                            verb='在 %s 中回复了 %s' % (instance.post.title, instance.parent.user_name),
+                            description=instance.content)
+            if not instance.user_name == instance.parent.user_name:
+                notify.send(instance.user, recipient=instance.parent.user, verb='在 %s 中@了你' % instance.post.title,
+                            description=instance.content)
+        else:
+            if recipient.count() > 0:
+                notify.send(instance.user, recipient=recipient, verb='在 %s 中发表了评论' % instance.post.title,
+                            description=instance.content)
 
 post_save.connect(comment_handle, sender=Comment)
 

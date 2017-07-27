@@ -49,12 +49,15 @@ h1,h2,h3,h4,h5,h6,label,p{
 .logo,.header-in {
 	float:left;
 }
+.logo a img{
+	height: 52px;
+	width: auto;
+}
 .header-in{
-	width:75%;
+	width:68%;
 }
 .header-top-on{
 	float:right;
-	margin-top: 0.7em;
 }
 ul.social-in li{
 	display: inline-block;
@@ -81,12 +84,15 @@ ul.social-in li  i.tin:hover{
 ul.social-in li  i.facebook:hover{
 	background-position:-192px -16px;
 }
+.bell a{
+	float: right;
+}
 .search{
 	float:right;
 	position:relative;
-	width:60%;
+	width:50%;
 	border: 1px solid #ededed;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 .header-bottom {
 	padding: 0.3em 0 1em;	
@@ -95,12 +101,12 @@ ul.social-in li  i.facebook:hover{
 	outline: none;
 	padding:8px 15px;
 	background: none;
-	width: 77%;
+	width: 70%;
 	border: none;
 	font-size:1em;
-	color:#a9a7a7;		
+	color:#a9a7a7;
 }
-.search input[type="submit"] {	
+.search input[type="submit"] {
 	border: none;
 	cursor: pointer;
 	position: absolute;
