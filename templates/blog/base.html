@@ -9,6 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 {% load blog_tags %}
 {% load staticfiles %}
 {% load account %}
+{% load notifications_tags %}
 <head>
 {% block site_info %}
 <title>{{ SITE_NAME }}</title>
@@ -17,6 +18,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 {% endblock site_info %}
 {% block extra_head %}
 {% endblock extra_head %}
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charseutft=-8" />
 <link rel="shortcut icon" href="{% static 'blog/images/favicon.ico' %}" />
@@ -63,11 +65,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					    <div class="clearfix"> </div>
 				    </div>
 				    <div class="header-top-on">
+                        {% notifications_unread as unread_count %}
 					    <ul class="social-in">
                             {% if user.is_authenticated %}
                             <li class="bell">
-                                <a href="{% url 'notifications:all' %}" style="display: inline-block; font-size: 1.4em">
+                                <a href="{% url 'notifications:all' %}" style="font-size: 1.6em">
                                     <i class="glyphicon glyphicon-bell"></i>
+                                    <span class="notice-unread_count"><b>{% if unread_count > 0 %}{{ unread_count }}{% endif %}</b></span>
                                 </a>
                             </li>
                             <li class="dropdown">
@@ -114,7 +118,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <li><a href="{% url 'blog:category' 'python-study-notes' %}" class="color3"> Python </a></li>
 						        <li><a href="{% url 'blog:category' 'resources-share' %}" class="color4">资源分享</a></li>
                                 <li><a href="https://github.com/r26zhao" target="_blank" class="color5"> GitHub </a></li>
-						        <li><a href="javascript:void(0);" class="color6"> About </a></li>
+						        <li style="max-width: 481px"><a href="javascript:void(0);" class="color6"> About </a></li>
 						        <div class="clearfix"></div>
 					        </ul>
                         </div>

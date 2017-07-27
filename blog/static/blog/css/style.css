@@ -61,8 +61,8 @@ h1,h2,h3,h4,h5,h6,label,p{
 }
 ul.social-in li{
 	display: inline-block;
-    margin-top: 10px;
-    margin-left: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 ul.social-in li a{
 	font-size: 1.35em;
@@ -84,8 +84,14 @@ ul.social-in li  i.tin:hover{
 ul.social-in li  i.facebook:hover{
 	background-position:-192px -16px;
 }
+.notice-unread_count{
+    font-size: 0.7em;
+	float: right;
+	color: red;
+}
 .bell a{
 	float: right;
+	display: inline-block;
 }
 .search{
 	float:right;

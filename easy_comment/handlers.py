@@ -21,14 +21,20 @@ def comment_handle(sender, instance, created, **kwargs):
             recipient = recipient.exclude(id=instance.parent.user.id)
             if recipient.count() > 0:
                 notify.send(instance.user, recipient=recipient,
-                            verb='在 %s 中回复了 %s' % (instance.post.title, instance.parent.user_name),
+                            verb='回复了 %s' % instance.parent.user_name,
+                            action_object=instance,
+                            target=instance.post,
                             description=instance.content)
             if not instance.user_name == instance.parent.user_name:
-                notify.send(instance.user, recipient=instance.parent.user, verb='在 %s 中@了你' % instance.post.title,
+                notify.send(instance.user, recipient=instance.parent.user, verb='@了你',
+                            action_object=instance,
+                            target=instance.post,
                             description=instance.content)
         else:
             if recipient.count() > 0:
-                notify.send(instance.user, recipient=recipient, verb='在 %s 中发表了评论' % instance.post.title,
+                notify.send(instance.user, recipient=recipient, verb='发表了评论',
+                            action_object=instance,
+                            target=instance.post,
                             description=instance.content)
 
 post_save.connect(comment_handle, sender=Comment)
