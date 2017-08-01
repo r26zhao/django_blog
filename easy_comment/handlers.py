@@ -17,8 +17,8 @@ ADMINS = get_recipient()
 
 def email_handler(*args):
     for user in args:
-        if not user.onlinestatus.is_online():
-            try:
+        try:
+            if not user.onlinestatus.is_online():
                 context = {'receiver':user.username,
                            'unsend_count':user.notifications.filter(unread=True, emailed=False).count(),
                            'notice_list':user.notifications.filter(unread=True, emailed=False),
@@ -29,10 +29,8 @@ def email_handler(*args):
                           'support@aaron-zhao.com',
                           recipient_list=[user.email])
                 user.notifications.unsent().update(emailed=True)
-            except Exception as e:
-
-                print(e)
-                return None
+        except Exception as e:
+            print("Error in easy_comment.handlers.py.email_handler: %s" % e)
 
 def comment_handler(sender, instance, created, **kwargs):
     if created:
