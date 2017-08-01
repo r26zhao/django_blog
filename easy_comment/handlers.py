@@ -18,7 +18,7 @@ ADMINS = get_recipient()
 def email_handler(*args):
     for user in args:
         try:
-            if not user.onlinestatus.is_online():
+            if not (hasattr(user, 'onlinestatus') and user.onlinestatus.is_online()):
                 context = {'receiver':user.username,
                            'unsend_count':user.notifications.filter(unread=True, emailed=False).count(),
                            'notice_list':user.notifications.filter(unread=True, emailed=False),
