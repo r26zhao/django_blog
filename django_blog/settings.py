@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'mptt',
     'easy_comment',
     'notifications',
+    'online_status',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
@@ -61,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'online_status.middleware.OnlineStatusMiddleware',
 ]
 
 ROOT_URLCONF = 'django_blog.urls'
@@ -346,7 +348,7 @@ EMAIL_USE_SSL = True
 #EMAIL_USE_TLS = True
 # 默认发件人，不设置的话django默认使用的webmaster@localhost
 DEFAULT_FROM_EMAIL = 'Support <support@aaron-zhao.com>'
-ADMINS = (('Aaron', 'rudy710@qq.com'), ('Doge', 'zry710@gmail.com'))
+ADMINS = (('Aaron', 'rudy710@qq.com'),)
 #非空链接，却发生404错误，发送通知MANAGERS
 SEND_BROKEN_LINK_EMAILS = True
 MANAGERS = ADMINS
@@ -357,3 +359,4 @@ ROBOTS_USE_HOST = False
 
 # notification setting
 NOTIFICATIONS_USE_JSONFIELD=True
+SEND_NOTIFICATION_EMAIL = True

@@ -30,6 +30,15 @@ def global_setting(request):
 def index(request):
     post_list = Post.objects.all()
     post_list = get_page(request, post_list)
+    from blog.models import User
+    b = User.objects.get(id=3)
+    '''
+    if b.is_authenticated():
+        print("### test from index view")
+        print("### last login %s" % b.onlinestatus.last_login)
+        print("### get last login %s" % b.onlinestatus.get_last_active())
+        print("### get last login %s" % b.onlinestatus.is_online())
+    '''
     return render(request, 'blog/index.html', context={'post_list': post_list})
 
 

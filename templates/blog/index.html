@@ -13,67 +13,6 @@
 {% endif %}
 {% endblock site_info %}
 
-		    {% block gallery %}
-            <div class="gallery" style="display: none;">
-                <h1>图文推荐</h1>
-		<!-- requried-jsfiles-for owl -->
-                <link href="{% static 'blog/css/owl.carousel.css' %}" rel="stylesheet">
-                <script src="{% static 'blog/js/owl.carousel.js' %}"></script>
-                <script>
-				$(document).ready(function() {
-					$("#owl-demo").owlCarousel({
-						items : 3,
-						lazyLoad : true,
-						autoPlay : true,
-						pagination : false,
-						navigation : true,
-						navigationText :  true,
-					});
-				});
-			    </script>
-		<!-- //requried-jsfiles-for owl -->
-			<!-- start content_slider -->
-		            <div id="owl-demo" class="owl-carousel ">
-			        <div class="item g1">
-				        <a href="single.html"><img class="lazyOwl " data-src="{% static 'blog/images/pi.jpg' %}" alt="name"></a>
-				        <div class="caption">
-					        <h3 class="cinema"><a href="single.html">CINEMA</a></h3>
-					        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-				        </div>
-			        </div>
-			        <div class="item g1">
-				        <a href="single.html"><img class="lazyOwl" data-src="{% static 'blog/images/pi2.jpg' %}" alt="name"></a>
-				        <div class="caption">
-					        <h3 class="cinema travel"><a href="single.html">Travel</a></h3>
-					        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-				        </div>
-			        </div>
-			        <div class="item g1">
-				        <a href="single.html"><img class="lazyOwl" data-src="{% static 'blog/images/pi1.jpg' %}" alt="name"></a>
-				        <div class="caption">
-					        <h3 class="cinema tele"><a href="single.html">television</a></h3>
-					        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-				        </div>
-			        </div>
-			        <div class="item g1">
-				        <a href="single.html"><img class="lazyOwl" data-src="{% static 'blog/images/pi.jpg' %}" alt="name"></a>
-				        <div class="caption">
-					        <h3 class="cinema"><a href="single.html">CINEMA</a></h3>
-					        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-				        </div>
-			        </div>
-			        <div class="item g1">
-				        <a href="single.html"><img class="lazyOwl" data-src="{% static 'blog/images/pi2.jpg' %}" alt="name"></a>
-				        <div class="caption">
-					        <h3 class="cinema travel"><a href="single.html">Travel</a></h3>
-					        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-				        </div>
-			        </div>
-		            </div>
-		<!--//sreen-gallery-cursual---->
-            </div>
-            {% endblock gallery %}
-
                     {% block content %}
                     {% for post in post_list %}
 		            <div class="post">
