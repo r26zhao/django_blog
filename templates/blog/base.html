@@ -10,6 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 {% load staticfiles %}
 {% load account %}
 {% load notifications_tags %}
+{% load comment_tags %}
 <head>
 {% block site_info %}
 <title>{{ SITE_NAME }}</title>
@@ -162,7 +163,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	                    <ul class="cd-tabs-content">
 		                    <li data-content="fashion" >
 		                        <div class="top-men">
-                                    {% get_reading_rank as post_list %}
+                                    {% get_comment_rank as post_list %}
                                     {% for post in post_list %}
                                     <div class="post_rank">
                                         <h5><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
