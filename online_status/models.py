@@ -20,7 +20,7 @@ class OnlineStatus(models.Model):
         cache_key = '%s_last_login' % self.user.username
         # 如果缓存过期，从数据库获取last_login，并存到缓存
         if not cache.get(cache_key):
-            print("####### index view -- cache not found")
+            #print("####### index view -- cache not found")
             cache.set(cache_key, self.last_login, settings.USER_LAST_LOGIN_EXPIRE)
         return cache.get(cache_key)
 
