@@ -7,9 +7,9 @@
  层级回复功能用[**django-mptt**](https://github.com/django-mptt/django-mptt)实现的，mptt在后台会记录层级回复的顺序
 
  通知功能使用的[**django-notifications-hq**](https://github.com/django-notifications/django-notifications)
-# 开发环境
+## 开发环境
 django 1.11, python 3.4
-# 安装
+## 安装
 1. 使用pip安装```django-ckeditor```, ```django-mptt```, ```django-notifications-hq```
 
 ```
@@ -92,7 +92,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-# 使用
+## 使用
 ### example
 在easy_comment的templates中我写了两个模板文件```comment_form.html``` 和 ```comment_list.html```，分别在用来显示评论框和评论列表。在你的```blog_detail.html```模板中，把它们放在显示评论的位置即可。
 
@@ -116,7 +116,7 @@ python manage.py migrate
 ```
 
 
-# 自定义模板
+## 自定义模板
 如果你要自定义评论模板的话，下面的模板标签可以方便使用
 ### 模板标签
 在使用模板标签之前，先加载```{% load comment_tags %}```
@@ -160,19 +160,21 @@ python manage.py migrate
 ```
 {% get_comment_rank as post_list %}
 ```
-# 评论通知
+## 评论通知
 每当用户发表一条评论、回复或者点赞、踩，都会生成notification实例，管理员（admin）可以收到所有通知，普通用户可以收到与自己相关的评论、回复和点赞（踩 看不到）。
+![image](http://www.aaron-zhao.com//media/upload/Aaron/2017/08/03/ofpkpf.png)
 
 ```/notifications/``` 当前登录用户的所有通知
 
 ```/notifications/unread``` 当前用户的未读通知
+
 
 ### 模板标签
 使用之前先加载  ```{% load notifications_tags %}```
 
 ```{% notifications_unread %}``` 获取未读通知数
 
-# 邮件通知
+## 邮件通知
 默认情况下是不发邮件通知的。开启邮件通知功能后，只有当用户不在线的情况下，才会发邮件。
 
 ```
@@ -201,7 +203,7 @@ MIDDLEWARE = [
 ```
 USER_ONLINE_TIMEOUT = 600
 ```
-# 关于django-ckeditor
+## 关于django-ckeditor
 默认情况下django-ckeditor设置的只允许管理员发送图片，要让普通用户也可以发图片的话，需要ckeditor_uploader/urls.py里进行修改,它的```upload``` 和 ```browse```方法用了```staff_member_required```装饰器，把它换成```login_required```装饰器即可。
 
 ```
