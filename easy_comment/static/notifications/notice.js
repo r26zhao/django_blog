@@ -24,6 +24,8 @@ jQuery(function ($) {
                     clearInterval(blink.timer);
                     document.title = blink.title;
                     blink.is_flashing = false;
+                    $(".live-notify-badge").text('');
+                    $("span.unread-count").text('');
                 }
             }
         };
