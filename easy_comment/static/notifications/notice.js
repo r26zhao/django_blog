@@ -29,7 +29,7 @@ jQuery(function ($) {
         };
         function fetch_data() {
             $.get(
-                "notifications/api/unread_count/",
+                "/notifications/api/unread_count/",
                 function (data) {
                     if (data.unread_count > 0){
                         $(".live-notify-badge").text(data.unread_count);
