@@ -72,7 +72,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <li class="bell">
                                 <a href="{% url 'notifications:all' %}" style="font-size: 1.6em">
                                     <i class="glyphicon glyphicon-bell"></i>
-                                    <span class="notice-unread_count"><b>{% if unread_count > 0 %}{{ unread_count }}{% endif %}</b></span>
+                                    <span class="live-notify-badge"></span>
                                 </a>
                             </li>
                             <li class="dropdown">
@@ -88,7 +88,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <i></i>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">消息</a></li>
+                                    <li><a href="#">消息<span class="badge unread-count"></span></a></li>
                                     <li><a href="{% url 'blog:account_profile' %}">设置</a></li>
                                     <li><a href="{% url 'account_logout' %}?next={{ request.path }}">登出</a></li>
                                 </ul>
@@ -284,6 +284,7 @@ var _hmt = _hmt || [];
 </script>
 <script src="{% static 'blog/js/main.js' %}"></script>
 <script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
+<script src="{% static 'notifications/notice.js' %}"></script>
 {% block comment_script %}
 {% endblock comment_script %}
 </body>

@@ -84,10 +84,11 @@ ul.social-in li  i.tin:hover{
 ul.social-in li  i.facebook:hover{
 	background-position:-192px -16px;
 }
-.notice-unread_count{
+.live-notify-badge{
     font-size: 0.7em;
 	float: right;
 	color: red;
+	font-weight: 700;
 }
 .bell a{
 	float: right;
