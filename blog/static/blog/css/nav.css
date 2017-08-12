@@ -3,11 +3,9 @@ label.mobile_menu span {
 	  color:#FFF;
       font-size:1em;
 	  display: none;
-	  font-family: 'Open Sans', sans-serif;
 }
 .nav {
 	/* General Font */
-	font-family: 'Open Sans', sans-serif;
 	/* General Shape */
 	position: relative;
 	margin: 0;
@@ -32,7 +30,6 @@ ul.nav li{
 	font-size:1.5em;
 	font-weight:700;
 	text-transform:uppercase;
-	font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* Simple multilevel dropdown */
@@ -76,7 +73,6 @@ ul.nav li{
 	-webkit-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
 	-ms-transition: all 0.2s linear;
-	font-family: 'Roboto Condensed', sans-serif;
 }
 .nav li > ul li a span.arrow{
 	width:15px;

@@ -5,8 +5,8 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 body{
-	background: #ebebeb ;	
-	font-family: 'Open Sans', sans-serif;
+	background: #333333 ;
+	font-family:"微软雅黑";
 }
 body a{
 	transition: 0.5s all;
@@ -125,7 +125,6 @@ ul.social-in li  i.facebook:hover{
 	color: #fff;
 	font-weight: 700;
 	padding: 6px 26px;
-	font-family: 'Roboto Condensed', sans-serif;
 }
 /*----*/
 .gallery h1{
@@ -230,7 +229,7 @@ h2.resp-accordion {
 }
 .post h3 a{
 	text-decoration:none;
-	color:#000;
+	color:#333333;
 }
 .post h3 a:hover{
 	color:#5261ac;
@@ -244,7 +243,7 @@ h2.resp-accordion {
 }
 .post p{
 	font-size: 1em;
-	color: #494949;
+	color: #666666;
 	line-height: 1.5em;
 	padding: 1.2em 0 1em;
 }
@@ -345,7 +344,7 @@ a.more:hover,.post-footer li a:hover{
 	padding: 1em 1em 0 1em;
 	/*border: 1px solid silver;
 	border-radius: 5px;*/
-	background: #ebebeb;
+	background: #f6f6f6;
 }
 .feb {
 	position: absolute;
@@ -438,7 +437,6 @@ a.more:hover,.post-footer li a:hover{
 	color:#fff;
 	background:#ec098d ;
 	padding:10px 21px;
-	font-family: 'Roboto Condensed', sans-serif;
 	font-weight:600;
 	text-transform:uppercase;
 	text-decoration: none;
@@ -825,7 +823,6 @@ ul.social {
 	text-transform: uppercase;
 	padding: 0.3em 0;
 	font-size: 1.5em;
-	font-family: 'Roboto Condensed', sans-serif;
 	line-height: 1.3em;
 }
 .magazine-grid p{
@@ -837,7 +834,7 @@ ul.social {
 .magazine-grid h3{
 	font-size: 1.7em;
 	line-height: 1.3em;
-	font-family: 'Roboto Condensed', sans-serif;
+
 	font-weight: 700;
 	padding: 0.6em 0 0;
 }

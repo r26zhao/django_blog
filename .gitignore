@@ -4,3 +4,4 @@ blog/migrations
 easy_comment/migrations
 .idea/
 online_status/migrations
+./idea/workspace.xml
