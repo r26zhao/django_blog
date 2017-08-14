@@ -243,7 +243,7 @@ h2.resp-accordion {
 }
 .post p{
 	font-size: 1em;
-	color: #666666;
+	color: #2f2f2f;
 	line-height: 1.5em;
 	padding: 1.2em 0 1em;
 }
@@ -272,7 +272,6 @@ h2.resp-accordion {
 }
 .post_info ul li span{
 	display: inline-block;
-	font-size: 1.1em;
 	color: #777;
 }
 #views a i {
