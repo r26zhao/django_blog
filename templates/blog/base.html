@@ -95,10 +95,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </li>
                             {% else %}
                             <li><a href="{% url 'account_login' %}?next={{ request.path }}">
-                                <span class="username">登录</span></a>
+                                <span class="username" style="font-size: 1.2em">登录</span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"><span class="username" style="font-size: 1.2em">/</span></a>
                             </li>
                             <li><a href="{% url 'account_signup' %}">
-                                <span class="username">注册</span></a>
+                                <span class="username" style="font-size: 1.2em">注册</span></a>
                             </li>
                             {% endif %}
 					    </ul>
