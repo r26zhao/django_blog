@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e84a78b-0268-4756-bc5c-6ea152bec28b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_blog/settings.py" afterPath="$PROJECT_DIR$/django_blog/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,14 +28,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="382" column="38" lean-forward="true" selection-start-line="382" selection-start-column="38" selection-end-line="382" selection-end-column="38" />
+            <state relative-caret-position="545">
+              <caret line="381" column="0" lean-forward="false" selection-start-line="381" selection-start-column="0" selection-end-line="381" selection-end-column="2" />
               <folding>
                 <element signature="e#6311#6825#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="774">
+              <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/easy_comment/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="576">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -180,7 +191,6 @@
         <option value="$PROJECT_DIR$/easy_comment/static/notifications/notice.js" />
         <option value="$PROJECT_DIR$/django_blog/__init__.py" />
         <option value="$PROJECT_DIR$/online_status/middleware.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="C:/Envs/blogproject_env/Lib/site-packages/ckeditor_uploader/urls.py" />
         <option value="C:/Envs/python36_blog_env/Lib/site-packages/ckeditor_uploader/urls.py" />
         <option value="$PROJECT_DIR$/blog/static/blog/css/nav.css" />
@@ -198,6 +208,7 @@
         <option value="$PROJECT_DIR$/easy_comment/tasks.py" />
         <option value="$PROJECT_DIR$/django_blog/celery.py" />
         <option value="$PROJECT_DIR$/django_blog/settings.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -259,24 +270,6 @@
             <path>
               <item name="django_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="django_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.5.3 virtualenv at ~/Desktop/sites/aaron-zhao.com/env &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="django_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.5.3 virtualenv at ~/Desktop/sites/aaron-zhao.com/env &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="python3.5" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.5.3 virtualenv at ~/Desktop/sites/aaron-zhao.com/env &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="python3.5" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -644,13 +637,6 @@
     <entry file="file://C:/Envs/blogproject_env/Lib/site-packages/allauth/account/views.py" />
     <entry file="file://C:/Envs/blogproject_env/Lib/site-packages/django_redis/cache.py" />
     <entry file="file://C:/Envs/blogproject_env/Lib/site-packages/django_redis/client/default.py" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python34/Lib/asyncio/__init__.py" />
     <entry file="file://C:/Envs/blogproject_env/Lib/site-packages/ckeditor_uploader/urls.py" />
     <entry file="file://C:/Envs/python36_blog_env/Lib/site-packages/ckeditor_uploader/urls.py" />
@@ -792,7 +778,7 @@
     <entry file="file://$PROJECT_DIR$/easy_comment/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -837,11 +823,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="382" column="38" lean-forward="true" selection-start-line="382" selection-start-column="38" selection-end-line="382" selection-end-column="38" />
+        <state relative-caret-position="545">
+          <caret line="381" column="0" lean-forward="false" selection-start-line="381" selection-start-column="0" selection-end-line="381" selection-end-column="2" />
           <folding>
             <element signature="e#6311#6825#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="43" column="13" lean-forward="true" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
