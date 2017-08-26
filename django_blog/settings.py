@@ -348,7 +348,7 @@ ACCOUNT_LOGOUT_ON_GET = True
 # SMTP服务器，我使用的是sendclound的服务
 EMAIL_HOST = 'smtp.mxhichina.com'
 EMAIL_HOST_USER = 'support@aaron-zhao.com'
-EMAIL_HOST_PASSWORD = 'Manguimg710O'
+EMAIL_HOST_PASSWORD = '1234'
 EMAIL_PORT = 465
 #EMAIL_HOST = 'smtpcloud.sohu.com'
 #EMAIL_HOST_USER = 'Aaroon_test_N05MI9'  'bguqzpoxqlhccaig' qq

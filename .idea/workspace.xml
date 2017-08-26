@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e84a78b-0268-4756-bc5c-6ea152bec28b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/django_blog.iml" afterPath="$PROJECT_DIR$/.idea/django_blog.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_blog/celery.py" afterPath="$PROJECT_DIR$/django_blog/celery.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_blog/settings.py" afterPath="$PROJECT_DIR$/django_blog/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/easy_comment/handlers.py" afterPath="$PROJECT_DIR$/easy_comment/handlers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_form.html" afterPath="$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/easy_comment/views.py" afterPath="$PROJECT_DIR$/easy_comment/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="375" column="24" lean-forward="false" selection-start-line="375" selection-start-column="24" selection-end-line="375" selection-end-column="24" />
+            <state relative-caret-position="200">
+              <caret line="350" column="27" lean-forward="false" selection-start-line="350" selection-start-column="27" selection-end-line="350" selection-end-column="27" />
               <folding>
                 <element signature="e#6310#6824#0" expanded="false" />
               </folding>
@@ -46,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="handlers.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="handlers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/easy_comment/handlers.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-54">
@@ -201,10 +194,10 @@
         <option value="$PROJECT_DIR$/easy_comment/views.py" />
         <option value="$PROJECT_DIR$/easy_comment/handlers.py" />
         <option value="$PROJECT_DIR$/log/all.log" />
-        <option value="$PROJECT_DIR$/django_blog/settings.py" />
         <option value="$PROJECT_DIR$/log/celery.log" />
         <option value="$PROJECT_DIR$/easy_comment/tasks.py" />
         <option value="$PROJECT_DIR$/django_blog/celery.py" />
+        <option value="$PROJECT_DIR$/django_blog/settings.py" />
       </list>
     </option>
   </component>
@@ -537,6 +530,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1857" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15644002" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -546,7 +540,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277487" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22094241" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22094241" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -779,16 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="375" column="24" lean-forward="false" selection-start-line="375" selection-start-column="24" selection-end-line="375" selection-end-column="24" />
-          <folding>
-            <element signature="e#6310#6824#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_blog/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -847,6 +831,16 @@
           <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="350" column="27" lean-forward="false" selection-start-line="350" selection-start-column="27" selection-end-line="350" selection-end-column="27" />
+          <folding>
+            <element signature="e#6310#6824#0" expanded="false" />
           </folding>
         </state>
       </provider>
