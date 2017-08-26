@@ -39,9 +39,7 @@
 <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
 <script>
     $(window).load(function () {
-        if (!$(".comment-reply").hasClass('no-login')){
-            $(".comment-form")[0].reset();
-        }
+        $(".comment-form")[0].reset();
         if (sessionStorage.getItem('reply')){
             sessionStorage.removeItem('reply');
         }

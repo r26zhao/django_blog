@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8q@q!u=s#vgqz7=s)2au6w4ae@4mt8i=#76x6ll-x_jbs-_zh%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.aaron-zhao.com']
 
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'easy_comment',
     'notifications',
     'online_status',
+    'django_celery_results',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
@@ -150,6 +151,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 
 # Media root 设置
@@ -346,7 +348,7 @@ ACCOUNT_LOGOUT_ON_GET = True
 # SMTP服务器，我使用的是sendclound的服务
 EMAIL_HOST = 'smtp.mxhichina.com'
 EMAIL_HOST_USER = 'support@aaron-zhao.com'
-EMAIL_HOST_PASSWORD = '1234'
+EMAIL_HOST_PASSWORD = 'Manguimg710O'
 EMAIL_PORT = 465
 #EMAIL_HOST = 'smtpcloud.sohu.com'
 #EMAIL_HOST_USER = 'Aaroon_test_N05MI9'  'bguqzpoxqlhccaig' qq
@@ -357,7 +359,7 @@ EMAIL_USE_SSL = True
 #EMAIL_USE_TLS = True
 # 默认发件人，不设置的话django默认使用的webmaster@localhost
 DEFAULT_FROM_EMAIL = 'Support <support@aaron-zhao.com>'
-ADMINS = (('Aaron', 'rudy710@qq.com'),)
+ADMINS = (('Aaron', 'rudy710@qq.com'), ('Barry', 'zhruyao@163.com'))
 #非空链接，却发生404错误，发送通知MANAGERS
 SEND_BROKEN_LINK_EMAILS = True
 MANAGERS = ADMINS
@@ -378,3 +380,4 @@ REDIS_DB = 0
 #celery settings
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
+# CELERY_RESULT_BACKEND = 'django-cache'

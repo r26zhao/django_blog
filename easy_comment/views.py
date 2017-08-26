@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from . import handlers
 
+
 # Create your views here.
 
 @require_POST
@@ -17,8 +18,9 @@ def submit_comment(request, id):
         new_comment.user_name = request.user.username
         new_comment.save()
         location = "#c" + str(new_comment.id)
-        return JsonResponse({'msg':'success!', 'new_comment':location})
-    return JsonResponse({'msg':'评论出错!'})
+        return JsonResponse({'msg': 'success!', 'new_comment': location})
+    return JsonResponse({'msg': '评论出错!'})
+
 
 @require_POST
 def like(request):
@@ -27,7 +29,7 @@ def like(request):
     if comment_id and action:
         try:
             comment = Comment.objects.get(id=comment_id)
-            obj, created = Like.objects.get_or_create(user = request.user, comment = comment)
+            obj, created = Like.objects.get_or_create(user=request.user, comment=comment)
             if action == 'like':
                 if not created:
                     obj.status = True
@@ -37,7 +39,7 @@ def like(request):
             if action == 'dislike':
                 obj.status = False
                 obj.save()
-            return JsonResponse({'msg':'OK'})
+            return JsonResponse({'msg': 'OK'})
         except Comment.DoesNotExist:
-            return JsonResponse({"msg":"KO"})
-    return JsonResponse({"msg":"KO"})
+            return JsonResponse({"msg": "KO"})
+    return JsonResponse({"msg": "KO"})
