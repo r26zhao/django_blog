@@ -379,5 +379,5 @@ REDIS_DB = 0
 
 #celery settings
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
-CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
-# CELERY_RESULT_BACKEND = 'django-cache'
+# CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
+CELERY_RESULT_BACKEND = 'django-cache'
