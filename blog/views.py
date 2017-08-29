@@ -14,7 +14,7 @@ logger = logging.getLogger('blog.views')
 
 # Paginator function
 def get_page(request, post_list):
-    paginator = Paginator(post_list, 8)
+    paginator = Paginator(post_list, 10)
     page = request.GET.get('page', 1)
     try:
         post_list = paginator.page(page)
