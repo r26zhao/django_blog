@@ -77,11 +77,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comment_form.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="comment_form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_form.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
               <caret line="8" column="72" lean-forward="false" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comment_list.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -155,7 +165,6 @@
         <option value="$PROJECT_DIR$/templates/account/password_reset.html" />
         <option value="$PROJECT_DIR$/templates/account/password_set.html" />
         <option value="$PROJECT_DIR$/blog/sitemaps.py" />
-        <option value="$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_list.html" />
         <option value="$PROJECT_DIR$/easy_comment/urls.py" />
         <option value="$PROJECT_DIR$/easy_comment/notification.py" />
         <option value="$PROJECT_DIR$/easy_comment/models.py" />
@@ -200,6 +209,7 @@
         <option value="$PROJECT_DIR$/django_blog/settings.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_form.html" />
+        <option value="$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_list.html" />
       </list>
     </option>
   </component>
@@ -700,13 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../env/lib/python3.5/site-packages/kombu/utils/json.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -871,6 +874,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="72" lean-forward="false" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
           <folding />
         </state>
       </provider>
