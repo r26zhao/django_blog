@@ -77,7 +77,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img class="img-rounded" src="{{ request.user.avatar.url }}">
+                                    <img class="img-rounded" src="{{ request.user.get_avatar_url }}">
                                     <span class="username">
                                         {% if request.user.nickname %}
                                             {{ request.user.nickname }}

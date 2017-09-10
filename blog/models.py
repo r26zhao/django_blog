@@ -32,6 +32,14 @@ class User(AbstractUser):
             self.avatar.name = self.username + '/' + self.avatar.name
         super(User, self).save()
 
+    def get_avatar_url(self):
+        url = self.avatar.url
+        file_name = url.split('/')[-1]
+        if self.socialaccount_set.exists() and file_name == 'default.png':
+            url = self.socialaccount_set.first().get_avatar_url()
+        return url
+
+
 # Tag 标签
 class Tag(models.Model):
     name = models.CharField(max_length=30, verbose_name='标签名称')
