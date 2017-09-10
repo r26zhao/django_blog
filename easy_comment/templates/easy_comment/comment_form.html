@@ -6,7 +6,7 @@
 {% if request.user.is_authenticated %}
     <div class="comment-header">
         <a class="comment-avatar">
-            <img class="img-rounded" src="{{ request.user.avatar.url }}">
+            <img class="img-rounded" src="{{ request.user.get_avatar_url }}">
         </a>
         <span><strong>
             {% if request.user.nickname %}
