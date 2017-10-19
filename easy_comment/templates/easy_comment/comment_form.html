@@ -47,7 +47,7 @@
         // if true,说明是提交评论后刷新的页面，将位置跳到新评论处
         if (sessionStorage.getItem('anchor')){
             var top = $(sessionStorage.getItem('new_comment')).offset().top;
-            $('body,html').animate({scrollTop:top}, 50);
+            $('body,html').animate({scrollTop:top}, 1000);
             window.location.hash = sessionStorage.getItem('new_comment');
             sessionStorage.removeItem('anchor');
         }
@@ -111,6 +111,7 @@
                 success:function (json) {
                     sessionStorage.setItem('anchor', true);
                     sessionStorage.setItem('new_comment', json.new_comment);
+                    $(".comment-form")[0].reset();
                     window.location.reload();
                 },
                 error:function (json) {
