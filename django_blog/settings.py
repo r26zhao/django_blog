@@ -215,7 +215,7 @@ CKEDITOR_CONFIGS = {
     },
     'comment': {
         # 编辑器的宽高请根据你的页面自行设置
-        'width': '720px',
+        'width': 'auto',
         'height': '150px',
         'image_previewText': ' ',
         'tabSpaces': 4,
@@ -348,7 +348,7 @@ ACCOUNT_LOGOUT_ON_GET = True
 # SMTP服务器，我使用的是sendclound的服务
 EMAIL_HOST = 'smtp.mxhichina.com'
 EMAIL_HOST_USER = 'support@aaron-zhao.com'
-EMAIL_HOST_PASSWORD = '1234'
+EMAIL_HOST_PASSWORD = 'Manguimg710O'
 EMAIL_PORT = 465
 #EMAIL_HOST = 'smtpcloud.sohu.com'
 #EMAIL_HOST_USER = 'Aaroon_test_N05MI9'  'bguqzpoxqlhccaig' qq
