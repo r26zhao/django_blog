@@ -16,7 +16,7 @@ class User(AbstractUser):
     nickname = models.CharField(max_length=30, blank=True, null=True, verbose_name='昵称')
     qq = models.CharField(max_length=20, blank=True, null=True, verbose_name='QQ号码')
     url = models.URLField(max_length=100, blank=True, null=True, verbose_name='个人网页地址')
-    avatar = ProcessedImageField(upload_to='avatar',default='avatar/default.png', verbose_name='头像',
+    avatar = ProcessedImageField(upload_to='avatar', default='avatar/default.png', verbose_name='头像',
                                  processors=[ResizeToFill(85,85)],)
 
     class Meta:
@@ -80,6 +80,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, verbose_name='作者')
     category = models.ForeignKey(Category, verbose_name='分类')
     tag = models.ManyToManyField(Tag, verbose_name='标签')
+    cover = ProcessedImageField(upload_to='cover', default='', verbose_name='封面', processors=[ResizeToFill(160, 120)])
 
     class Meta:
         verbose_name = '文章'

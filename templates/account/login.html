@@ -9,15 +9,17 @@
 {% endblock site_info %}
 
 {% block local-account %}
-    <div class="local-header"><h4>登录</h4></div>
+    <div class="header"><h2>登录</h2></div>
     <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form|crispy }}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-        <a class="secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-        <a class="secondaryAction new_user" href="{% url 'account_signup' %}">新用户注册</a>
+        <button class="button button-primary-flat button-rounded" type="submit">{% trans "Sign In" %}</button>
+        <div class="regis">
+            <a href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+            <a class="pull-right" href="{% url 'account_signup' %}">新用户注册</a>
+        </div>
     </form>
 {% endblock local-account %}

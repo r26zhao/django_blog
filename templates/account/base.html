@@ -2,25 +2,39 @@
 {% load socialaccount %}
 
 
-{% block content %}
+{% block login %}
     <div class="local-login">
     {% block local-account %}
     {% endblock local-account %}
     </div>
-{% endblock content %}
-
-{% block sidebar %}
-    <div class="social-login">
-        <div class="social-header"><h4>第三方账号登录</h4></div>
-        {% get_providers as socialaccount_providers %}
-        {% for provider in socialaccount_providers %}
-        <div class="social-provider">
+    <div class="login social-login">
+        {% if request.user.is_authenticated %}
+        <div class="social-header"><span>其他操作</span></div>
+        <div class="social-link">
+            {% if request.path == '/accounts/profile/' %}
+            <a href="{% url 'account_change_password' %}">修改密码</a>
+            {% else %}
+            <a href="{% url 'blog:account_profile' %}">个人资料</a>
+            {% endif %}
+            <a>登出</a>
+        </div>
+        {% else %}
+        <div class="social-header"><span>第三方账号登录</span></div>
+        <div class="social-link">
+            {% get_providers as socialaccount_providers %}
+            {% for provider in socialaccount_providers %}
             <a title="{{provider.name}}" class="{{provider.id}}"
                href="{% provider_login_url provider.id scope=scope auth_params=auth_params %}">
-                <i></i>
-                {{provider.name}}
+                <i class="fa {% if provider.id == 'github' %}
+                fa-github-square
+                {% elif provider.id == 'weibo' %}
+                fa-weibo
+                {% endif %} fa-3x"></i>
             </a>
+            {% endfor %}
         </div>
-        {% endfor %}
+        {% endif %}
     </div>
-{% endblock sidebar %}
+{% endblock login %}
+{% block dashboard %}
+{% endblock dashboard %}

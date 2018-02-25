@@ -1,15 +1,17 @@
 {% extends 'account/base.html' %}
 {% load crispy_forms_tags %}
-
+{% block site_info %}
+<title>个人资料 - AA的博客</title>
+{% endblock site_info %}
 {% block local-account %}
-    <div class="local-header"><h4>个人资料</h4></div>
+    <div class="header"><h2>个人资料</h2></div>
     <form class="login" method="post" enctype="multipart/form-data" action="{% url 'blog:account_profile' %}">
         {% csrf_token %}
         {{ form|crispy }}
-        <div class="avatar">
+        <div class="avatar pull-right">
             <img class="img-rounded" src="{{ request.user.avatar.url }}">
         </div>
-        <button class="primaryAction" type="submit">更新资料</button>
+        <button class="button button-primary-flat button-rounded" type="submit" style="display: block">更新资料</button>
     </form>
 {% endblock local-account %}
 

@@ -1,295 +1,216 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE html>
-<html>
-{% load blog_tags %}
 {% load staticfiles %}
-{% load account %}
-{% load notifications_tags %}
-{% load comment_tags %}
+{% load blog_tags %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 {% block site_info %}
-<title>{{ SITE_NAME }}</title>
-<meta name="keywords" content="{{ SITE_KEYWORDS }}"/>
+<meta name="keywords" content="{{ SITE_KEYWORDS }}" />
 <meta name="description" content="{{ SITE_DESCP }}" />
+<title>{{ SITE_NAME }}</title>
 {% endblock site_info %}
-{% block extra_head %}
-{% endblock extra_head %}
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html; charseutft=-8" />
-<link rel="shortcut icon" href="{% static 'blog/images/favicon.ico' %}" />
-<link rel="bookmark" href="{% static 'blog/images/favicon.ico' %}" />
-<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
-<!-- 微博验证 -->
-<meta property="wb:webmaster" content="fcf81cdbd4a4acc6" />
-<!-- Baidu Verification-->
-<meta name="baidu-site-verification" content="KYsqOq4afw" />
-
-<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!--theme-style-->
-<link href="{% static 'blog/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
-<link href="{% static 'blog/css/form.css' %}" rel="stylesheet" type="text/css" />
-<link href="{% static 'easy_comment/css/comment.css' %}" rel="stylesheet" type="text/css">
-<!--//theme-style-->
-
-<link href="{% static 'blog/css/nav.css' %}" rel="stylesheet" type="text/css" media="all"/>
-<!--highlight-->
-<link rel="stylesheet" href="{% static 'blog/css/prism.css' %}">
-
+<meta name="author" content="maked by Aaron Zhao" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" media="all" href="{% static 'blog/html5_blue/css/style.css' %}" />
+<link href="https://cdn.bootcss.com/Buttons/2.0.0/css/buttons.min.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+{% block css %}
+{% endblock css %}
+<script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
 </head>
 <body>
-<!--header-->
-<div class="back">
-	<img src="{% static 'blog/images/back.png' %}" alt="" style="width: 390px; height: 390px;">
-</div>
-<div class="container">
-    <div class="main-top">
-        <div class="main">
-            <div class="header">
-                <div class="header-top">
-                    <div class="header-in">
-                        <div class="logo">
-                            <a href="/"><img src="{% static 'blog/images/logo.png' %}" alt="" ></a>
-                        </div>
-                        <div class="search pull-right">
-                            <form role="search" method="get" action="{% url 'blog:search' %}">
-                                {% csrf_token %}
-                                <input type="search" name="q" placeholder="搜索" required>
-                                <input type="submit" value="SEARCH">
-                            </form>
-                        </div>
-					    <div class="clearfix"> </div>
-				    </div>
-				    <div class="header-top-on">
-                        {% notifications_unread as unread_count %}
-					    <ul class="social-in">
-                            {% if user.is_authenticated %}
-                            <li class="bell">
-                                <a href="{% url 'notifications:all' %}" style="font-size: 1.6em">
-                                    <i class="glyphicon glyphicon-bell"></i>
-                                    <span class="live-notify-badge"></span>
-                                </a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img class="img-rounded" src="{{ request.user.get_avatar_url }}">
-                                    <span class="username">
-                                        {% if request.user.nickname %}
-                                            {{ request.user.nickname }}
-                                        {% else %}
-                                            {{ request.user.username }}
-                                        {% endif %}
-                                    </span>
-                                    <i></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">消息<span class="badge unread-count"></span></a></li>
-                                    <li><a href="{% url 'blog:account_profile' %}">设置</a></li>
-                                    <li><a href="{% url 'account_logout' %}?next={{ request.path }}">登出</a></li>
-                                </ul>
-                            </li>
-                            {% else %}
-                            <li><a href="{% url 'account_login' %}?next={{ request.path }}">
-                                <span class="username" style="font-size: 1.2em">登录</span></a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);"><span class="username" style="font-size: 1.2em">/</span></a>
-                            </li>
-                            <li><a href="{% url 'account_signup' %}">
-                                <span class="username" style="font-size: 1.2em">注册</span></a>
-                            </li>
-                            {% endif %}
-					    </ul>
-				    </div>
-				<div class="clearfix"> </div>
-			    </div>
-			<!---->
-                <div class="header-bottom">
-                    <div class="navigation">
-                        <div>
-                            <label class="mobile_menu" for="mobile_menu">
-                                <span>Menu</span>
-                            </label>
-                            <input id="mobile_menu" type="checkbox">
-                            <ul class="nav">
-                                <li><a class="color1" href="/"> 首 页 </a></li>
-                                <li><a href="{% url 'blog:category' 'django' %}" class="color2"> Django </a></li>
-                                <li><a href="{% url 'blog:category' 'python-study-notes' %}" class="color3"> Python </a></li>
-						        <li><a href="{% url 'blog:category' 'resources-share' %}" class="color4">资源分享</a></li>
-                                <li><a href="https://github.com/r26zhao" target="_blank" class="color5"> GitHub </a></li>
-						        <li style="max-width: 481px"><a href="javascript:void(0);" class="color6"> About </a></li>
-						        <div class="clearfix"></div>
-					        </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% block message %}
-        {% if messages %}
-         <div id="myAlert" class="alert alert-success auth-message">
-            <a href="#" class="close" data-dismiss="alert">&times;</a>
-	        {% for message in messages %}
-	        <strong>{{message}}</strong>
-	        {% endfor %}
-         </div>
-        {% endif %}
-        {% endblock message %}
-
-		    {% block gallery %}
-
-            {% endblock gallery %}
-            <div class="content">
-	            <div class="col-md-8 content-top">
-                    {% block content %}
-                    {% endblock content %}
-                    {% block comment %}
-                    {% endblock comment %}
-	            </div>
-	<!---->
-		        <div class="col-md-4 content-bottom">
-                {% block sidebar %}
-			        <div class="story"><h4  class="stories"><span>推荐阅读</span></h4></div>
-			        <!---->
-                    <div class="cd-tabs">
-			            <nav>
-				            <ul class="cd-tabs-navigation">
-					            <li><a data-content="fashion"  href="#0">评论排行<i> </i></a></li>
-                                <li><a data-content="cinema" href="#0" class="selected fashion1">阅读排行<i> </i></a></li>
-					            <li><a data-content="television" href="#0" class="fashion2">最新文章<i> </i></a></li>
-                            </ul>
-			            </nav>
-	                    <ul class="cd-tabs-content">
-		                    <li data-content="fashion" >
-		                        <div class="top-men">
-                                    {% get_comment_rank as post_list %}
-                                    {% for post in post_list %}
-                                    <div class="post_rank">
-                                        <h5><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </li>
-                            <li data-content="cinema" class="selected">
-		                        <div class="top-men">
-                                    {% get_reading_rank as post_list %}
-                                    {% for post in post_list %}
-                                    <div class="post_rank">
-                                        <h5><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </li>
-                            <li data-content="television" >
-                                <div class="top-men">
-                                    {% get_recent_post as post_list %}
-                                    {% for post in post_list %}
-                                    <div class="post_rank">
-                                        <h5><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </li>
-                            <div class="clearfix"></div>
-	                    </ul>
-                    </div>
-                    <div class="grid-top">
-				        <h4>分&nbsp&nbsp&nbsp类</h4>
-                        {% get_category as category_list %}
-				        <ul>
-                            {% for category in category_list %}
-                             <li><a href="{% url 'blog:category' category.slug %}">{{ category.name }} ({{ category.post_num }})</a></li>
-                            {% empty %}
-                             <li>暂时没有分类！</li>
-                            {% endfor %}
-				        </ul>
-                    </div>
-				        <!---->
-                    <div class="grid-top-in">
-                        <h4>标 签 云</h4>
-                        <ul>
-                            {% get_tag as tag_list %}
-                            {% for tag in tag_list %}
-                            <li><a href="{% url 'blog:tag' tag.slug %}">{{ tag.name }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                {% endblock sidebar %}
-				<!---->
-                </div>
-                <div class="clearfix"></div>
-		    </div>
+    <div class="top"> <span class="totop"></span>
+      <!--
+      <div class="topmenu">
+        <ul id="menu-top" class="wrap">
+          <li><a>您好！欢迎来到我的博客！</a></li>
+        </ul>
+      </div>
+      -->
+      <div class="wrap page-header">
+        <h1 style="margin-top: 20px;"><a href="/" title="响应式新闻技术博客类织梦模板(自适应手机端)"><img src="{% static 'blog/html5_blue/images/logo.png' %}" width="" height="" border="0" alt=""></a></h1>
+        <div class="contact">
+          <li class="rss"><a href="{% url 'blog:rss_feed' %}" title="订阅本站"><i class="fa fa-rss fa-2x"></i></a></li>
+          <li class="qq"><a href="http://wpa.qq.com/msgrd?v=3&uin=370297300&site=qq&menu=yes" target="_blank" title="QQ联系"><i class="fa fa-qq fa-2x"></i></a></li>
+          <li class="github"><a href="https://github.com/r26zhao" title="Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a></li>
         </div>
-	    <i class="line"> </i>
-	    <i class="line-in"> </i>
-	    <i class="line-in line-in1"> </i>
-	    <i class="line-in line-in2"> </i>
-	</div>
-    <p class="footer-class">Copyright © 2017 AA的博客<br>鲁ICP备17020303号-1</p>
-    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-</div>
+      </div>
+      <div class="nav">
+        <div class="wrap zwrap">
+          <div class="navbar-header">
+            <li class="navbar-toggle"> <i class="fa fa-list fa-2x"></i> </li>
+            <li style="float:right;display:inline-block">
+              <div class="toggle-search"><i class="fa fa-search fa-2x"></i></div>
+            </li>
+            <li style="float:right;">
+              <div class="search-expand">
+                <div class="search-expand-inner">
+                  <form onSubmit="return checkSearchForm()" method="post" name="formsearch" id="searchform" class="searchform themeform" action="/plus/search.php" >
+                    <input type="text" class="search" name="q" onblur="if(this.value=='')this.value='按回车键搜索...';" onfocus="if(this.value=='按回车键搜索...')this.value='';" value="按回车键搜索..." placeholder="按回车键搜索">
+                    <input type="hidden" value="title" name="show">
+                    <input type="hidden" value="1" name="tempid">
+                    <input type="hidden" value="news" name="tbname">
+                    <input name="mid" value="1" type="hidden">
+                    <input name="submit" value="search" type="hidden">
+                  </form>
+                </div>
+              </div>
+            </li>
+          </div>
+          <div class="navbar-collapse">
+            <ul>
+              <li class="menu-item {% if request.path == '/' %}
+              current_page_item
+              {% endif %}"><a href="/">首页</a></li>
+              <li class="menu-item {% if request.path == '/category/django/' %}
+              current_page_item
+              {% endif %}"><a href="{% url 'blog:category' 'django' %}">Django</a>
+              </li>
+              <li class="menu-item {% if request.path == '/category/python-study-notes/' %}
+              current_page_item
+              {% endif %}"><a href="{% url 'blog:category' 'python-study-notes' %}">Python</a>
+              </li>
+              <li class="menu-item {% if request.path == '/category/resources-share/' %}
+                current_page_item
+              {% endif %}"><a href="{% url 'blog:category' 'resources-share' %}">资源分享</a>
+                <ul class="sub-menu">
 
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-        $(".scroll").click(function(event){
-            event.preventDefault();
-            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-        });
-    });
-</script>
-<!-- 百度自动推送 -->
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                </ul>
+              </li>
+              <li class="menu-item ">{% if request.path == '/my-projects/' %}
+                current_page_item
+              {% endif %}<a href="https://github.com/r26zhao" target="_blank">我的项目</a>
+                <ul class="sub-menu">
+
+                </ul>
+              </li>
+              <li class="menu-item "><a href="/leave-message/">API</a></li>
+              <li class="menu-item ">{% if request.path == '/leave-message/' %}
+                current_page_item
+              {% endif %}<a href="/leave-message/">给我留言</a></li>
+              {% if not request.user.is_authenticated  %}
+              <li class="menu-item" id="index-login">
+                  <a href="{% url 'account_login' %}?next={{ request.path }}" {% if request.path == '/accounts/signup/' %}
+                  style="background-color: #2c3e50"
+                  {% endif %}>登录</a>
+              </li>
+              <li class="menu-item {% if request.path == '/accounts/signup/' %}
+              current-menu-item
+              {% endif %}" id="index-register"><a href="{% url 'account_signup' %}">注册</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="notic">
+        <div class="wrap subnotic"><i class="fa fa-bullhorn"></i> 欢迎来到我的博客！</div>
+      </div>
+    </div>
+
+    <div class="middle">
+    {% block login %}
+    {% endblock login %}
+    </div>
+
+    <div class="wrap">
+      <div class="main">
+        {% block slider %}
+        {% endblock slider %}
+        {% block post_list %}
+        {% endblock post_list %}
+        {% block article %}
+        {% endblock article %}
+      </div>
+
+    <div class="sider">
+      <div class="right">
+        {% block dashboard %}
+        {% if request.path == '/' and not request.user.is_authenticated %}
+        <div class="author">
+          <div class="topauthor">
+              {% get_blog_owner as owner %}
+              <img alt="" src="{{ owner.avatar }}" class="avatar avatar-100 photo" height="100" width="100">
+              <span class="intag">博客主人</span>
+              <span class="names">Aaron Zhao</span></br>
+              <ul class="personal_tag tag_cloud">
+                  <a href="javascript:void(0);">90后</a>
+                  <a href="javascript:void(0);">留学狗</a>
+                  <a href="javascript:void(0);">Call me 老A</a>
+              </ul>
+          </div>
+          <span class="bot"></span> </div>
+        <div class="butauthor author">
+          <li> <span class="bignum" ID="bignum1">{{ owner.post_num }}</span>文章总数 </li>
+          <li> <span class="bignum">{{ owner.view_num }}</span>访问次数 </li>
+          <li> <span class="bignum" ID="days"></span>建站天数 </li>
+        </div>
+        {% endif %}
+        {% if request.user.is_authenticated %}
+        <div class="butauthor author">
+          <div id="user_info">
+              <img src="{{ request.user.avatar.url }}" alt="头像"/>
+          </div>
+          <div id="dashboard">
+              <ul>
+                  <li style="color: #203e50">{{ request.user.username }}</li>
+                  <li><a href="{% url 'blog:account_profile' %}">设置</a></li>
+                  <li><a>消息</a></li>
+                  <li><a href="{% url 'account_logout' %}?next={{ request.path }}">登出</a></li>
+              </ul>
+          </div>
+        </div>
+        {% endif %}
+        {% endblock dashboard %}
+        {% block sider %}
+        {% endblock sider %}
+      </div>
+    </div>
+    <!--
+    <script type="text/javascript">
+    function NewDate(str) {
+    str = str.split('-');
+    var date = new Date();
+
+    date.setUTCHours(0, 0, 0, 0);
+    return date;
     }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    function showsectime() {
+    var birthDay =NewDate("2016-05-29");
+    var today=new Date();
+    var timeold=today.getTime()-birthDay.getTime();
+    var sectimeold=timeold/1000
+    var secondsold=Math.floor(sectimeold);
+    var msPerDay=24*60*60*1000;
+    var e_daysold=timeold/msPerDay;
+    var daysold=Math.floor(e_daysold);
+    var e_hrsold=(daysold-e_daysold)*-24;
+    var hrsold=Math.floor(e_hrsold);
+    var e_minsold=(hrsold-e_hrsold)*-60;
+    var minsold=Math.floor((hrsold-e_hrsold)*-60);
+    var seconds=Math.floor((minsold-e_minsold)*-60).toString();
+    document.getElementById("bignum").innerHTML = daysold;
+    setTimeout(showsectime, 1000);
     }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-<!-- 百度统计 -->
+    showsectime();
+    </script>
+    -->
+</div>
+    <div class="clear"></div>
+    ﻿<div class="footer">
+      <div class="wrap">
+        <p class="ffooter">Copyright &copy; 2018 Aaron Zhao的博客 | 鲁ICP备17020303号-1 </p>
+      </div>
+    </div>
+<script type="text/javascript" src="{% static 'blog/html5_blue/js/yycm.js' %}"></script>
 <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?aa83bd353f51db2b2df5b49ec8b30a3f";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
+    var s1 = '2017-05-05';//设置为你的建站时间
+    s1 = new Date(s1.replace(/-/g, "/"));
+    s2 = new Date();
+    var days = s2.getTime() - s1.getTime();
+    var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+    document.getElementById('days').innerHTML = number_of_days;
 </script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $().UItoTop({ easingType: 'easeOutQuart' });
-        $(".comment-content img").removeAttr('style');
-        $(".django-ckeditor-widget").removeAttr('style');
-    });
-</script>
-<script type="text/javascript" src="{% static 'blog/js/move-top.js' %}"></script>
-<script type="text/javascript" src="{% static 'blog/js/easing.js' %}"></script>
-<script src="{% static 'blog/js/easyResponsiveTabs.js' %}" type="text/javascript"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#horizontalTab,#horizontalTab1,#horizontalTab2').easyResponsiveTabs({
-            type: 'default', //Types: default, vertical, accordion
-            width: 'auto', //auto or any width like 600px
-            fit: true   // 100% fit in a container
-        });
-    });
-</script>
-<script src="{% static 'blog/js/main.js' %}"></script>
-<script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
-<script src="{% static 'notifications/notice.js' %}"></script>
-{% block comment_script %}
-{% endblock comment_script %}
+{% block script %}
+{% endblock script %}
 </body>
 </html>

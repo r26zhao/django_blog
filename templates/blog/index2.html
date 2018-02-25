@@ -1,0 +1,109 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% load blog_tags %}
+{% block site_info %}
+{% if not request.path == '/' %}
+<meta name="keywords" content="{{ keywords }}" />
+<meta name="description" content="{{ description }}" />
+<title>{{ title }}</title>
+{% else %}
+<meta name="keywords" content="{{ SITE_KEYWORDS }}" />
+<meta name="description" content="{{ SITE_DESCP }}" />
+<title>{{ SITE_NAME }}</title>
+{% endif %}
+{% endblock site_info %}
+{% block slider %}
+<div class="screen {% if request.path != '/' %}
+hidden_block
+{% endif %}">
+  <div class="slide_container">
+    <ul class="rslides" id="slider">
+      <li> <a href="#" target="_blank"><img src="{% static 'blog/images/slider_1.png' %}"></a> </li>
+      <li> <a href="#" target="_blank"><img src="{% static 'blog/images/slider_2.png' %}"></a> </li>
+      <li> <a href="#" target="_blank"><img src="{% static 'blog/images/slider_3.png' %}"></a> </li>
+      <li> <a href="#" target="_blank"><img src="{% static 'blog/images/slider_4.png' %}"></a> </li>
+    </ul>
+  </div>
+</div>
+<div class="hot-posts {% if request.path != '/' %}
+hidden_block
+{% endif %}">
+    <h2>热门排行</h2>
+    <ul>
+        {% get_reading_rank as rank %}
+        {% for post in rank %}
+        <li>
+            <p><span style="color: #f78585">{{ post.click_count }}阅读</span></p>
+            <span class="label label-{{ forloop.counter }}">{{ forloop.counter }}</span>
+            <a href="{{ post.get_absolute_url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+        {% empty %}
+        暂无排行
+        {% endfor %}
+    </ul>
+</div>
+{% endblock slider %}
+{% block post_list %}
+
+{% for post in post_list %}
+<div class="block">
+  <h2><span class="category"> <a href="{% url 'blog:category' post.category.slug %}" rel="category tag" >{{ post.category }}</a> <i class="fa fa-caret-right"></i></span><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+  <div class="clear"></div>
+
+  <div class='viewimg'> <a href='{{ post.get_absolute_url }}' class='ipic'> <img src='{{ post.cover.url }}' alt='如果没有略缩图，就不会显示前面的图片！' class='thumbnail' /><span class='shine' style='background-position: 160px 50%;'> </span></a> </div>
+
+  <div class="preview"> {{ post.excerpt }}</div>
+  <div class="preem">
+      <span><i class="fa fa-clock-o"></i> {{ post.date_created|timesince }}前 </span>
+      <span><i class="fa fa-eye"></i> {{ post.click_count }}阅读 </span>
+      <span><i class="fa fa-comment-o"></i> <a href="{{ post.get_absolute_url }}" class="ds-thread-count">{{ post.comment_set.all.count }}评论</a> </span>
+      <span style="color: #f78585"><i class="fa fa-heart-o"></i> 0喜欢 </span>
+      <span class="more" style="margin-right: 0"><a href="{{ post.get_absolute_url }}" title="{{ post.title }}">阅读详情</a></span> </div>
+</div>
+{% empty %}
+ 暂无文章
+{% endfor %}
+
+<div class='pagination'>&nbsp;&nbsp;<a href="/cms/">点击查看更多</a> &nbsp;</div>
+{% endblock post_list %}
+{% block sider %}
+<div class="subblock">
+  <h3>文章分类</h3>
+  <ul>
+    {% get_category as category_list %}
+    {% for category in category_list %}
+    <li>
+      <div class="sideshow">
+          <a href="{% url 'blog:category' category.slug %}">
+              <strong>{{ category.name }}</strong> </a>
+          <span class="post_num pull-right"> {{ category.post_num }} </span>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+<div class="subblock">
+  <h3>标签</h3>
+  <ul class="tag_cloud">
+      {% get_tag as tag_list %}
+      {% for tag in tag_list %}
+      <a href="{% url 'blog:tag' tag.slug %}" title="{{ tag.post_num }}个话题" style="width: 43.5%">
+           {{ tag.name }}&nbsp;&nbsp;&nbsp;({{ tag.post_num }})
+      </a>
+      {% endfor %}
+  </ul>
+</div>
+<div class="subblock linkcat">
+  <h3>友情链接</h3>
+  <ul>
+
+    <li><a href='' target='_blank'></a> </li>
+
+  </ul>
+</div>
+<ul class="widgets">
+</ul>
+{% endblock sider %}
+{% block script %}
+<<script src="https://cdn.bootcss.com/ResponsiveSlides.js/1.55/responsiveslides.min.js"></script>
+{% endblock script %}

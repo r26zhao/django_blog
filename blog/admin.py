@@ -3,7 +3,7 @@ from .models import *
 # Register your models here.
 
 class PostAdmin(admin.ModelAdmin):
-    fields = ('title', 'excerpt', 'content', 'category', 'tag', 'author',)
+    fields = ('title', 'excerpt', 'content', 'category', 'tag', 'author', 'cover')
     list_display = ('title', 'date_created', 'date_modified', 'category', 'author', 'is_recommended',)
     list_editable = ('category', 'author', 'is_recommended',)
 

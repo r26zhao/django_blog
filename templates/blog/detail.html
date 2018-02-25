@@ -1,42 +1,71 @@
 {% extends 'blog/base.html' %}
 {% load staticfiles %}
+{% load blog_tags %}
 {% block site_info %}
-<title>{{ title }}</title>
-<meta name="keywords" content="{{ keywords }}"/>
+<meta name="keywords" content="{{ keywords }}" />
 <meta name="description" content="{{ description }}" />
+<title>{{ title }}</title>
 {% endblock site_info %}
-{% block content %}
-<div class="post" style="border: 1px solid silver;border-radius: 5px;font-size: 1.15em">
-                        <div class="post_info">
-                            <ul>
-                                <li>
-                                    <span><h3><a href="#">{{ post.title }}</a></h3></span>
-                                </li>
-                                <li style="padding-top: 0.5em">
-                                    <span>作者：{{ post.author }}&nbsp;&nbsp;</span>
-                                    <span>发表于：{{ post.date_created }}</span>
-                                    <span class="pull-right">评论：({{ post.comment_set.all.count }})</span>
-                                    <span class="pull-right" style="margin-right: 10px">阅读：({{ post.click_count }})</span>
-                                </li>
-                                <li>
-                                    <span>
-                                        关键字：
-                                        {% for tag in tag_list %}
-                                        <a href="{% url 'blog:tag' tag.slug %}">{{ tag.name }}&nbsp;&nbsp;</a>
-                                        {% endfor %}
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-			            <p>{{ post.content|safe }}</p>
-                        <span class="last-modified pull-right"><em>修改于：{{ post.date_modified }}</em></span>
-                        <p></p>
+{% block css %}
+ <link rel="stylesheet" type="text/css" href="{% static 'blog/css/prism.css' %}" />
+{% endblock css %}
+{% block article %}
+<div class="article">
+    <div class="breadcrumbs">
+        <a title="返回首页" href="/"><i class="fa fa-home"></i></a>
+        <small> > </small>
+        <a href="{% url 'blog:category' post.category.slug %}">{{ post.category.name }}</a>
+        <small> > </small>
+        <span>{{ post.title }}</span>
+    </div>
+    <header class="article-header">
+        <h1 class="article-title">
+            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+        </h1>
+        <div class="preem">
+            <span>
+                <i class="fa fa-list-alt"></i>
+                <a href="{% url 'blog:category' post.category.slug %}">{{ post.category.name }}</a>
+            </span>
+            <span>
+                <i class="fa fa-user"></i>
+                <a href="javascript:void(0);">{{ post.author.username }}</a>
+            </span>
+            <span>
+                <i class="fa fa-clock-o"></i>
+                {{ post.date_created|timesince }}
+            </span>
+            <span>
+                <i class="fa fa-eye"></i>
+                {{ post.click_count }}
+            </span>
+            <span>
+                <i class="fa fa-comment-o"></i>
+                <a href="">{{ post.comment_set.all.count }}评论</a>
+            </span>
+        </div>
+    </header>
+    <article class="article-content">
+        {{ post.content|safe }}
+    </article>
 </div>
-
-{% endblock content %}
-
-{% block comment %}
-{% include 'easy_comment/comment_form.html' %}
-{% include 'easy_comment/comment_list.html' %}
-{% endblock comment %}
-
+{% endblock article %}
+{% block sider %}
+<div class="subblock" id="title_list">
+    <h3>文章目录</h3>
+    <ul>
+        {{ title_tree|safe }}
+        <li>
+            <a href="#评论">评论</a>
+        </li>
+    </ul>
+</div>
+{% endblock sider %}
+{% block script %}
+<script src="/static/ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js"></script>
+<script type="text/javascript">
+    $('.article-content').find(':header').each(function () {
+        $(this).attr('id', $(this).text());
+    });
+</script>
+{% endblock script %}

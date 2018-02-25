@@ -9,14 +9,14 @@
 {% endblock site_info %}
 
 {% block local-account %}
-    <div class="local-header"><h4>注册</h4></div>
+    <div class="header"><h2>注册</h2></div>
     <form class="login signup" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
         {{ form|crispy}}
     {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
-        <button class="primaryAction sign-button" type="submit">{% trans "Sign Up" %} &raquo;</button>
-        <a class="primaryAction sign-button already-button" href="{{ login_url }}">已有账号登录</a>
+        <button class="button button-primary-flat button-rounded" type="submit">{% trans "Sign Up" %} &raquo;</button>
+        <a class="button button-primary-flat button-rounded pull-right" href="{{ login_url }}">已有账号登录</a>
     </form>
 {% endblock local-account %}

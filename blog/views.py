@@ -5,11 +5,9 @@ from .models import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
 from .forms import UserDetailForm
 from django.contrib.auth.decorators import login_required
-
+from .catalog import catalog
 
 logger = logging.getLogger('blog.views')
-
-
 # Create your views here.
 
 # Paginator function
@@ -30,17 +28,7 @@ def global_setting(request):
 def index(request):
     post_list = Post.objects.all()
     post_list = get_page(request, post_list)
-    '''
-    from blog.models import User
-    b = User.objects.get(id=3)
-    
-    if b.is_authenticated():
-        print("### test from index view")
-        print("### last login %s" % b.onlinestatus.last_login)
-        print("### get last login %s" % b.onlinestatus.get_last_active())
-        print("### get last login %s" % b.onlinestatus.is_online())
-    '''
-    return render(request, 'blog/index.html', context={'post_list': post_list})
+    return render(request, 'blog/index2.html', context={'post_list': post_list})
 
 
 def detail(request, pk):
@@ -50,13 +38,15 @@ def detail(request, pk):
     title = post.title + ' - AA的博客'
     description = post.excerpt
     keywords = post.category.name
+    title_tree = catalog(post.content)
     for tag in tag_list:
         keywords = keywords + ', ' + tag.name
     return render(request, 'blog/detail.html', context={'post': post,
                                                         'title':title,
                                                         'keywords':keywords,
                                                         'description':description,
-                                                        'tag_list':tag_list})
+                                                        'tag_list':tag_list,
+                                                        'title_tree': title_tree})
 
 
 def category(request, slug):
@@ -66,7 +56,7 @@ def category(request, slug):
     title = category.name + ' - AA的博客'
     keywords = category.name
     description = category.name
-    return render(request, 'blog/index.html', context={'post_list':post_list,
+    return render(request, 'blog/index2.html', context={'post_list':post_list,
                                                        'title':title,
                                                        'keywords':keywords,
                                                        'description':description})
