@@ -1595,6 +1595,7 @@ text-decoration:underline;
     overflow: hidden;
     clear: both;
 	height: 25px;
+	margin-top: 10px;
 }
 .hot-posts a {
     font-size: 14.5px;

@@ -27,14 +27,14 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="1491" column="16" lean-forward="false" selection-start-line="1491" selection-start-column="7" selection-end-line="1491" selection-end-column="16" />
+            <state relative-caret-position="88">
+              <caret line="1594" column="21" lean-forward="true" selection-start-line="1594" selection-start-column="21" selection-end-line="1594" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="227">
@@ -54,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index2.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/blog/index2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="86" column="22" lean-forward="false" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="22" />
+            <state relative-caret-position="135">
+              <caret line="89" column="75" lean-forward="false" selection-start-line="89" selection-start-column="75" selection-end-line="89" selection-end-column="75" />
               <folding>
                 <element signature="e#545#566#0#HTML" expanded="true" />
                 <element signature="n#block#2;n#!!top" expanded="false" />
@@ -123,7 +123,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.social</find>
       <find>middle</find>
       <find>social</find>
       <find>social-login</find>
@@ -153,6 +152,7 @@
       <find>hot-posts ul</find>
       <find>tag_cloud</find>
       <find>min-width</find>
+      <find>hot-posts ul li</find>
     </findStrings>
     <replaceStrings>
       <replace>.social</replace>
@@ -212,10 +212,10 @@
         <option value="$PROJECT_DIR$/blog/static/blog/html5_blue/js/yycm.js" />
         <option value="$PROJECT_DIR$/templates/blog/detail.html" />
         <option value="$PROJECT_DIR$/templates/blog/base.html" />
-        <option value="$PROJECT_DIR$/templates/blog/index2.html" />
         <option value="$PROJECT_DIR$/blog/catalog.py" />
-        <option value="$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css" />
         <option value="$PROJECT_DIR$/django_blog/settings.py" />
+        <option value="$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/blog/index2.html" />
       </list>
     </option>
   </component>
@@ -933,30 +933,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="86" column="22" lean-forward="false" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="22" />
-          <folding>
-            <element signature="e#545#566#0#HTML" expanded="true" />
-            <element signature="n#block#2;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="1491" column="16" lean-forward="false" selection-start-line="1491" selection-start-column="7" selection-end-line="1491" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="101" column="21" lean-forward="false" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="1594" column="21" lean-forward="true" selection-start-line="1594" selection-start-column="21" selection-end-line="1594" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="89" column="75" lean-forward="false" selection-start-line="89" selection-start-column="75" selection-end-line="89" selection-end-column="75" />
+          <folding>
+            <element signature="e#545#566#0#HTML" expanded="true" />
+            <element signature="n#block#2;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

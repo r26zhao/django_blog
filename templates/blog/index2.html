@@ -87,7 +87,7 @@ hidden_block
   <ul class="tag_cloud">
       {% get_tag as tag_list %}
       {% for tag in tag_list %}
-      <a href="{% url 'blog:tag' tag.slug %}" title="{{ tag.post_num }}个话题" style="width: 43.5%">
+      <a href="{% url 'blog:tag' tag.slug %}" title="{{ tag.post_num }}个话题">
            {{ tag.name }}&nbsp;&nbsp;&nbsp;({{ tag.post_num }})
       </a>
       {% endfor %}
