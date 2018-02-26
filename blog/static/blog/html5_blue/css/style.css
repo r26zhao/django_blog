@@ -1427,13 +1427,6 @@ text-decoration:underline;
 .mainmenu {
 	display: none;
 }
-.navbar-toggle {
-	display: none!important;
-	float: right;
-}
-.navbar-header, .navbar-collapse {
-	display: block!important;
-}
 .nav ul {
 	font-size: 0;
 }
@@ -1464,6 +1457,13 @@ text-decoration:underline;
 .social-login span::before, .social-login span::after {
     width: 43%;
 }
+.navbar-toggle {
+	display: none!important;
+	float: right;
+}
+.navbar-header, .navbar-collapse {
+	display: block!important;
+}
 #index-tag a {
 	width: 93%;
 }
@@ -1492,6 +1492,9 @@ text-decoration:underline;
 @media(min-width:1200px) {
 .social-login span::before, .social-login span::after {
     width: 44%;
+}
+#index-tag a {
+	width: 43.5%;
 }
 .wrap {
 	width: 1170px;
