@@ -84,7 +84,7 @@ hidden_block
 </div>
 <div class="subblock">
   <h3>标签</h3>
-  <ul class="tag_cloud">
+  <ul class="tag_cloud" id="index-tag">
       {% get_tag as tag_list %}
       {% for tag in tag_list %}
       <a href="{% url 'blog:tag' tag.slug %}" title="{{ tag.post_num }}个话题">
