@@ -24,11 +24,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="948" column="16" lean-forward="false" selection-start-line="948" selection-start-column="16" selection-end-line="948" selection-end-column="16" />
+            <state relative-caret-position="183">
+              <caret line="1538" column="19" lean-forward="true" selection-start-line="1538" selection-start-column="19" selection-end-line="1538" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -97,7 +97,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/blog/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
@@ -146,13 +146,13 @@
       <find>navbar-toggle</find>
       <find>navbar-collapse</find>
       <find>min-width</find>
-      <find>max-width</find>
       <find>article_content</find>
       <find>article-content</find>
       <find>rocket</find>
-      <find>totop</find>
       <find>if request.path</find>
       <find>tag_cloud</find>
+      <find>totop</find>
+      <find>max-width</find>
     </findStrings>
     <replaceStrings>
       <replace>.social</replace>
@@ -213,9 +213,9 @@
         <option value="$PROJECT_DIR$/templates/blog/index2.html" />
         <option value="$PROJECT_DIR$/templates/blog/detail.html" />
         <option value="$PROJECT_DIR$/blog/static/blog/html5_blue/js/yycm.js" />
-        <option value="$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css" />
-        <option value="$PROJECT_DIR$/django_blog/settings.py" />
         <option value="$PROJECT_DIR$/templates/blog/base.html" />
+        <option value="$PROJECT_DIR$/django_blog/settings.py" />
+        <option value="$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css" />
       </list>
     </option>
   </component>
@@ -1060,22 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="948" column="16" lean-forward="false" selection-start-line="948" selection-start-column="16" selection-end-line="948" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="101" column="21" lean-forward="false" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/blog/index2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -1094,6 +1078,22 @@
           <folding>
             <element signature="n#if#10;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="101" column="21" lean-forward="false" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="1538" column="19" lean-forward="true" selection-start-line="1538" selection-start-column="19" selection-end-line="1538" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
