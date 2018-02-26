@@ -202,6 +202,9 @@ a:hover {
 	-ms-transition: all .8s;
 	transition: all .8s;
 }
+#index-tag a {
+	width: 43.5%;
+}
 .navbar-collapse {
 	background-color: #2c3e50;
 	display: none;
@@ -1399,6 +1402,9 @@ text-decoration:underline;
 .social-login span::before, .social-login span::after {
     width: 42%;
 }
+#index-tag a {
+	width: 90%;
+}
 .wrap {
 	width: 750px;
 }
@@ -1457,6 +1463,9 @@ text-decoration:underline;
 @media(min-width:992px) {
 .social-login span::before, .social-login span::after {
     width: 43%;
+}
+#index-tag a {
+	width: 93%;
 }
 .wrap {
 	width: 970px;
@@ -1585,7 +1594,7 @@ text-decoration:underline;
 .hot-posts ul li {
     overflow: hidden;
     clear: both;
-    margin-top: 10px;
+	height: 25px;
 }
 .hot-posts a {
     font-size: 14.5px;
