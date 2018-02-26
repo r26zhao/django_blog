@@ -173,7 +173,7 @@ var _hmt = _hmt || [];
         {% if request.user.is_authenticated %}
         <div class="butauthor author">
           <div id="user_info">
-              <img src="{{ request.user.avatar.url }}" alt="头像"/>
+              <img src="{{ request.user.get_avatar_url}}" alt="头像"/>
           </div>
           <div id="dashboard">
               <ul>

@@ -24,7 +24,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="183">
@@ -97,14 +97,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/blog/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
-              <caret line="43" column="49" lean-forward="false" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
-              <folding>
-                <element signature="n#if#10;n#!!top" expanded="false" />
-              </folding>
+              <caret line="175" column="54" lean-forward="false" selection-start-line="175" selection-start-column="54" selection-end-line="175" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,7 +130,6 @@
       <find>confirm</find>
       <find>input</find>
       <find>global</find>
-      <find>avatar</find>
       <find>if request.path == '/acc</find>
       <find>change</find>
       <find>article-content h</find>
@@ -153,6 +150,7 @@
       <find>tag_cloud</find>
       <find>totop</find>
       <find>max-width</find>
+      <find>avatar</find>
     </findStrings>
     <replaceStrings>
       <replace>.social</replace>
@@ -213,9 +211,9 @@
         <option value="$PROJECT_DIR$/templates/blog/index2.html" />
         <option value="$PROJECT_DIR$/templates/blog/detail.html" />
         <option value="$PROJECT_DIR$/blog/static/blog/html5_blue/js/yycm.js" />
-        <option value="$PROJECT_DIR$/templates/blog/base.html" />
         <option value="$PROJECT_DIR$/django_blog/settings.py" />
         <option value="$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/blog/base.html" />
       </list>
     </option>
   </component>
@@ -1071,16 +1069,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="43" column="49" lean-forward="false" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
-          <folding>
-            <element signature="n#if#10;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -1093,6 +1081,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="1538" column="19" lean-forward="true" selection-start-line="1538" selection-start-column="19" selection-end-line="1538" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="175" column="54" lean-forward="false" selection-start-line="175" selection-start-column="54" selection-end-line="175" selection-end-column="54" />
           <folding />
         </state>
       </provider>
