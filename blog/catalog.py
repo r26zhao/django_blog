@@ -15,4 +15,6 @@ def catalog(string):
                 html += '</ul></li><li><a href="#{}">{}</a><ul>'.format(striptags(match[i]), striptags(match[i]))
         if match[i].startswith('<h3'):
             html += '<li><a href="#{}">{}</a></li>'.format(striptags(match[i]), striptags(match[i]))
+            if i == len(match) - 1:
+                html += '</ul>'
     return html
