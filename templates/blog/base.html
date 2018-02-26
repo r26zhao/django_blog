@@ -41,7 +41,7 @@ var _hmt = _hmt || [];
 </script>
 </head>
 <body>
-    <div class="top"> <span class="totop"></span>
+    <div class="top"> <a class="totop" title="回顶部"><i class="fa fa-arrow-up fa-2x"></i></a>
       <!--
       <div class="topmenu">
         <ul id="menu-top" class="wrap">
@@ -87,15 +87,15 @@ var _hmt = _hmt || [];
               <li class="menu-item {% if request.path == '/' %}
               current_page_item
               {% endif %}"><a href="/">首页</a></li>
-              <li class="menu-item {% if request.path == '/category/django/' %}
+              <li class="menu-item {% if request.path == '/category/django/' or post.category.name == 'Django' %}
               current_page_item
               {% endif %}"><a href="{% url 'blog:category' 'django' %}">Django</a>
               </li>
-              <li class="menu-item {% if request.path == '/category/python-study-notes/' %}
+              <li class="menu-item {% if request.path == '/category/python-study-notes/' or post.category.name == 'Python笔记' %}
               current_page_item
               {% endif %}"><a href="{% url 'blog:category' 'python-study-notes' %}">Python</a>
               </li>
-              <li class="menu-item {% if request.path == '/category/resources-share/' %}
+              <li class="menu-item {% if request.path == '/category/resources-share/' or post.category.name == '资源分享' %}
                 current_page_item
               {% endif %}"><a href="{% url 'blog:category' 'resources-share' %}">资源分享</a>
                 <ul class="sub-menu">

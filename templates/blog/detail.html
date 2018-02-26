@@ -67,5 +67,6 @@
     $('.article-content').find(':header').each(function () {
         $(this).attr('id', $(this).text());
     });
+    $('.article-content img').removeAttr('style');
 </script>
 {% endblock script %}

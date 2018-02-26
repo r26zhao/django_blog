@@ -679,10 +679,10 @@ text-decoration:underline;
 .article-content p {
     margin: 0 0 15px 0;
 }
-.article_content strong {
+.article-content strong {
 	font-weight: bold;
 }
-.article_content a:hover {
+.article-content a:hover {
 	border-bottom: 1px dotted #CCC;
 }
 .article-content h2 {
@@ -697,20 +697,20 @@ text-decoration:underline;
     font-size: 18px;
     margin-bottom: 10px;
 }
-.article_content img {
+.article-content img {
 	display: block!important;
-	width: 100% !important;
+	max-width: 100% !important;
 	height: auto !important;
 	margin-left: auto;
 	margin-right: auto;
 }
-.article_content blockquote {
+.article-content blockquote {
 	background-color: #f5f5f5;
 	margin: 5px auto;
 	padding: 20px 20px 10px 30px;
 	border: 1px solid #eaeaea;
 }
-.article_content blockquote p {
+.article-content blockquote p {
 	text-indent: 0;
 }
 .con_pretext {
@@ -942,14 +942,15 @@ text-decoration:underline;
 	right: 25px;
 	bottom: 25px;
 	display: block;
-	width: 26px;
-	height: 62px;
-	background: url(../images/rocket.png) no-repeat 0 0;
 	-webkit-transition: all .2s ease-in-out;
 	cursor: pointer;
+	background-color: #16a085;
+	color: #fff;
+	z-index: 999;
 }
 .totop:hover {
-	background: url(../images/rocket.png) no-repeat 0 -62px;
+	background-color: #1abc9c;
+	color: #fff;
 }
 .dp-highlighter {
 	font-family: "Courier New", Courier, mono;
