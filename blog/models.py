@@ -17,7 +17,9 @@ class User(AbstractUser):
     qq = models.CharField(max_length=20, blank=True, null=True, verbose_name='QQ号码')
     url = models.URLField(max_length=100, blank=True, null=True, verbose_name='个人网页地址')
     avatar = ProcessedImageField(upload_to='avatar', default='avatar/default.png', verbose_name='头像',
-                                 processors=[ResizeToFill(85,85)],)
+                                 processors=[ResizeToFill(85,85)],
+                                 format='JPEG',
+                                 options={'quality':60})
 
     class Meta:
         verbose_name = '用户'
@@ -30,7 +32,7 @@ class User(AbstractUser):
     def save(self, *args, **kwargs):
         if len(self.avatar.name.split('/')) == 1:
             self.avatar.name = self.username + '/' + self.avatar.name
-        super(User, self).save()
+        super(User, self).save(*args, **kwargs)
 
     def get_avatar_url(self):
         url = self.avatar.url
@@ -80,7 +82,9 @@ class Post(models.Model):
     author = models.ForeignKey(User, verbose_name='作者')
     category = models.ForeignKey(Category, verbose_name='分类')
     tag = models.ManyToManyField(Tag, verbose_name='标签')
-    cover = ProcessedImageField(upload_to='cover', default='', verbose_name='封面', processors=[ResizeToFill(160, 120)])
+    cover = ProcessedImageField(upload_to='cover', default='', verbose_name='封面', processors=[ResizeToFill(160, 120)],
+                                format='JPEG',
+                                options={"quality": 60})
 
     class Meta:
         verbose_name = '文章'
