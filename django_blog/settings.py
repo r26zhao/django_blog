@@ -223,7 +223,7 @@ CKEDITOR_CONFIGS = {
         'toolbar_Custom': [
             ['Bold', 'Italic', 'Underline', 'Format', 'RemoveFormat'],
             ['NumberedList', 'BulletedList'],
-            ['Blockquote', 'CodeSnippet'],
+            ['CodeSnippet'],
             ['Image', 'Link', 'Unlink']
         ],
         'extraPlugins': ','.join(['codesnippet', 'uploadimage', 'prism', 'widget', 'lineutils', ]),

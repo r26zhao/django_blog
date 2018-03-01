@@ -27,8 +27,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="935" column="19" lean-forward="false" selection-start-line="935" selection-start-column="19" selection-end-line="935" selection-end-column="19" />
+            <state relative-caret-position="204">
+              <caret line="348" column="19" lean-forward="false" selection-start-line="348" selection-start-column="19" selection-end-line="348" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -57,8 +57,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="101" column="21" lean-forward="false" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
+            <state relative-caret-position="156">
+              <caret line="223" column="25" lean-forward="true" selection-start-line="223" selection-start-column="25" selection-end-line="223" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -80,11 +80,9 @@
       <file leaf-file-name="comment_entry.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_entry.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="57">
+              <caret line="3" column="56" lean-forward="false" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,15 +135,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>min-width</find>
-      <find>article_content</find>
       <find>article-content</find>
       <find>rocket</find>
       <find>if request.path</find>
       <find>tag_cloud</find>
       <find>totop</find>
       <find>max-width</find>
-      <find>avatar</find>
       <find>recurse</find>
       <find>tree</find>
       <find>slider</find>
@@ -156,7 +151,6 @@
       <find>formfield</find>
       <find>author img</find>
       <find>ping</find>
-      <find>pinglun</find>
       <find>pinglun-</find>
       <find>parent</find>
       <find>h3</find>
@@ -167,6 +161,10 @@
       <find>render_to_string</find>
       <find>.comment</find>
       <find>timeout</find>
+      <find>avatar</find>
+      <find>cache</find>
+      <find>pinglun</find>
+      <find>ckeditor</find>
     </findStrings>
     <replaceStrings>
       <replace>.social</replace>
@@ -224,12 +222,12 @@
         <option value="$PROJECT_DIR$/blog/models.py" />
         <option value="$PROJECT_DIR$/templates/blog/index2.html" />
         <option value="$PROJECT_DIR$/templates/blog/base.html" />
-        <option value="$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css" />
         <option value="$PROJECT_DIR$/easy_comment/comment_entry.html" />
         <option value="$PROJECT_DIR$/easy_comment/tasks.py" />
         <option value="$PROJECT_DIR$/templates/blog/detail.html" />
-        <option value="$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_entry.html" />
         <option value="$PROJECT_DIR$/easy_comment/templatetags/comment_tags.py" />
+        <option value="$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_entry.html" />
+        <option value="$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css" />
         <option value="$PROJECT_DIR$/django_blog/settings.py" />
       </list>
     </option>
@@ -1049,14 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="935" column="19" lean-forward="false" selection-start-line="935" selection-start-column="19" selection-end-line="935" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/easy_comment/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -1104,16 +1094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_entry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/easy_comment/templatetags/comment_tags.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -1124,10 +1104,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_entry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="56" lean-forward="false" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="348" column="19" lean-forward="false" selection-start-line="348" selection-start-column="19" selection-end-line="348" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/django_blog/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="101" column="21" lean-forward="false" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
+        <state relative-caret-position="156">
+          <caret line="223" column="25" lean-forward="true" selection-start-line="223" selection-start-column="25" selection-end-line="223" selection-end-column="25" />
           <folding />
         </state>
       </provider>

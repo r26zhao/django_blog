@@ -346,6 +346,7 @@ a:hover {
 	padding: 20px;
 	border: 1px solid #ececec;
 	overflow: hidden;
+    color: #292b2c;
 }
 .pinglun h2 {
 	font-size: 20px;
@@ -692,6 +693,7 @@ text-decoration:underline;
     word-wrap: break-word;
     position: relative;
     padding-top: 10px;
+    color: #292b2c;
 }
 .article-content p {
     margin: 0 0 15px 0;
