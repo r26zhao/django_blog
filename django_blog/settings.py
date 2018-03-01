@@ -221,7 +221,7 @@ CKEDITOR_CONFIGS = {
         'tabSpaces': 4,
         'toolbar': 'Custom',
         'toolbar_Custom': [
-            ['Bold', 'Italic', 'Underline', 'Format', 'RemoveFormat'],
+            ['Bold', 'Italic', 'Underline', 'RemoveFormat'],
             ['NumberedList', 'BulletedList'],
             ['CodeSnippet'],
             ['Image', 'Link', 'Unlink']
