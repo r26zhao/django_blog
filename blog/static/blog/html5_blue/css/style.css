@@ -341,6 +341,23 @@ a:hover {
 	border: 1px solid #ececec;
 	overflow: hidden;
 }
+.pinglun {
+	background-color: #fff;
+	padding: 20px;
+	border: 1px solid #ececec;
+	overflow: hidden;
+}
+.pinglun h2 {
+	font-size: 20px;
+	margin: 20px -20px 20px -20px;
+	padding: 10px 20px 9px 10px;
+	line-height: 18px;
+	border-left: 4px solid #1abc9c;
+	background-color: #f1f1f1;
+}
+.pinglun h2 span {
+    color: #16a085;
+}
 .article-title a {
     color: #444;
     font-weight: normal;
@@ -766,45 +783,66 @@ text-decoration:underline;
 	display: inline-block;
 	float: left;
 }
-.comment-body {
-	padding: 10px 0 0 70px;
-	position: relative;
+.pinglun-body {
+    float: right;
+    width: 90%;
 }
-.comment-avatar {
-	position: absolute;
-	left: 0;
+.pinglun-body h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #046bb0;
+    padding-bottom: 10px;
 }
-.comment-avatar img {
-	margin: 10px;
-	position: relative;
+.pinglun-body h3 span, .pinglun-bottom span {
+    color: #999;
+    font-weight: normal;
+    font-size: 14px;
+}
+.pinglun-bottom span {
+    margin-left: 20px;
+}
+.pinglun-entry {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: dashed 1px #7f8c8d;
+}
+.dianzan {
+    padding-top: 7px;
+}
+.reply span {
+    color: #16a085;
+}
+.pinglun-text {
+    padding: 10px 0;
+}
+.pinglun-avatar {
 	float: left;
-	margin: 0 6px 0 0;
-	border: 1px solid #ddd;
-	background: #fff;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
+    width: 8%;
+    margin: auto;
+}
+.pinglun-avatar img {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	max-width: 80%;
+	height: auto;
+	border: 3px solid #fff;
+	float: left;
+	-webkit-transition: all .8s ease-in-out;
+	-moz-transition: all .8s ease-in-out;
+	-o-transition: all .8s ease-in-out;
+	transition: all .8s ease-in-out;
+	-moz-box-shadow: 1px 1px 7px #777;
+	-webkit-box-shadow: 1px 1px 7px #777;
+	box-shadow: 1px 1px 7px #777;
+    margin-top: 5px;
 }
 .children {
 	margin-left: 60px;
 }
-.comment-span, .comment-span a {
-	font-weight: bold;
-}
 .datetime {
 	color: #bbb;
 	font-size: 0.8em;
-}
-.comment-text {
-	font-size: 0.9em;
-	color: #888;
-	margin-bottom: 0.5em;
-}
-.reply a {
-	font-size: 0.9em;
-	color: #BBB;
-}
-.reply a:hover {
-	color: #00a4dc;
 }
 .respond {
 	background: #fff;
@@ -877,8 +915,25 @@ text-decoration:underline;
 	top: 20px;
 	left: -8px;
 }
-.comments-title {
-	margin-bottom: 10px;
+.parent-pinglun blockquote {
+	background-color: #f5f5f5;
+	margin: 5px;
+	padding: 10px 10px 10px 10px;
+	border: 1px solid #eaeaea;
+    font-size: 14px !important;
+}
+.parent-pinglun blockquote i {
+    color: #7f8c8d;
+}
+.parent-pinglun blockquote em {
+    color: #0f74a8;
+    font-size: 14px;
+}
+.parent-pinglun blockquote div {
+    font-size: 14px;
+    padding-left: 19px;
+    max-height: 67px;
+    overflow: auto;
 }
 .submain {
 	background-color: #fff;
@@ -1071,7 +1126,7 @@ text-decoration:underline;
 	width: 60px;
 	height: 22px;
 }
-.dp-c .comment {
+.dp-c .pinglun {
 	color: green;
 }
 .dp-c .string {
@@ -1086,7 +1141,7 @@ text-decoration:underline;
 .dp-c .vars {
 	color: #d00;
 }
-.dp-vb .comment {
+.dp-vb .pinglun {
 	color: green;
 }
 .dp-vb .string {
@@ -1098,7 +1153,7 @@ text-decoration:underline;
 .dp-vb .keyword {
 	color: blue;
 }
-.dp-sql .comment {
+.dp-sql .pinglun {
 	color: green;
 }
 .dp-sql .string {
@@ -1116,7 +1171,7 @@ text-decoration:underline;
 .dp-xml .cdata {
 	color: #ff1493;
 }
-.dp-xml .comments {
+.dp-xml .pingluns {
 	color: green;
 }
 .dp-xml .tag {
@@ -1133,7 +1188,7 @@ text-decoration:underline;
 .dp-xml .attribute-value {
 	color: blue;
 }
-.dp-delphi .comment {
+.dp-delphi .pinglun {
 	color: #008200;
 	font-style: italic;
 }
@@ -1153,7 +1208,7 @@ text-decoration:underline;
 .dp-delphi .vars {
 	color: #000;
 }
-.dp-py .comment {
+.dp-py .pinglun {
 	color: green;
 }
 .dp-py .string {
@@ -1183,7 +1238,7 @@ text-decoration:underline;
 	color: #8a2be2;
 	font-style: italic;
 }
-.dp-rb .comment {
+.dp-rb .pinglun {
 	color: #c00;
 }
 .dp-rb .string {
@@ -1198,7 +1253,7 @@ text-decoration:underline;
 .dp-rb .variable {
 	color: #6cf;
 }
-.dp-css .comment {
+.dp-css .pinglun {
 	color: green;
 }
 .dp-css .string {
@@ -1213,7 +1268,7 @@ text-decoration:underline;
 .dp-css .vars {
 	color: #d00;
 }
-.dp-j .comment {
+.dp-j .pinglun {
 	color: #3f7f5f;
 }
 .dp-j .string {
@@ -1229,7 +1284,7 @@ text-decoration:underline;
 .dp-j .number {
 	color: #c00000;
 }
-.dp-cpp .comment {
+.dp-cpp .pinglun {
 	color: #e00;
 }
 .dp-cpp .string {
@@ -1247,7 +1302,7 @@ text-decoration:underline;
 	color: #2e8b57;
 	font-weight: bold;
 }
-.dp-perl .comment {
+.dp-perl .pinglun {
 	color: green;
 }
 .dp-perl .string {
@@ -1265,7 +1320,7 @@ text-decoration:underline;
 .dp-css .vars {
 	color: #d00;
 }
-.dp-g .comment {
+.dp-g .pinglun {
 	color: #3f7f5f;
 }
 .dp-g .string {

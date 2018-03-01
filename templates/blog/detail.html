@@ -1,6 +1,7 @@
 {% extends 'blog/base.html' %}
 {% load staticfiles %}
 {% load blog_tags %}
+{% load comment_tags %}
 {% block site_info %}
 <meta name="keywords" content="{{ keywords }}" />
 <meta name="description" content="{{ description }}" />
@@ -50,6 +51,18 @@
     </article>
 </div>
 {% endblock article %}
+{% block comment %}
+<div class="pinglun" id="评论">
+    <h2>
+        评论
+        <span class="pull-right">10人参与 | 200条评论</span>
+    </h2>
+    <div class="pinglun-list">
+        {% generate_comment_list post as html %}
+        {{ html|safe }}
+    </div>
+</div>
+{% endblock %}
 {% block sider %}
 <div class="subblock" id="title_list">
     <h3>文章目录</h3>

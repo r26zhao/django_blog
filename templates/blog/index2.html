@@ -50,7 +50,7 @@ hidden_block
   <h2><span class="category"> <a href="{% url 'blog:category' post.category.slug %}" rel="category tag" >{{ post.category }}</a> <i class="fa fa-caret-right"></i></span><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
   <div class="clear"></div>
 
-  <div class='viewimg'> <a href='{{ post.get_absolute_url }}' class='ipic'> <img src='{{ post.cover.url }}' alt='如果没有略缩图，就不会显示前面的图片！' class='thumbnail' /><span class='shine' style='background-position: 160px 50%;'> </span></a> </div>
+  <div class='viewimg'> <a href='{{ post.get_absolute_url }}' class='ipic'> <img src='{{ post.cover.url }}' alt='' class='thumbnail' /><span class='shine' style='background-position: 160px 50%;'> </span></a> </div>
 
   <div class="preview"> {{ post.excerpt }}</div>
   <div class="preem">
@@ -105,5 +105,5 @@ hidden_block
 </ul>
 {% endblock sider %}
 {% block script %}
-<<script src="https://cdn.bootcss.com/ResponsiveSlides.js/1.55/responsiveslides.min.js"></script>
+<script src="https://cdn.bootcss.com/ResponsiveSlides.js/1.55/responsiveslides.min.js"></script>
 {% endblock script %}
