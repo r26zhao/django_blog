@@ -8,7 +8,7 @@ from . import handlers
 # Create your views here.
 
 @require_POST
-def submit_comment(request, id):
+def submit_comment(request):
     form = CommentForm(data=request.POST)
     # print(request.POST)
     if form.is_valid():

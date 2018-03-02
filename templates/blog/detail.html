@@ -53,6 +53,40 @@
 {% endblock article %}
 {% block comment %}
 <div class="pinglun" id="评论">
+    <div class="comment-form-header">
+        {% if request.user.is_authenticated %}
+        <img src="{{ request.user.get_avatar_url }}">
+        <div class="header-username">
+            <span>
+                {{ request.user.username }}
+                <i class="fa fa-edit"></i>
+            </span>
+            <span style="color: #292b2c">回复：</span>
+            <span style="color: #16a085">@Aaron</span>
+        </div>
+        {% else %}
+        <span class="remind-login">尚未登录，请<a href="{% url 'account_login' %}?next={{ request.path }}">登录</a>后参与评论</span>
+        {% endif %}
+    </div>
+    {% generate_form_for post as form %}
+    <form class="comment-form" method="post" action="{% url 'easy_comment:submit_comment' %}">
+        {% csrf_token %}
+        {% for field in form %}
+        {{ field }}
+        {{ field.errors }}
+        {% endfor %}
+        <button class="button button-primary-flat button-rounded pull-right" type="submit" id="submit-button">
+            <i class="fa fa-check-square-o"></i>
+            提交评论
+        </button>
+    </form>
+    <button class="button button-primary-flat button-rounded pull-right" id="cancel-button">
+        <i class="fa fa-undo"></i>
+        取消回复
+    </button>
+    <div class="clear"></div>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
     <h2>
         评论
         <span class="pull-right">10人参与 | 200条评论</span>
@@ -81,5 +115,7 @@
         $(this).attr('id', $(this).text());
     });
     $('.article-content img').removeAttr('style');
+    $('.pinglun-text img').removeAttr('style');
+    $(".django-ckeditor-widget").removeAttr('style');
 </script>
 {% endblock script %}

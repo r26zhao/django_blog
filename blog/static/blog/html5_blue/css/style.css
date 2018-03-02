@@ -817,10 +817,63 @@ text-decoration:underline;
 .pinglun-text {
     padding: 10px 0;
 }
+.pinglun-text img {
+    max-width: 100%;
+    height: auto;
+}
 .pinglun-avatar {
 	float: left;
     width: 8%;
     margin: auto;
+}
+#cancel-button {
+    font-size: 14px;
+    padding: 0 20px;
+    background-color: #E74C3C;
+    margin-top: 10px;
+}
+.comment-form-header {
+    border: solid 1px #d1d1d1;
+    border-bottom: none;
+}
+.comment-form-header img {
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	width: 6.4%;
+	height: auto;
+	border: 3px solid #fff;
+	-webkit-transition: all .8s ease-in-out;
+	-moz-transition: all .8s ease-in-out;
+	-o-transition: all .8s ease-in-out;
+	transition: all .8s ease-in-out;
+	-moz-box-shadow: 1px 1px 7px #777;
+	-webkit-box-shadow: 1px 1px 7px #777;
+	box-shadow: 1px 1px 7px #777;
+    margin-bottom: 5px;
+}
+.header-username {
+    display: inline-block;
+    width: 90%;
+    float: right;
+    margin: auto;
+    padding-top: 1.5%;
+}
+.header-username span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #046bb0;
+}
+.header-username i {
+    margin: 0 5px;
+}
+#submit-button {
+    font-size: 14px;
+    padding: 0 20px;
+    margin: 10px 0 0 20px;
+}
+#id_parent, #id_post, #id_honeypot {
+    display: none;
 }
 .pinglun-avatar img {
 	-webkit-border-radius: 50%;
@@ -923,6 +976,7 @@ text-decoration:underline;
 	padding: 10px 10px 10px 10px;
 	border: 1px solid #eaeaea;
     font-size: 14px !important;
+    color: #666;
 }
 .parent-pinglun blockquote i {
     color: #7f8c8d;
@@ -1004,6 +1058,13 @@ text-decoration:underline;
 	background-color: #16a085;
 	color: #fff;
 	z-index: 999;
+}
+.remind-login {
+    padding: 15px;
+    display: block;
+}
+.remind-login a {
+    color: #E74C3C;
 }
 .totop:hover {
 	background-color: #1abc9c;
@@ -1590,6 +1651,11 @@ text-decoration:underline;
         width: 100%;
         padding: 0;
         margin: 0;
+    }
+    .header-username span {
+        font-size: 14px;
+        font-weight: 600;
+        color: #046bb0;
     }
     .page-header h1 a {
 	font-size: 32px;
