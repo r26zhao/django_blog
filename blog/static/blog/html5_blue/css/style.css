@@ -831,10 +831,19 @@ text-decoration:underline;
     padding: 0 20px;
     background-color: #E74C3C;
     margin-top: 10px;
+	display: none;
 }
 .comment-form-header {
     border: solid 1px #d1d1d1;
     border-bottom: none;
+}
+#reply-action {
+	color: #292b2c;
+	display: none;
+}
+#recipient {
+	color: #16a085;
+	display: none;
 }
 .comment-form-header img {
     -webkit-border-radius: 50%;

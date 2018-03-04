@@ -61,8 +61,8 @@
                 {{ request.user.username }}
                 <i class="fa fa-edit"></i>
             </span>
-            <span style="color: #292b2c">回复：</span>
-            <span style="color: #16a085">@Aaron</span>
+            <span id="reply-action">回复：</span>
+            <span id="recipient"></span>
         </div>
         {% else %}
         <span class="remind-login">尚未登录，请<a href="{% url 'account_login' %}?next={{ request.path }}">登录</a>后参与评论</span>
@@ -71,11 +71,14 @@
     {% generate_form_for post as form %}
     <form class="comment-form" method="post" action="{% url 'easy_comment:submit_comment' %}">
         {% csrf_token %}
+        {{ form.media }}
         {% for field in form %}
         {{ field }}
         {{ field.errors }}
         {% endfor %}
-        <button class="button button-primary-flat button-rounded pull-right" type="submit" id="submit-button">
+        <button class="button button-primary-flat button-rounded pull-right {% if not request.user.is_authenticated %}
+        no-login
+        {% endif %}" type="submit" id="submit-button">
             <i class="fa fa-check-square-o"></i>
             提交评论
         </button>
@@ -85,8 +88,7 @@
         取消回复
     </button>
     <div class="clear"></div>
-    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
-    <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+
     <h2>
         评论
         <span class="pull-right">10人参与 | 200条评论</span>
@@ -117,5 +119,61 @@
     $('.article-content img').removeAttr('style');
     $('.pinglun-text img').removeAttr('style');
     $(".django-ckeditor-widget").removeAttr('style');
+    $("#submit-button").click(function (e) {
+        e.preventDefault();
+        if ($(this).hasClass('no-login')){
+            alert("请登录后参与评论！");
+            return false;
+        }
+        pid = $('#id_parent option:selected').val();
+        if (sessionStorage.getItem('reply')) {
+            pid = sessionStorage.getItem('pid');
+        }
+        $.ajaxSetup({
+            data: {csrfmiddlewaretoken: '{{ csrf_token }}' }});
+        $.ajax({
+            type: 'post',
+            url: "{% url 'easy_comment:submit_comment' %}",
+            data:{
+                    'honeypot':$("#id_honeypot").val(),
+                    'content':CKEDITOR.instances.id_content.getData(),
+                    'parent':pid,
+                    'post':$('#id_post option:selected').val()
+            },
+            dataType:'json',
+            success:function (json) {
+                if (json.msg == 'success!') {
+                    $(".pinglun-list").prepend(json.html);
+                    CKEDITOR.instances.id_content.setData("");
+                    $("#cancel-button").css('display', 'none');
+                    $("#reply-action").css('display', 'none');
+                    $("#recipient").css('display', 'none');
+                    sessionStorage.removeItem('reply');
+                }
+            },
+            error:function (json) {
+                alert("Something is wrong! lol");
+            }
+        });
+    });
+    $(".reply").click(function () {
+        if ($("#submit-button").hasClass('no-login')) {
+            alert('请登录后参与评论！');
+            return false;
+        }
+        $("#recipient").text($(this).data('name'));
+        $("#reply-action").css('display', 'inline-block');
+        $("#recipient").css('display', 'inline-block');
+        $("#cancel-button").css('display', 'inline-block');
+        sessionStorage.setItem('reply', true);
+        sessionStorage.setItem('pid', $(this).attr('id'));
+    });
+    $("#cancel-button").click(function () {
+        $(this).css('display', 'none');
+        $("#reply-action").css('display', 'none');
+        $("#recipient").css('display', 'none');
+        sessionStorage.removeItem('reply');
+    });
+
 </script>
 {% endblock script %}
