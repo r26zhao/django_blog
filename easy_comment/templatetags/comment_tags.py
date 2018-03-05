@@ -15,16 +15,28 @@ def generate_form_for(post):
     return form
 
 @register.simple_tag
-def get_comment_list_of(post):
-    return post.comment_set.all()
+def get_comments_count(post):
+    key = "post_{}_comments_num".format(post.id)
+    comment_num = cache.get(key, None)
+    if not comment_num:
+        comment_num = post.comment_set.all().count()
+        cache.set(key, comment_num, timeout=300)
+    return comment_num
 
 @register.simple_tag
 def get_comments_user_count(post):
-    user_list = []
-    for comment in post.comment_set.all():
-        if not comment.user in user_list:
-            user_list.append(comment.user)
-    return len(user_list)
+    key = "post_{}_comments_user_num".format(post.id)
+    user_num = cache.get(key, None)
+    if not user_num:
+        user_list = []
+        key1 = "post_{}_comments_user".format(post.id)
+        for comment in post.comment_set.all():
+            if not comment.user in user_list:
+                user_list.append(comment.user)
+        user_num = len(user_list)
+        cache.set(key, user_num, timeout=300)
+        cache.set(key1, user_list, timeout=300)
+    return user_num
 
 @register.simple_tag
 def get_like_action(user, comment):
