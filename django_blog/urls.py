@@ -21,6 +21,14 @@ from django.views.generic.base import RedirectView
 from django.contrib.sitemaps.views import sitemap
 from blog.sitemaps import PostSitemap, CategorySitemap, TagSitemap
 import notifications.urls
+from rest_framework.routers import DefaultRouter
+from api import views
+
+router = DefaultRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'posts', views.PostViewSet)
+router.register(r'tags', views.TagViewSet)
+router.register(r'comments', views.CommentViewSet)
 
 sitemaps = {
     'posts':PostSitemap,
@@ -38,4 +46,5 @@ urlpatterns = [
     url(r'^robots\.txt$', include('robots.urls')),
     url(r'', include('easy_comment.urls')),
     url(r'^notifications/', include(notifications.urls, namespace='notifications')),
+    url(r'^api/', include(router.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
