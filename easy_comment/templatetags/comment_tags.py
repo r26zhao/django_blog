@@ -65,17 +65,4 @@ def get_comment_rank(num=5):
 
 @register.simple_tag
 def generate_comment_list(post):
-    key1 = 'post_{}_comments'.format(post.id)
-    html = cache.get(key1, None)
-    if not html:
-        html = ''
-        comments = post.comment_set.all().order_by('-submit_date')
-        for comment in comments:
-            key = 'comment_{}_html'.format(comment.id)
-            comment_html = cache.get(key, None)
-            if not comment_html:
-                comment_html = render_to_string('easy_comment/comment_entry.html', context={'comment': comment})
-                cache.set(key, comment_html, timeout=300)
-            html += comment_html
-        cache.set(key1, html, timeout=300)
-    return html
+    return post.to_comments_html()

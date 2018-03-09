@@ -4,6 +4,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 from django.urls import reverse
 from imagekit.models import ProcessedImageField
 from imagekit.processors import ResizeToFill
+from django.core.cache import cache
 
 
 # Create your models here.
@@ -97,8 +98,74 @@ class Post(models.Model):
     def click_increase(self):
         self.click_count += 1
         self.save(update_fields=['click_count'])
+
     def get_absolute_url(self):
         return reverse('blog:detail', kwargs={'pk':self.pk})
+
+    def to_comments_html(self):
+        key = 'post_{}_comments'.format(self.id)
+        html = cache.get(key, None)
+        if not html:
+            html = ''
+            comments = self.comment_set.all().order_by('-submit_date')
+            for comment in comments:
+                comment_html = comment.to_html()
+                html += comment_html
+            cache.set(key, html, timeout=300)
+        return html
+
+    def comment_user_count(self):
+        key = "post_{}_comments_user_num".format(self.id)
+        user_num = cache.get(key, None)
+        if not user_num:
+            user_list = []
+            key1 = "post_{}_comments_user".format(self.id)
+            for comment in self.comment_set.all():
+                if not comment.user in user_list:
+                    user_list.append(comment.user)
+            user_num = len(user_list)
+            cache.set(key, user_num, timeout=300)
+            cache.set(key1, user_list, timeout=300)
+        return user_num
+
+    def comment_count(self):
+        key = "post_{}_comments_num".format(self.id)
+        comment_num = cache.get(key, None)
+        if not comment_num:
+            comment_num = self.comment_set.all().count()
+            cache.set(key, comment_num, timeout=300)
+        return comment_num
+
+    def comment_update(self, new_comment):
+        comment_html = new_comment.to_html()
+        key1 = 'post_{}_comments'.format(self.id)
+        comment_list_html = cache.get(key1, None)
+        if comment_list_html:
+            comment_list_html = comment_html + comment_list_html
+            cache.set(key1, comment_list_html, timeout=300)
+        else:
+            comment_list_html = self.to_comments_html()
+        key2 = "post_{}_comments_user".format(self.id)
+        key3 = "post_{}_comments_user_num".format(self.id)
+        user_list = cache.get(key2, None)
+        if user_list:
+            if not new_comment.user in user_list:
+                user_list.append(new_comment.user)
+            user_num = len(user_list)
+            cache.set(key3, user_num, timeout=300)
+            cache.set(key2, user_list, timeout=300)
+        else:
+            user_num = self.comment_user_count()
+        key4 = "post_{}_comments_num".format(self.id)
+        comment_num = cache.get(key4, None)
+        if comment_num:
+            comment_num += 1
+            cache.set(key4, comment_num, timeout=300)
+        else:
+            comment_num = self.comment_count()
+        return  comment_list_html, user_num, comment_num
+
+
 
 '''
 # Comment 评论

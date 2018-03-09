@@ -145,12 +145,13 @@
             dataType:'json',
             success:function (json) {
                 if (json.msg == 'success!') {
-                    $(".pinglun-list").prepend(json.html);
+                    $(".pinglun-list").html(json.html);
                     CKEDITOR.instances.id_content.setData("");
                     $("#cancel-button").css('display', 'none');
                     $("#reply-action").css('display', 'none');
                     $("#recipient").css('display', 'none');
                     sessionStorage.removeItem('reply');
+                    $('.pinglun h2 span').text( json.user_num + "人参与 | " + json.comment_num + "条评论");
                 }
             },
             error:function (json) {

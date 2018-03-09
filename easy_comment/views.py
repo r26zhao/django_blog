@@ -4,31 +4,27 @@ from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from django.template.loader import render_to_string
 from django.core.cache import cache
+from django.views.generic.edit import CreateView
+from django.views.generic.base import View
+from django.contrib.auth.mixins import LoginRequiredMixin
 from . import handlers
 
-
 # Create your views here.
+class PostCommentView(LoginRequiredMixin, View):
 
-@require_POST
-def submit_comment(request):
-    form = CommentForm(data=request.POST)
-    if form.is_valid():
-        # print('success')
-        new_comment = form.save(commit=False)
-        new_comment.user = request.user
-        new_comment.user_name = request.user.username
-        new_comment.save()
-        key = 'comment_{}_html'.format(new_comment.id)
-        comment_html = render_to_string('easy_comment/comment_entry.html', context={'comment': new_comment})
-        cache.set(key, comment_html, timeout=300)
-        post = new_comment.post
-        key1 = 'post_{}_comments'.format(post.id)
-        comment_list_html = cache.get(key1, None)
-        if comment_list_html:
-            comment_list_html = comment_html + comment_list_html
-            cache.set(key1, comment_list_html, timeout=300)
-        return JsonResponse({'msg': 'success!', 'html': comment_html})
-    return JsonResponse({'msg': '评论出错!'})
+    def post(self, request):
+        form = CommentForm(data=request.POST)
+        if form.is_valid():
+            new_comment = form.save(commit=False)
+            new_comment.user = request.user
+            new_comment.user_name = request.user.username
+            new_comment.save()
+            result = new_comment.post.comment_update(new_comment)
+            return JsonResponse({'msg': 'success!',
+                                 'html': result[0],
+                                 'user_num': result[1],
+                                 'comment_num': result[2]})
+        return JsonResponse({'msg': '评论出错!'})
 
 
 @require_POST

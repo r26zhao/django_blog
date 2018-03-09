@@ -2,6 +2,8 @@ from django.db import models
 from django.conf import settings
 from mptt.models import TreeForeignKey, MPTTModel
 from ckeditor_uploader.fields import RichTextUploadingField
+from django.core.cache import cache
+from django.template.loader import render_to_string
 
 # Create your models here.
 
@@ -20,6 +22,15 @@ class Comment(MPTTModel):
         if self.parent is not None:
             return '%s 回复 %s' % (self.user_name, self.parent.user_name)
         return '%s 评论文章 post_%s' % (self.user_name, str(self.post.id))
+
+    def to_html(self):
+        key = "comment_{}_html".format(self.id)
+        html = cache.get(key, None)
+        if not html:
+            html = render_to_string('easy_comment/comment_entry.html', context={'comment': self})
+            cache.set(key, html, timeout=300)
+        return html
+
 
 class Like(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
