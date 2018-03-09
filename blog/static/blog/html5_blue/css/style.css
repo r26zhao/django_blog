@@ -113,6 +113,9 @@ a:hover {
     width: 38%;
     height: 1px;
 }
+.unread-count {
+	color: #E74C3C;
+}
 .top {
 	padding: 0;
 	background-color: #fff;

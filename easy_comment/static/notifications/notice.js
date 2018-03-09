@@ -35,7 +35,7 @@ jQuery(function ($) {
                 function (data) {
                     if (data.unread_count > 0){
                         $(".live-notify-badge").text(data.unread_count);
-                        $("span.unread-count").text(data.unread_count);
+                        $("span.unread-count").text("（" + data.unread_count + "）");
                         clearInterval(blink.timer);
                         document.title = "【新消息】" + blink.title;
                         blink.is_flashing = true;

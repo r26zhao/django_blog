@@ -39,6 +39,7 @@ var _hmt = _hmt || [];
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
+<script type="application/javascript" src="{% static 'notifications/notice.js' %}"></script>
 </head>
 <body>
     <div class="top"> <a class="totop" title="回顶部"><i class="fa fa-arrow-up fa-2x"></i></a>
@@ -128,7 +129,7 @@ var _hmt = _hmt || [];
         </div>
       </div>
       <div class="notic">
-        <div class="wrap subnotic"><i class="fa fa-bullhorn"></i> 博客升级中，暂时无法使用评论功能，如需留言，请qq联系</div>
+        <div class="wrap subnotic"><i class="fa fa-bullhorn"></i> 欢迎来到我的博客！</div>
       </div>
     </div>
 
@@ -181,7 +182,11 @@ var _hmt = _hmt || [];
               <ul>
                   <li style="color: #203e50">{{ request.user.username }}</li>
                   <li><a href="{% url 'blog:account_profile' %}">设置</a></li>
-                  <li><a>消息</a></li>
+                  <li><a href="{% url 'notifications:unread' %}" target="_blank">
+                        消息
+                        <span class="unread-count"></span>
+                      </a>
+                  </li>
                   <li><a href="{% url 'account_logout' %}?next={{ request.path }}">登出</a></li>
               </ul>
           </div>
