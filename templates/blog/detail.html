@@ -113,7 +113,7 @@
 </div>
 {% endblock sider %}
 {% block script %}
-<script src="/static/ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js"></script>
+<script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
 <script type="text/javascript">
     $('.article-content').find(':header').each(function () {
         $(this).attr('id', $(this).text());
@@ -152,6 +152,8 @@
                     $("#recipient").css('display', 'none');
                     sessionStorage.removeItem('reply');
                     $('.pinglun h2 span').text( json.user_num + "人参与 | " + json.comment_num + "条评论");
+                    $('.pinglun-text img').removeAttr('style');
+                    Prism.highlightAll();
                 }
             },
             error:function (json) {
@@ -177,6 +179,5 @@
         $("#recipient").css('display', 'none');
         sessionStorage.removeItem('reply');
     });
-
 </script>
 {% endblock script %}
