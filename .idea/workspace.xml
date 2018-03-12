@@ -56,8 +56,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/easy_comment/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="44" column="59" lean-forward="false" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+            <state relative-caret-position="475">
+              <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -80,8 +80,8 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/blog/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="211" column="63" lean-forward="false" selection-start-line="211" selection-start-column="63" selection-end-line="211" selection-end-column="63" />
+            <state relative-caret-position="182">
+              <caret line="56" column="26" lean-forward="false" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="26" />
               <folding>
                 <element signature="e#3926#3977#0#HTML" expanded="false" />
                 <element signature="e#6501#6691#0#HTML" expanded="false" />
@@ -121,7 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pinglun-avatar</find>
       <find>header-avatar</find>
       <find>.comment</find>
       <find>ckeditor</find>
@@ -151,6 +150,7 @@
       <find>alert</find>
       <find>errordic</find>
       <find>validation</find>
+      <find>request.user</find>
     </findStrings>
     <replaceStrings>
       <replace>.social</replace>
@@ -211,9 +211,9 @@
         <option value="$PROJECT_DIR$/templates/blog/index2.html" />
         <option value="$PROJECT_DIR$/blog/static/blog/html5_blue/js/yycm.js" />
         <option value="$PROJECT_DIR$/blog/models.py" />
-        <option value="$PROJECT_DIR$/easy_comment/views.py" />
         <option value="$PROJECT_DIR$/easy_comment/forms.py" />
         <option value="$PROJECT_DIR$/templates/blog/detail.html" />
+        <option value="$PROJECT_DIR$/easy_comment/views.py" />
         <option value="$PROJECT_DIR$/django_blog/settings.py" />
       </list>
     </option>
@@ -1024,7 +1024,7 @@
         <state relative-caret-position="209">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#51#109#0" expanded="true" />
+            <element signature="e#51#109#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1042,7 +1042,7 @@
         <state relative-caret-position="228">
           <caret line="60" column="26" lean-forward="false" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1075,8 +1075,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/blog/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="211" column="63" lean-forward="false" selection-start-line="211" selection-start-column="63" selection-end-line="211" selection-end-column="63" />
+        <state relative-caret-position="182">
+          <caret line="56" column="26" lean-forward="false" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="26" />
           <folding>
             <element signature="e#3926#3977#0#HTML" expanded="false" />
             <element signature="e#6501#6691#0#HTML" expanded="false" />
@@ -1086,8 +1086,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/easy_comment/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="44" column="59" lean-forward="false" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+        <state relative-caret-position="475">
+          <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>

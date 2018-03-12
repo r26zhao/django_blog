@@ -3,17 +3,15 @@ from .models import Comment, Like
 from blog.models import Post
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
-from django.template.loader import render_to_string
+from django.contrib.auth.decorators import login_required
 from django.core.cache import cache
-from django.views.generic.edit import CreateView
-from django.views.generic.base import View
 from django.views.generic import ListView
 from django.views.generic.detail import SingleObjectMixin
-from django.contrib.auth.mixins import LoginRequiredMixin
+
 from . import handlers
 
 # Create your views here.
-class PostCommentView(LoginRequiredMixin, SingleObjectMixin, ListView):
+class PostCommentView(SingleObjectMixin, ListView):
     paginate_by = 15
 
     def get(self, request, *args, **kwargs):
@@ -31,6 +29,7 @@ class PostCommentView(LoginRequiredMixin, SingleObjectMixin, ListView):
                 html += comment.to_html()
         return JsonResponse({'html': html})
 
+    @login_required
     def post(self, request):
         form = CommentForm(data=request.POST)
         if form.is_valid():
