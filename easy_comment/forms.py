@@ -1,4 +1,5 @@
 from django import forms
+from django.template.defaultfilters import striptags
 from .models import Comment
 
 class CommentForm(forms.ModelForm):
@@ -7,10 +8,14 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('content', 'parent', 'post')
+        error_messages = {
+            'content': {
+                'empty': 'Some useful help text.',
+            },
+        }
 
-    # 验证honeypot字段，如果有输入，则是垃圾评论
-    def clean_honeypot(self):
-        value = self.cleaned_data['honeypot']
-        if value:
-            return forms.ValidationError(self.fields['honeypot'].error_message)
+    def clean_content(self):
+        value = self.cleaned_data['content']
+        if striptags(value).replace(' ', '').replace('&nbsp;', '') == '' and not '<img' in value:
+            self.add_error('content', '兄dei，评论内容不能为空~')
         return value

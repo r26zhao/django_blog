@@ -14,7 +14,8 @@ $(document).ready(function(){
         $(".totop").hide();
         $(window).scroll(function(){
             0<$(window).scrollTop()?$(".totop").fadeIn(200):$(".totop").fadeOut(200)});
-            $(".totop").click(function(){$("html,body").animate({scrollTop:"0px"},400)});
+            $(".totop").click(function(){$("html,body").animate({scrollTop:"0px"},400)
+            });
 });
 
 // 评论分页

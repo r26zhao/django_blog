@@ -96,8 +96,6 @@
         <span class="pull-right">{{ comment_user_count }}人参与 | {{ comment_count }}条评论</span>
     </h2>
     <div class="pinglun-list">
-        {% generate_comment_list post as html %}
-        {{ html|safe }}
     </div>
 </div>
 {% endblock %}
@@ -154,6 +152,12 @@
                     $('.pinglun h2 span').text( json.user_num + "人参与 | " + json.comment_num + "条评论");
                     $('.pinglun-text img').removeAttr('style');
                     Prism.highlightAll();
+                    empty_page = false;
+                    block_request = false;
+                    page = 1;
+                }
+                else {
+                    alert(json.msg);
                 }
             },
             error:function (json) {
@@ -178,6 +182,37 @@
         $("#reply-action").css('display', 'none');
         $("#recipient").css('display', 'none');
         sessionStorage.removeItem('reply');
+    });
+    $.get(
+        "{% url 'easy_comment:post_comments_list' post.id %}",
+        function (data) {
+            $(".pinglun-list").html(data.html);
+            Prism.highlightAll();
+            $('.pinglun-text img').removeAttr('style');
+        }
+    );
+    var page = 1;
+    var empty_page = false;
+    var block_request = false;
+    $(window).scroll(function () {
+        var margin = $(document).height() - $(window).height() - 200;
+        if ($(window).scrollTop() > margin && empty_page == false && block_request == false) {
+            block_request = true;
+            page += 1;
+            $.get(
+                "{% url 'easy_comment:post_comments_list' post.id %}?page=" + page,
+                function(data) {
+                    if(data == '') {
+                    empty_page = true;
+                }
+                else {
+                    block_request = false;
+                    $(".pinglun-list").append(data.html);
+                    Prism.highlightAll();
+                    $('.pinglun-text img').removeAttr('style');
+                }
+            });
+        }
     });
 </script>
 {% endblock script %}

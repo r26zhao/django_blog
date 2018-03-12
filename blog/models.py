@@ -100,18 +100,16 @@ class Post(models.Model):
         self.save(update_fields=['click_count'])
 
     def get_absolute_url(self):
-        return reverse('blog:detail', kwargs={'pk':self.pk})
+        return reverse('blog:detail', kwargs={'pk': self.pk})
 
     def to_comments_html(self):
         key = 'post_{}_comments'.format(self.id)
-        html = cache.get(key, None)
-        if not html:
-            html = ''
-            comments = self.comment_set.all().order_by('-submit_date')
-            for comment in comments:
-                comment_html = comment.to_html()
-                html += comment_html
-            cache.set(key, html, timeout=300)
+        html = ''
+        comments = self.comment_set.all().order_by('-submit_date')[:15]
+        for comment in comments:
+            comment_html = comment.to_html()
+            html += comment_html
+        cache.set(key, html, timeout=300)
         return html
 
     def comment_user_count(self):
@@ -137,14 +135,7 @@ class Post(models.Model):
         return comment_num
 
     def comment_update(self, new_comment):
-        comment_html = new_comment.to_html()
-        key1 = 'post_{}_comments'.format(self.id)
-        comment_list_html = cache.get(key1, None)
-        if comment_list_html:
-            comment_list_html = comment_html + comment_list_html
-            cache.set(key1, comment_list_html, timeout=300)
-        else:
-            comment_list_html = self.to_comments_html()
+        comment_list_html = self.to_comments_html()
         key2 = "post_{}_comments_user".format(self.id)
         key3 = "post_{}_comments_user_num".format(self.id)
         user_list = cache.get(key2, None)
