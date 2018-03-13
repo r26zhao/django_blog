@@ -125,6 +125,10 @@
             alert("请登录后参与评论！");
             return false;
         }
+        if ($("#id_honeypot").val().length > 0){
+                alert("spam!");
+                return false;
+        }
         pid = $('#id_parent option:selected').val();
         if (sessionStorage.getItem('reply')) {
             pid = sessionStorage.getItem('pid');
@@ -182,6 +186,21 @@
         $("#reply-action").css('display', 'none');
         $("#recipient").css('display', 'none');
         sessionStorage.removeItem('reply');
+    });
+    $(".dianzan").live('click', function (e) {
+        e.preventDefault();
+        var c_id = $(this).data('id');
+        var action = $(this).data('action');
+        $.post(
+            "/comment/" + c_id + "/like_dislikes/",
+            {'action': action},
+            function (data) {
+                if (data.status == 'ok'){
+                    $(this).find('.likes_count').text(data.like);
+                    $(this).find('.dislikes_count').text(data.dislike);
+                }
+            }
+        );
     });
     $.get(
         "{% url 'easy_comment:post_comments_list' post.id %}",

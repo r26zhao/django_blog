@@ -4,8 +4,11 @@ from blog.models import Post
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from django.core.cache import cache
 from django.views.generic import ListView
+from django.views.generic.detail import SingleObjectMixin
+from django.views.generic.base import View
 from django.views.generic.detail import SingleObjectMixin
 
 from . import handlers
@@ -29,7 +32,7 @@ class PostCommentView(SingleObjectMixin, ListView):
                 html += comment.to_html()
         return JsonResponse({'html': html})
 
-    @login_required
+    @method_decorator(login_required)
     def post(self, request):
         form = CommentForm(data=request.POST)
         if form.is_valid():
@@ -50,6 +53,33 @@ class PostCommentView(SingleObjectMixin, ListView):
 
     def get_queryset(self):
         return self.object.comment_set.all().order_by('-submit_date')
+
+
+class CommentLikeView(SingleObjectMixin, View):
+    model = Comment
+
+    @method_decorator(login_required)
+    def post(self, request, *args, **kwargs):
+        comment = self.get_object()
+        action = request.POST.get('action')
+        if comment.user == request.user:
+            return JsonResponse({'status': 'ko', 'msg': '不能对自己点赞或者踩'})
+        if action == 'like':
+            if request.user not in comment.users_like.all():
+                comment.users_like.add(request.user)
+                if request.user in comment.users_dislike.all():
+                    comment.users_dislike.remove(request.user)
+            else:
+                return JsonResponse({'status': 'ko', 'msg': '已经赞过啦♪(^∇^*)~！'})
+        else:
+            if request.user not in comment.users_dislike.all():
+                comment.users_dislike.add(request.user)
+                if request.user in comment.users_like.all():
+                    comment.users_like.remove(request.user)
+            else:
+                return JsonResponse({'status': 'ko', 'msg': '已经踩过啦￣□￣｜｜！'})
+        result = comment.likes_count(update=True)
+        return JsonResponse({'status': 'ok', 'like': result['likes'], 'dislike': result['dislikes']})
 
 
 @require_POST

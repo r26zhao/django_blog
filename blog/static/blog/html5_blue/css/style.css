@@ -44,12 +44,18 @@ a:hover {
 	margin-right: auto;
 	margin-left: auto;
 }
+.dianzan span p {
+	display: inline-block;
+}
 .zwrap {
 	padding-right: 0;
 	padding-left: 0;
 }
 .enheight {
 	height: 300px!important;
+}
+.danger{
+	color: #E74C3C;
 }
 .paper {
 	background-color: #fff;
@@ -810,9 +816,6 @@ text-decoration:underline;
     margin-bottom: 15px;
     padding-bottom: 15px;
     border-bottom: dashed 1px #7f8c8d;
-}
-.dianzan {
-    padding-top: 7px;
 }
 .reply span {
     color: #16a085;
