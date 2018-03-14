@@ -22,7 +22,7 @@
             <div class="pinglun-bottom">
                 <a class="dianzan" href="{% url 'easy_comment:comment_like' comment.id %}" data-id="{{ comment.id }}" data-action="dislike" title="踩">
                     <span class="dianzan pull-right">
-                        <i class="fa fa-thumbs-o-down {% if request.user in comment.users_dislike %}
+                        <i class="fa fa-thumbs-o-down {% if request.user in comment.users_dislike.all %}
                         danger
                         {% endif %}"></i>
                         <p class="dislikes_count">{{ comment.likes_count.dislikes }}</p>
@@ -30,7 +30,7 @@
                 </a>
                 <a class="dianzan" href="{% url 'easy_comment:comment_like' comment.id %}" data-id="{{ comment.id }}" data-action="like" title="赞">
                     <span class="pull-right">
-                        <i class="fa fa-thumbs-o-up {% if request.user in comment.users_like %}
+                        <i class="fa fa-thumbs-o-up {% if request.user in comment.users_like.all %}
                         danger
                         {% endif %}"></i>
                         <p class="likes_count">{{ comment.likes_count.likes }}</p>

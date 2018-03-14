@@ -191,16 +191,23 @@
         e.preventDefault();
         var c_id = $(this).data('id');
         var action = $(this).data('action');
-        $.post(
-            "/comment/" + c_id + "/like_dislikes/",
-            {'action': action},
-            function (data) {
-                if (data.status == 'ok'){
-                    $(this).find('.likes_count').text(data.like);
-                    $(this).find('.dislikes_count').text(data.dislike);
+        $.ajax({
+            type: 'post',
+            url: "/comment/" + c_id + "/like_dislikes/",
+            data: {'action': action},
+            dataType: 'json',
+            success: function (data) {
+                if (data.status == 'ko'){
+                    alert(data.msg);
                 }
+                else {
+                    $(this).find('p').text(data.likes);
+                }
+            },
+            error: function (data) {
+                alert(data.status);
             }
-        );
+        });
     });
     $.get(
         "{% url 'easy_comment:post_comments_list' post.id %}",

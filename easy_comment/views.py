@@ -3,11 +3,11 @@ from .models import Comment, Like
 from blog.models import Post
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
+from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.core.cache import cache
 from django.views.generic import ListView
-from django.views.generic.detail import SingleObjectMixin
 from django.views.generic.base import View
 from django.views.generic.detail import SingleObjectMixin
 
@@ -23,13 +23,8 @@ class PostCommentView(SingleObjectMixin, ListView):
         context = self.get_context_data()
         page_obj = context['page_obj']
         html = ''
-        if page_obj.number == 1:
-            key = 'post_{}_comments'.format(self.object.id)
-            html = cache.get(key, None)
-        if not html:
-            html = ''
-            for comment in context['object_list']:
-                html += comment.to_html()
+        for comment in context['object_list']:
+            html += comment.to_html()
         return JsonResponse({'html': html})
 
     @method_decorator(login_required)
@@ -55,13 +50,15 @@ class PostCommentView(SingleObjectMixin, ListView):
         return self.object.comment_set.all().order_by('-submit_date')
 
 
+@method_decorator(csrf_exempt, name='dispatch')
 class CommentLikeView(SingleObjectMixin, View):
     model = Comment
 
-    @method_decorator(login_required)
     def post(self, request, *args, **kwargs):
         comment = self.get_object()
         action = request.POST.get('action')
+        print(action)
+        print(comment.user == request.user)
         if comment.user == request.user:
             return JsonResponse({'status': 'ko', 'msg': '不能对自己点赞或者踩'})
         if action == 'like':
@@ -79,6 +76,7 @@ class CommentLikeView(SingleObjectMixin, View):
             else:
                 return JsonResponse({'status': 'ko', 'msg': '已经踩过啦￣□￣｜｜！'})
         result = comment.likes_count(update=True)
+        comment.to_html(update=True)
         return JsonResponse({'status': 'ok', 'like': result['likes'], 'dislike': result['dislikes']})
 
 

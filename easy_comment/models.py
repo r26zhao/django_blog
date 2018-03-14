@@ -25,10 +25,10 @@ class Comment(MPTTModel):
             return '%s 回复 %s' % (self.user_name, self.parent.user_name)
         return '%s 评论文章 post_%s' % (self.user_name, str(self.post.id))
 
-    def to_html(self):
+    def to_html(self, update=False):
         key = "comment_{}_html".format(self.id)
-        html = cache.get(key, None)
-        if not html:
+        html = cache.get(key)
+        if html is None or update:
             html = render_to_string('easy_comment/comment_entry.html', context={'comment': self})
             cache.set(key, html, timeout=300)
         return html
