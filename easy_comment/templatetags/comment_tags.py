@@ -1,6 +1,5 @@
 from django import template
 from ..forms import CommentForm
-from ..models import Like
 from django.conf import settings
 from django.apps import apps
 from django.db.models.aggregates import Count
@@ -37,16 +36,6 @@ def get_comments_user_count(post):
         cache.set(key, user_num, timeout=300)
         cache.set(key1, user_list, timeout=300)
     return user_num
-
-@register.simple_tag
-def get_like_action(user, comment):
-    if user.is_anonymous:
-        return 0
-    try:
-        obj = Like.objects.get(user = user, comment = comment)
-        return 1 if obj.status else -1
-    except Like.DoesNotExist:
-        return 0
 
 @register.simple_tag
 def get_like_count(comment):

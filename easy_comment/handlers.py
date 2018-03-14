@@ -1,5 +1,5 @@
 from django.db.models.signals import post_save
-from .models import Comment, Like
+from .models import Comment
 from notifications.signals import notify
 from django.conf import settings
 from django.apps import apps
@@ -55,7 +55,7 @@ def comment_handler(sender, instance, created, **kwargs):
 
 post_save.connect(comment_handler, sender=Comment)
 
-
+'''
 def like_handler(sender, instance, created, **kwargs):
     if created:
         recipient = ADMINS.exclude(id=instance.user.id).exclude(id=instance.comment.user.id)
@@ -76,3 +76,4 @@ def like_handler(sender, instance, created, **kwargs):
 
 
 post_save.connect(like_handler, sender=Like)
+'''

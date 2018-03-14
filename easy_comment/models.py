@@ -42,18 +42,3 @@ class Comment(MPTTModel):
             result['dislikes'] = -self.users_dislike.all().count()
             cache.set(key, result, timeout=300)
         return result
-
-
-class Like(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL)
-    comment = models.ForeignKey(Comment)
-    created_time = models.DateTimeField(auto_now_add=True)
-    status = models.BooleanField(default=True)
-
-    class Meta:
-        verbose_name = '点赞'
-        verbose_name_plural = verbose_name
-    def __str__(self):
-        if self.status:
-            return '%s 赞了 %s的评论' % (self.user.username, self.comment.user_name)
-        return '%s 踩了 %s的评论' % (self.user.username, self.comment.user_name)

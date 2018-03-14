@@ -1,5 +1,5 @@
 from .forms import CommentForm
-from .models import Comment, Like
+from .models import Comment
 from blog.models import Post
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
