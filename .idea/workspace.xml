@@ -57,6 +57,44 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="handlers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/easy_comment/handlers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-741">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="365" column="30" lean-forward="false" selection-start-line="365" selection-start-column="30" selection-end-line="365" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/blog/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="244" column="50" lean-forward="false" selection-start-line="244" selection-start-column="50" selection-end-line="244" selection-end-column="50" />
+              <folding>
+                <element signature="e#4010#4061#0#HTML" expanded="false" />
+                <element signature="e#4260#6152#0#HTML" expanded="false" />
+                <element signature="e#6197#6661#0#HTML" expanded="false" />
+                <element signature="e#6706#6896#0#HTML" expanded="false" />
+                <element signature="e#6944#7578#0#HTML" expanded="false" />
+                <element signature="e#7679#7828#0#HTML" expanded="false" />
+                <element signature="e#7946#8679#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -155,15 +193,15 @@
         <option value="$PROJECT_DIR$/blog/static/blog/html5_blue/js/yycm.js" />
         <option value="$PROJECT_DIR$/blog/models.py" />
         <option value="$PROJECT_DIR$/easy_comment/forms.py" />
-        <option value="$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css" />
         <option value="$PROJECT_DIR$/easy_comment/urls.py" />
-        <option value="$PROJECT_DIR$/templates/blog/detail.html" />
         <option value="$PROJECT_DIR$/easy_comment/handlers.py" />
         <option value="$PROJECT_DIR$/easy_comment/views.py" />
         <option value="$PROJECT_DIR$/easy_comment/templatetags/comment_tags.py" />
         <option value="$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_entry.html" />
         <option value="$PROJECT_DIR$/easy_comment/models.py" />
         <option value="$PROJECT_DIR$/easy_comment/admin.py" />
+        <option value="$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/blog/detail.html" />
         <option value="$PROJECT_DIR$/django_blog/settings.py" />
       </list>
     </option>
@@ -217,12 +255,48 @@
             <path>
               <item name="django_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="django_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="django_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="django_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="django_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="easy_comment" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="html5_blue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="html5_blue" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -238,17 +312,17 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\zry71\Documents\GitHub\django_blog\easy_comment\templates\easy_comment" />
-      <recent name="C:\Users\zry71\PycharmProjects\django_blog\blog\static\blog\less" />
-      <recent name="C:\Users\zry71\PycharmProjects\django_blog\blog\static\ckeditor\ckeditor\plugins" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aaron\Documents\GitHub\django_blog\blog\static\blog\html5_blue\js" />
       <recent name="C:\Users\zry71\Documents\GitHub\django_blog\blog\static\blog\js" />
       <recent name="C:\Users\zry71\Documents\GitHub\django_blog\blog\static\blog\images" />
       <recent name="C:\Users\zry71\Documents\GitHub\django_blog\blog\static\blog" />
       <recent name="C:\Users\zry71\Documents\GitHub\django_blog\templates\blog" />
-      <recent name="C:\Users\zry71\Documents\GitHub\django_blog\easy_comment\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zry71\Documents\GitHub\django_blog\easy_comment\templates\easy_comment" />
+      <recent name="C:\Users\zry71\PycharmProjects\django_blog\blog\static\blog\less" />
+      <recent name="C:\Users\zry71\PycharmProjects\django_blog\blog\static\ckeditor\ckeditor\plugins" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -546,18 +620,11 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="76" />
+      <option name="time" value="78" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Python36/Lib/site-packages/rest_framework/viewsets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2945">
-          <caret line="163" column="30" lean-forward="false" selection-start-line="163" selection-start-column="30" selection-end-line="163" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python36/Lib/site-packages/rest_framework/mixins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -604,6 +671,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -611,6 +679,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -641,6 +710,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-826">
           <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -648,6 +718,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="154" column="6" lean-forward="false" selection-start-line="154" selection-start-column="6" selection-end-line="154" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -696,6 +767,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="172" column="6" lean-forward="false" selection-start-line="172" selection-start-column="6" selection-end-line="172" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -721,14 +793,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css" />
     <entry file="file://$PROJECT_DIR$/templates/blog/base.html" />
     <entry file="file://$PROJECT_DIR$/easy_comment/urls.py" />
     <entry file="file://$PROJECT_DIR$/online_status/middleware.py" />
     <entry file="file://$PROJECT_DIR$/blog/models.py" />
     <entry file="file://$PROJECT_DIR$/easy_comment/migrations/0002_auto_20180313_1609.py" />
-    <entry file="file://$PROJECT_DIR$/templates/blog/detail.html" />
-    <entry file="file://$PROJECT_DIR$/easy_comment/handlers.py" />
     <entry file="file://$PROJECT_DIR$/easy_comment/views.py" />
     <entry file="file://$PROJECT_DIR$/easy_comment/templatetags/comment_tags.py" />
     <entry file="file://$PROJECT_DIR$/easy_comment/templates/easy_comment/comment_entry.html" />
@@ -748,6 +817,46 @@
           <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/easy_comment/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-741">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/static/blog/html5_blue/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="365" column="30" lean-forward="false" selection-start-line="365" selection-start-column="30" selection-end-line="365" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/static/blog/html5_blue/js/jquery.sticky.elements.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="244" column="50" lean-forward="false" selection-start-line="244" selection-start-column="50" selection-end-line="244" selection-end-column="50" />
+          <folding>
+            <element signature="e#4010#4061#0#HTML" expanded="false" />
+            <element signature="e#4260#6152#0#HTML" expanded="false" />
+            <element signature="e#6197#6661#0#HTML" expanded="false" />
+            <element signature="e#6706#6896#0#HTML" expanded="false" />
+            <element signature="e#6944#7578#0#HTML" expanded="false" />
+            <element signature="e#7679#7828#0#HTML" expanded="false" />
+            <element signature="e#7946#8679#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>

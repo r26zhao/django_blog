@@ -112,6 +112,7 @@
 {% endblock sider %}
 {% block script %}
 <script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
+<script src="{% static 'blog/html5_blue/js/jquery.sticky.elements.js' %}"></script>
 <script type="text/javascript">
     $('.article-content').find(':header').each(function () {
         $(this).attr('id', $(this).text());
@@ -240,5 +241,7 @@
             });
         }
     });
+    var width = $(".right").width();
+    $("#title_list").width(width).stikify({rate: 2, cieling: 0});
 </script>
 {% endblock script %}

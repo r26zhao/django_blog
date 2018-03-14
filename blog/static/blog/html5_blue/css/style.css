@@ -28,7 +28,7 @@ body {
 	color: #666;
 }
 i {
-	padding-right: 3px;
+	margin-right: 3px;
 }
 a {
 	color: #046bb0;
@@ -363,7 +363,7 @@ a:hover {
 	padding: 10px 20px 9px 10px;
 	line-height: 18px;
 	border-left: 4px solid #1abc9c;
-	background-color: #f1f1f1;
+	background-color: #effcf9;
 }
 .pinglun h2 span {
     color: #16a085;
@@ -719,7 +719,7 @@ text-decoration:underline;
     padding: 10px 20px 9px 10px;
     line-height: 18px;
     border-left: 4px solid #1abc9c;
-    background-color: #f1f1f1;
+    background-color: #effcf9;
 }
 .article-content h3 {
     font-size: 18px;
@@ -1824,7 +1824,6 @@ text-decoration:underline;
 }
 #title_list ul {
 	padding: 0 30px;
-	border: none;
 }
 #title_list ul li {
 	border: none;
@@ -1832,6 +1831,7 @@ text-decoration:underline;
 }
 #title_list ul li ul {
 	padding: 0 32px;
+	border: none;
 }
 #title_list ul li ul li {
 	list-style-type: circle;
