@@ -1,6 +1,3 @@
-from .forms import CommentForm
-from .models import Comment
-from blog.models import Post
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
@@ -10,7 +7,11 @@ from django.core.cache import cache
 from django.views.generic import ListView
 from django.views.generic.base import View
 from django.views.generic.detail import SingleObjectMixin
+from django.shortcuts import get_object_or_404
 
+from .forms import CommentForm
+from .models import Comment, Favour
+from blog.models import Post
 from . import handlers
 
 # Create your views here.
@@ -50,54 +51,10 @@ class PostCommentView(SingleObjectMixin, ListView):
         return self.object.comment_set.all().order_by('-submit_date')
 
 
-@method_decorator(csrf_exempt, name='dispatch')
-class CommentLikeView(SingleObjectMixin, View):
-    model = Comment
+class Post_FavourView(View):
 
-    def post(self, request, *args, **kwargs):
-        comment = self.get_object()
-        action = request.POST.get('action')
-        print(action)
-        print(comment.user == request.user)
-        if comment.user == request.user:
-            return JsonResponse({'status': 'ko', 'msg': '不能对自己点赞或者踩'})
-        if action == 'like':
-            if request.user not in comment.users_like.all():
-                comment.users_like.add(request.user)
-                if request.user in comment.users_dislike.all():
-                    comment.users_dislike.remove(request.user)
-            else:
-                return JsonResponse({'status': 'ko', 'msg': '已经赞过啦♪(^∇^*)~！'})
-        else:
-            if request.user not in comment.users_dislike.all():
-                comment.users_dislike.add(request.user)
-                if request.user in comment.users_like.all():
-                    comment.users_like.remove(request.user)
-            else:
-                return JsonResponse({'status': 'ko', 'msg': '已经踩过啦￣□￣｜｜！'})
-        result = comment.likes_count(update=True)
-        comment.to_html(update=True)
-        return JsonResponse({'status': 'ok', 'like': result['likes'], 'dislike': result['dislikes']})
+    def get(self, request, post_id):
+        if request.user.is_authenticated:
+            post = get_object_or_404(Post, id=post_id)
 
-
-@require_POST
-def like(request):
-    comment_id = request.POST.get('id')
-    action = request.POST.get('action')
-    if comment_id and action:
-        try:
-            comment = Comment.objects.get(id=comment_id)
-            obj, created = Like.objects.get_or_create(user=request.user, comment=comment)
-            if action == 'like':
-                if not created:
-                    obj.status = True
-                    obj.save()
-            if action == 'cancel-like' or action == 'cancel-dislike':
-                obj.delete()
-            if action == 'dislike':
-                obj.status = False
-                obj.save()
-            return JsonResponse({'msg': 'OK'})
-        except Comment.DoesNotExist:
-            return JsonResponse({"msg": "KO"})
-    return JsonResponse({"msg": "KO"})
+        return JsonResponse({'status': 0})

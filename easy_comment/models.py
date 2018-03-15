@@ -18,6 +18,7 @@ class Favour(models.Model):
 
     class Meta:
         ordering = ('-date_created',)
+        unique_together = ('user', 'content_type', 'object_id')
 
     def __str__(self):
         return "{} 喜欢 {}_{}".format(self.user.username, self.content_object._meta.model_name, self.content_object.id)

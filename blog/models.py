@@ -5,6 +5,8 @@ from django.urls import reverse
 from imagekit.models import ProcessedImageField
 from imagekit.processors import ResizeToFill
 from django.core.cache import cache
+from django.contrib.contenttypes.fields import GenericRelation
+from easy_comment.models import Favour
 
 
 # Create your models here.
@@ -86,6 +88,7 @@ class Post(models.Model):
     cover = ProcessedImageField(upload_to='cover', default='', verbose_name='封面', processors=[ResizeToFill(160, 120)],
                                 format='JPEG',
                                 options={"quality": 60})
+    favours = GenericRelation(Favour, related_query_name='posts')
 
     class Meta:
         verbose_name = '文章'
@@ -94,6 +97,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def favour_count(self, update=0):
+        key = ''
 
     def click_increase(self):
         self.click_count += 1
