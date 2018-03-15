@@ -1956,3 +1956,29 @@ text-decoration:underline;
 #div_id_avatar {
     display: inline-block;
 }
+.jiathis_style_32x32 {
+	display: inline-block;
+	float: right;
+}
+.jiathis_style_32x32 a {
+	display: inline-block;
+}
+#like-btn {
+	color: #1abc9c;
+	padding: 0 16px;
+	font-size: 14.5px;
+	line-height: 32px;
+	height: 36px;
+}
+#like-btn span {
+	font-size: 14.5px;
+	font-family: inherit;
+}
+.like_share {
+	margin-top: 60px;
+}
+.like-count {
+	border-left: solid 1px;
+	margin-left: 5px;
+	padding-left: 5px;
+}

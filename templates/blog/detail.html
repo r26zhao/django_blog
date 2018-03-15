@@ -49,6 +49,24 @@
     <article class="article-content">
         {{ post.content|safe }}
     </article>
+
+    <div class="like_share">
+        <a href="javascript:void(0)" id="like-btn"
+           class="button button-glow button-border button-rounded" data-action="like">
+            <i class="fa fa-heart-o"></i>
+            喜欢
+            <span class="like-count">0</span>
+        </a>
+        <!-- JiaThis Button BEGIN -->
+        <div class="jiathis_style_32x32">
+            <a class="jiathis_button_tsina"></a>
+            <a class="jiathis_button_weixin"></a>
+            <a class="jiathis_button_cqq"></a>
+            <div class="clear"></div>
+        </div>
+        <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+        <!-- JiaThis Button END -->
+    </div>
 </div>
 {% endblock article %}
 {% block comment %}
@@ -243,5 +261,20 @@
     });
     var width = $(".right").width();
     $("#title_list").width(width).stikify({rate: 2, cieling: 0});
+    $("#like-btn").click(function () {
+        var n = $(this).find('.like-count').text();
+        if ($(this).data('action') == 'like'){
+            $(this).css({'background-color': '#1abc9c', 'color': '#fff'}).removeClass('button-glow');
+            $(this).find('i').removeClass('fa-heart-o').addClass('fa-heart');
+            $(this).data('action', 'unlike');
+            $(this).find('.like-count').text(Number(n) + 1);
+        }
+        else {
+            $(this).css({'background-color': '#fff', 'color': '#1abc9c'}).addClass('button-glow');
+            $(this).find('i').removeClass('fa-heart').addClass('fa-heart-o');
+            $(this).data('action', 'like');
+            $(this).find('.like-count').text(Number(n) - 1);
+        }
+    });
 </script>
 {% endblock script %}
