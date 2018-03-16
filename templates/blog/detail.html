@@ -52,7 +52,7 @@
 
     <div class="like_share">
         <a href="javascript:void(0)" id="like-btn"
-           class="button button-glow button-border button-rounded" data-action="like">
+           class="button button-glow button-border button-rounded">
             <i class="fa fa-heart-o"></i>
             喜欢
             <span class="like-count">0</span>
@@ -206,28 +206,6 @@
         $("#recipient").css('display', 'none');
         sessionStorage.removeItem('reply');
     });
-    $(".dianzan").live('click', function (e) {
-        e.preventDefault();
-        var c_id = $(this).data('id');
-        var action = $(this).data('action');
-        $.ajax({
-            type: 'post',
-            url: "/comment/" + c_id + "/like_dislikes/",
-            data: {'action': action},
-            dataType: 'json',
-            success: function (data) {
-                if (data.status == 'ko'){
-                    alert(data.msg);
-                }
-                else {
-                    $(this).find('p').text(data.likes);
-                }
-            },
-            error: function (data) {
-                alert(data.status);
-            }
-        });
-    });
     $.get(
         "{% url 'easy_comment:post_comments_list' post.id %}",
         function (data) {
@@ -262,6 +240,22 @@
     var width = $(".right").width();
     $("#title_list").width(width).stikify({rate: 2, cieling: 0});
     $("#like-btn").click(function () {
+        if ($(this).hasClass('no-login')){
+            alert("请登录后参与此操作~");
+            return false;
+        }
+        $.ajax({
+            type: 'post',
+            url: "{% url 'easy_comment:post_favour' post.id %}",
+            data: {'action': $(this).data('action')},
+            dataType: 'json',
+            success: function (data) {
+                alert(data.count);
+            },
+            error: function (data) {
+                alert(data.status);
+            }
+        });
         var n = $(this).find('.like-count').text();
         if ($(this).data('action') == 'like'){
             $(this).css({'background-color': '#1abc9c', 'color': '#fff'}).removeClass('button-glow');
@@ -276,5 +270,20 @@
             $(this).find('.like-count').text(Number(n) - 1);
         }
     });
+    $.get(
+        "{% url 'easy_comment:post_favour_count' post.id %}",
+        function (data) {
+            $("#like-btn").data('action', 'like');
+            if (data.status == 1){
+                $("#like-btn").css({'background-color': '#1abc9c', 'color': '#fff'}).removeClass('button-glow');
+                $("#like-btn").find('i').removeClass('fa-heart-o').addClass('fa-heart');
+                $("#like-btn").data('action', 'unlike');
+            }
+            if (data.status == -1) {
+                $("#like-btn").addClass('no-login')
+            }
+            $('.like-count').text(data.count);
+        }
+    );
 </script>
 {% endblock script %}

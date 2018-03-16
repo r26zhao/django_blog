@@ -9,19 +9,25 @@ from django.contrib.contenttypes.fields import GenericForeignKey, GenericRelatio
 
 # Create your models here.
 
+
 class Favour(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='favours')
     content_type = models.ForeignKey(ContentType)
     object_id = models.PositiveIntegerField()
     content_object = GenericForeignKey('content_type', 'object_id')
     date_created = models.DateTimeField(auto_now_add=True)
+    liked = models.BooleanField(default=True, verbose_name='是否喜欢')
 
     class Meta:
         ordering = ('-date_created',)
         unique_together = ('user', 'content_type', 'object_id')
 
     def __str__(self):
-        return "{} 喜欢 {}_{}".format(self.user.username, self.content_object._meta.model_name, self.content_object.id)
+        if self.liked:
+            return "{} 喜欢 {}_{}".format(self.user.username, self.content_object._meta.model_name, self.content_object.id)
+        else:
+            return "{} 取消了喜欢 {}_{}".format(self.user.username, self.content_object._meta.model_name,
+                                        self.content_object.id)
 
 
 class Comment(MPTTModel):

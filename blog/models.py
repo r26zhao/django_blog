@@ -99,7 +99,16 @@ class Post(models.Model):
         return self.title
 
     def favour_count(self, update=0):
-        key = ''
+        key = 'post_{}_favour_count'.format(self.id)
+        count = cache.get(key)
+        if count is None:
+            count = self.favours.filter(liked=True).count()
+            cache.set(key, count, timeout=300)
+        elif update:
+            count += update
+            cache.set(key, count, timeout=300)
+        return count
+
 
     def click_increase(self):
         self.click_count += 1
