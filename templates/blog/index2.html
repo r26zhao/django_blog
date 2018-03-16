@@ -57,7 +57,7 @@ hidden_block
       <span><i class="fa fa-clock-o"></i> {{ post.date_created|timesince }}前 </span>
       <span><i class="fa fa-eye"></i> {{ post.click_count }}阅读 </span>
       <span><i class="fa fa-comment-o"></i> <a href="{{ post.get_absolute_url }}" class="ds-thread-count">{{ post.comment_set.all.count }}评论</a> </span>
-      <span style="color: #f78585"><i class="fa fa-heart-o"></i> 0喜欢 </span>
+      <span style="color: #f78585"><i class="fa fa-heart-o"></i> {{ post.favour_count }}喜欢 </span>
       <span class="more" style="margin-right: 0"><a href="{{ post.get_absolute_url }}" title="{{ post.title }}">阅读详情</a></span> </div>
 </div>
 {% empty %}

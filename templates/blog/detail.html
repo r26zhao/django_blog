@@ -250,10 +250,10 @@
             data: {'action': $(this).data('action')},
             dataType: 'json',
             success: function (data) {
-                alert(data.count);
             },
             error: function (data) {
                 alert(data.status);
+                return false;
             }
         });
         var n = $(this).find('.like-count').text();
