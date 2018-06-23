@@ -10,6 +10,7 @@ from .catalog import catalog
 logger = logging.getLogger('blog.views')
 # Create your views here.
 
+
 # Paginator function
 def get_page(request, post_list):
     paginator = Paginator(post_list, 10)
@@ -20,9 +21,10 @@ def get_page(request, post_list):
         post_list = paginator.page(1)
     return post_list
 
+
 # 获得全局变量
 def global_setting(request):
-    return {'SITE_NAME': settings.SITE_NAME, 'SITE_DESCP': settings.SITE_DESCP, 'SITE_KEYWORDS': settings.SITE_KEYWORDS }
+    return {'SITE_NAME': settings.SITE_NAME, 'SITE_DESCP': settings.SITE_DESCP, 'SITE_KEYWORDS': settings.SITE_KEYWORDS}
 
 
 def index(request):
