@@ -96,9 +96,10 @@ hidden_block
 <div class="subblock linkcat">
   <h3>友情链接</h3>
   <ul>
-
-    <li><a href='' target='_blank'></a> </li>
-
+    {% get_friend_links as links %}
+    {% for link in links %}
+    <li><a href='{{ link.link }}' target='_blank'>{{ link.site_name }}</a> </li>
+    {% endfor %}
   </ul>
 </div>
 <ul class="widgets">

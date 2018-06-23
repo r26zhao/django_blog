@@ -20,9 +20,9 @@ class User(AbstractUser):
     qq = models.CharField(max_length=20, blank=True, null=True, verbose_name='QQ号码')
     url = models.URLField(max_length=100, blank=True, null=True, verbose_name='个人网页地址')
     avatar = ProcessedImageField(upload_to='avatar', default='avatar/default.png', verbose_name='头像',
-                                 processors=[ResizeToFill(85,85)],
+                                 processors=[ResizeToFill(85, 85)],
                                  format='JPEG',
-                                 options={'quality':60})
+                                 options={'quality': 60})
 
     class Meta:
         verbose_name = '用户'
@@ -49,6 +49,7 @@ class User(AbstractUser):
 class Tag(models.Model):
     name = models.CharField(max_length=30, verbose_name='标签名称')
     slug = models.SlugField(max_length=50, default='', blank=False)
+
     class Meta:
         verbose_name = '标签'
         verbose_name_plural = verbose_name
@@ -56,13 +57,16 @@ class Tag(models.Model):
 
     def __str__(self):
         return self.name
+
     def get_absolute_url(self):
-        return reverse('blog:tag', kwargs={'slug':self.slug})
+        return reverse('blog:tag', kwargs={'slug': self.slug})
+
 
 # Category 分类
 class Category(models.Model):
     name = models.CharField(max_length=30, verbose_name='分类名称')
     slug = models.SlugField(max_length=50, default='', blank=False)
+
     class Meta:
         verbose_name = '分类'
         verbose_name_plural = verbose_name
@@ -70,8 +74,10 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+
     def get_absolute_url(self):
-        return reverse('blog:category', kwargs={'slug':self.slug})
+        return reverse('blog:category', kwargs={'slug': self.slug})
+
 
 # Post 文章类
 class Post(models.Model):
@@ -109,7 +115,6 @@ class Post(models.Model):
             cache.set(key, count, timeout=300)
         return count
 
-
     def click_increase(self):
         self.click_count += 1
         self.save(update_fields=['click_count'])
@@ -134,7 +139,7 @@ class Post(models.Model):
             user_list = []
             key1 = "post_{}_comments_user".format(self.id)
             for comment in self.comment_set.all():
-                if not comment.user in user_list:
+                if comment.user not in user_list:
                     user_list.append(comment.user)
             user_num = len(user_list)
             cache.set(key, user_num, timeout=300)
@@ -155,7 +160,7 @@ class Post(models.Model):
         key3 = "post_{}_comments_user_num".format(self.id)
         user_list = cache.get(key2, None)
         if user_list:
-            if not new_comment.user in user_list:
+            if new_comment.user not in user_list:
                 user_list.append(new_comment.user)
             user_num = len(user_list)
             cache.set(key3, user_num, timeout=300)
@@ -169,8 +174,16 @@ class Post(models.Model):
             cache.set(key4, comment_num, timeout=300)
         else:
             comment_num = self.comment_count()
-        return  comment_list_html, user_num, comment_num
+        return comment_list_html, user_num, comment_num
 
+
+# 友情链接
+class FriendLink(models.Model):
+    site_name = models.CharField(default='', max_length=200, blank=True, null=True)
+    link = models.URLField(default='', max_length=100, blank=True, null=True)
+
+    def __str__(self):
+        return self.site_name
 
 
 '''

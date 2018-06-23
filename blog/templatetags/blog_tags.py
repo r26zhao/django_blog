@@ -44,3 +44,9 @@ def get_blog_owner():
         owner = {'name': user.username, 'post_num': post_num, 'view_num': view_num, 'avatar': user.avatar.url}
         cache.set('owner', owner, timeout=24*60*60)
     return owner
+
+
+@register.simple_tag
+def get_friend_links():
+    links = FriendLink.objects.all()
+    return links
