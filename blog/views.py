@@ -44,10 +44,10 @@ def detail(request, pk):
     for tag in tag_list:
         keywords = keywords + ', ' + tag.name
     return render(request, 'blog/detail.html', context={'post': post,
-                                                        'title':title,
-                                                        'keywords':keywords,
-                                                        'description':description,
-                                                        'tag_list':tag_list,
+                                                        'title': title,
+                                                        'keywords': keywords,
+                                                        'description': description,
+                                                        'tag_list': tag_list,
                                                         'title_tree': title_tree})
 
 
@@ -58,10 +58,11 @@ def category(request, slug):
     title = category.name + ' - AA的博客'
     keywords = category.name
     description = category.name
-    return render(request, 'blog/index2.html', context={'post_list':post_list,
-                                                       'title':title,
-                                                       'keywords':keywords,
-                                                       'description':description})
+    return render(request, 'blog/index2.html', context={'post_list': post_list,
+                                                        'title': title,
+                                                        'keywords': keywords,
+                                                        'description': description})
+
 
 def tag(request, slug):
     tag = get_object_or_404(Tag, slug=slug)
@@ -70,20 +71,22 @@ def tag(request, slug):
     title = tag.name + ' - AA的博客'
     keywords = tag.name
     description = tag.name
-    return render(request, 'blog/index.html', context={'post_list': post_list,
-                                                       'title': title,
-                                                       'keywords': keywords,
-                                                       'description': description})
+    return render(request, 'blog/index2.html', context={'post_list': post_list,
+                                                        'title': title,
+                                                        'keywords': keywords,
+                                                        'description': description})
+
 
 def search(request):
     q = request.GET.get('q')
     error_msg = ''
     if not q:
         error_msg = '请输入关键词'
-        return render(request, 'blog/search.html', context={'error_msg':error_msg})
+        return render(request, 'blog/search.html', context={'error_msg': error_msg})
     post_list = Post.objects.filter(title__contains=q)
-    post_list = get_page(request,post_list)
-    return render(request, 'blog/search.html', context={'error_msg':error_msg, 'post_list':post_list})
+    post_list = get_page(request, post_list)
+    return render(request, 'blog/search.html', context={'error_msg': error_msg, 'post_list': post_list})
+
 
 @login_required
 def account_profile(request):
@@ -95,5 +98,5 @@ def account_profile(request):
             form.save()
             messages.append('资料修改成功！')
     form = UserDetailForm(instance=request.user)
-    return render(request, 'account/user_detail.html', context={'form':form,
-                                                                'messages':messages,})
+    return render(request, 'account/user_detail.html', context={'form': form,
+                                                                'messages': messages})
