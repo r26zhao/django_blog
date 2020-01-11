@@ -7,7 +7,7 @@ chardet==3.0.3
 defusedxml==0.5.0
 Django==1.11.2
 django-allauth==0.32.0
-django-anymail==0.10
+django-anymail==1.2.1
 django-appconf==1.0.2
 django-celery-results==1.0.1
 django-ckeditor==5.2.2
