@@ -27,7 +27,7 @@ oauthlib==2.0.2
 olefile==0.44
 packaging==16.8
 pilkit==2.0
-Pillow==4.1.0
+Pillow==8.3.2
 Pygments==2.2.0
 PyMySQL==0.7.11
 pyparsing==2.2.0
