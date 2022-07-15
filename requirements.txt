@@ -9,7 +9,7 @@ Django==1.11.2
 django-allauth==0.32.0
 django-anymail==0.10
 django-appconf==1.0.2
-django-celery-results==1.0.1
+django-celery-results==2.4.0
 django-ckeditor==5.2.2
 django-crispy-forms==1.6.1
 django-imagekit==4.0.1
